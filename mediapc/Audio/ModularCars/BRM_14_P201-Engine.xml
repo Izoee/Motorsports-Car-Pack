@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="1" Street="1" Sport="1" Race="1" />
+    <Channel Name="Engine" Stock="G_V12NC_European_TrackToy_1_Eng" Street="G_V12NC_European_TrackToy_1_Eng" Sport="G_V12NC_European_TrackToy_1_Eng" Race="G_V12NC_European_TrackToy_1_Eng" />
+    <Channel Name="Exhaust" Stock="G_V12NC_European_TrackToy_1_Exh" Street="G_V12NC_European_TrackToy_1_Exh" Sport="G_V12NC_European_TrackToy_1_Exh" Race="G_V12NC_European_TrackToy_1_Exh" />
+    <Channel Name="Intake" Stock="G_V12NC_European_TrackToy_1_Int" Street="G_V12NC_European_TrackToy_1_Int" Sport="G_V12NC_European_TrackToy_1_Int" Race="G_V12NC_European_Supercar_1_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="TrackToy" />
+    <Channel Name="SuperCSC" Profile="TrackToy" />
+    <Channel Name="SuperDSC" Profile="TrackToy" />
+    <Channel Name="Transmission" Profile="TrackToy" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernV8Muscle" />
+    <Property Name="Backfire" Value="V12" />
+    <Property Name="AntiLag" Value="V12" />
+    <Property Name="TurboBOV" Value="TrackToy" />
+    <Property Name="CentrifugalBOV" Value="TrackToy" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Classic" />
+    <Property Name="Limiter" Value="Limiter_Classic" />
+    <Property Name="GearCrack" Value="Sequential" />
+  </Properties>
+</ModularCar>

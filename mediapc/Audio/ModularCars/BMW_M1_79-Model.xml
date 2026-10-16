@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <Properties>
+    <PropertyTemplate Source="Forzavista/ClassicSupercar" />
+    <PropertyTemplate Source="ForzavistaPositions/Standard" />
+    <PropertyTemplate Source="Chassis/AL_Medium" />
+    <Property Name="CockpitIR" Value="CockpitIR_SportsCar" />
+    <Property Name="CockpitFiltering" Value="0.8" />
+    <Property Name="Cooling" Value="Cooling_Classic" />
+    <Property Name="WipersFrontExternal" Value="Wipers_ClassicFrontExternal" />
+    <Property Name="WipersFrontInternal" Value="Wipers_ClassicFrontInternal" />
+    <Property Name="WipersRearExternal" Value="None" />
+    <Property Name="WipersRearInternal" Value="None" />
+    <Property Name="GearsInternal" Value="ClassicSupercarStick" />
+    <Property Name="GearsExternal" Value="ClassicSupercarStick" />
+    <Property Name="PassbyProfile" Value="Car_I6" />
+    <Property Name="CockpitSnapshot" Value="3" />
+    <Property Name="CockpitGain" Value="0" />
+  </Properties>
+</ModularCar>

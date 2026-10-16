@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.95" Street="0.95" Sport="0.95" Race="0.95" />
+    <Channel Name="Engine" Stock="G_V12NC_UK_Race_1_Eng" Street="G_V12NC_UK_Race_1_Eng" Sport="G_V12NC_UK_Race_1_Eng" Race="G_V12NC_UK_Race_1_Eng" />
+    <Channel Name="Exhaust" Stock="G_V12NC_UK_Race_2_Exh" Street="G_V12NC_UK_Race_2_Exh" Sport="G_V12NC_UK_Race_2_Exh" Race="G_V12NC_UK_Race_2_Exh" />
+    <Channel Name="Intake" Stock="G_V12NC_UK_Race_2_Int" Street="G_V12NC_UK_Race_2_Int" Sport="G_V12NC_UK_Race_2_Int" Race="G_V12NC_UK_Race_2_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_Big_SportMax" />
+    <Channel Name="SuperCSC" Profile="Supercar" />
+    <Channel Name="SuperDSC" Profile="Supercar" />
+    <Channel Name="Transmission" Profile="Supercar" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernV12TrackToy" />
+    <Property Name="Backfire" Value="RST_BF_DE_Classic_F12_Race_S1" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Classic_F12_Race_S1" />
+    <Property Name="TurboBOV" Value="Supercar" />
+    <Property Name="CentrifugalBOV" Value="Supercar" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Classic" />
+    <Property Name="Limiter" Value="Limiter_Classic" />
+    <Property Name="GearCrack" Value="Sequential" />
+  </Properties>
+</ModularCar>

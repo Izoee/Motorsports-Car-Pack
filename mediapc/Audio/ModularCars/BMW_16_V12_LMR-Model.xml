@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <Properties>
+    <PropertyTemplate Source="Forzavista/ClassicTrackToy" />
+    <PropertyTemplate Source="ForzavistaPositions/Standard" />
+    <PropertyTemplate Source="Chassis/AL_Tight" />
+    <Property Name="CockpitIR" Value="CockpitIR_TrackToy" />
+    <Property Name="CockpitFiltering" Value="0" />
+    <Property Name="Cooling" Value="Cooling_Classic" />
+    <Property Name="WipersFrontExternal" Value="None" />
+    <Property Name="WipersFrontInternal" Value="None" />
+    <Property Name="WipersRearExternal" Value="None" />
+    <Property Name="WipersRearInternal" Value="None" />
+    <Property Name="GearsInternal" Value="ClassicRacePaddle" />
+    <Property Name="GearsExternal" Value="ClassicRacePaddle" />
+    <Property Name="PassbyProfile" Value="Car_V12" />
+    <Property Name="AV_DOOROPEN_L" Value="AV_DOOROPEN_L_ModernConvertible_01" />
+    <Property Name="AV_DOOROPEN_R" Value="AV_DOOROPEN_R_ModernConvertible_01" />
+    <Property Name="AV_TOPCLOSE" Value="AV_TOPCLOSE_ModernConvertible_01" />
+    <Property Name="AV_TOPHIDE" Value="AV_TOPHIDE_ModernConvertible_01" />
+    <Property Name="AV_TOPRETURN" Value="AV_TOPRETURN_ModernConvertible_01" />
+    <Property Name="AV_TOPUP" Value="AV_TOPUP_ModernConvertible_01" />
+    <Property Name="AV_TRUNKDOWN" Value="AV_TRUNKDOWN_ModernConvertible_01" />
+    <Property Name="AV_TRUNKUP" Value="AV_TRUNKUP_ModernConvertible_01" />
+    <Property Name="CockpitSnapshot" Value="1" />
+    <Property Name="CockpitGain" Value="0" />
+  </Properties>
+</ModularCar>

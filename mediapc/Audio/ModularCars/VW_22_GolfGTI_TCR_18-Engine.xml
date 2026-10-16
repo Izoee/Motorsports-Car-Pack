@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.95" Street="0.95" Sport="0.95" Race="0.95" />
+    <Channel Name="Engine" Stock="G_I4TM_European_Rally_4_Eng" Street="G_I4TM_European_Rally_4_Eng" Sport="G_I4TM_European_Rally_4_Eng" Race="G_I4TM_European_Rally_4_Eng" />
+    <Channel Name="Exhaust" Stock="G_I4TM_Asian_TrackToy_1_Exh" Street="G_I4TM_Asian_TrackToy_1_Exh" Sport="G_I4TM_Asian_TrackToy_1_Exh" Race="G_I4TM_Asian_TrackToy_1_Exh" />
+    <Channel Name="Intake" Stock="G_I4TM_European_Race_1_Int" Street="G_I4TM_European_Race_1_Int" Sport="G_I4TM_European_Race_1_Int" Race="G_I4TM_European_Race_1_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_I6V6" />
+    <Channel Name="SuperCSC" Profile="Race" />
+    <Channel Name="SuperDSC" Profile="Race" />
+    <Channel Name="Transmission" Profile="HotHatch" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernI4Rally" />
+    <Property Name="Backfire" Value="RST_BF_DE_Modern_I4_Modern_S3" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Modern_I4_Modern_S3" />
+    <Property Name="TurboBOV" Value="RST_BOV_Race_Antilag" />
+    <Property Name="CentrifugalBOV" Value="Race" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="GearCrack_DSG" />
+  </Properties>
+</ModularCar>

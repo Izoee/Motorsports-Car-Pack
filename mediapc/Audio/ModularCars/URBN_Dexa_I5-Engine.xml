@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.9" Street="0.9" Sport="0.9" Race="0.9" />
+    <Channel Name="Engine" Stock="G_V10NM_European_Supercar_2_Eng" Street="G_V10NM_European_Supercar_2_Eng" Sport="G_V10NM_European_Supercar_2_Eng" Race="G_V10NM_European_Supercar_2_Eng" />
+    <Channel Name="Exhaust" Stock="G_I5TC_European_Rally_1_Exh" Street="G_I5TC_European_Rally_1_Exh" Sport="G_I5TC_European_Rally_1_Exh" Race="G_I5TC_European_Rally_1_Exh" />
+    <Channel Name="Intake" Stock="G_I5TC_European_Sport_1_Exh" Street="G_I5TC_European_Sport_1_Exh" Sport="G_I5TC_European_Sport_1_Exh" Race="G_I5TC_European_Sport_1_Exh" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_Big_SportMax" />
+    <Channel Name="SuperCSC" Profile="TrackToy" />
+    <Channel Name="SuperDSC" Profile="TrackToy" />
+    <Channel Name="Transmission" Profile="TrackToy" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernI5TrackToy" />
+    <Property Name="Backfire" Value="RST_BF_DE_Modern_I5_PandB_S3" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Modern_I5_PandB_S3" />
+    <Property Name="TurboBOV" Value="RST_BOV_I4_Euro_HotHatch" />
+    <Property Name="CentrifugalBOV" Value="TrackToy" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="Sequential" />
+  </Properties>
+</ModularCar>

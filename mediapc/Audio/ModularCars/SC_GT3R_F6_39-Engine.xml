@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.95" Street="0.95" Sport="0.95" Race="0.95" />
+    <Channel Name="Engine" Stock="G_F6NM_European_Race_2_Eng" Street="G_F6NM_European_Race_2_Eng" Sport="G_F6NM_European_Race_2_Eng" Race="G_F6NM_European_Race_2_Eng" />
+    <Channel Name="Exhaust" Stock="G_F6NM_European_Race_2_Exh" Street="G_F6NM_European_Race_2_Exh" Sport="G_F6NM_European_Race_2_Exh" Race="G_F6NM_European_Race_2_Exh" />
+    <Channel Name="Intake" Stock="G_F6NM_European_Race_6_Int" Street="G_F6NM_European_Race_6_Int" Sport="G_F6NM_European_Race_6_Int" Race="G_F6NM_European_Race_6_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_I6V6_Race" />
+    <Channel Name="SuperCSC" Profile="Race" />
+    <Channel Name="SuperDSC" Profile="Race" />
+    <Channel Name="Transmission" Profile="Race" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernF6Race" />
+    <Property Name="Backfire" Value="RST_BF_DE_Neo_F6_Race_S1" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Neo_F6_Race_S1" />
+    <Property Name="TurboBOV" Value="RST_BOV_Race_Antilag" />
+    <Property Name="CentrifugalBOV" Value="Race" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="Sequential" />
+  </Properties>
+</ModularCar>

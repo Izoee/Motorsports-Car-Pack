@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.86" Street="0.86" Sport="0.86" Race="0.86" />
+    <Channel Name="Engine" Stock="G_V6TTM_Asian_Sport_4_Eng" Street="G_V6TTM_Asian_Sport_4_Eng" Sport="G_V6TTM_Asian_Sport_4_Eng" Race="G_V6TTM_Asian_Sport_4_Eng" />
+    <Channel Name="Exhaust" Stock="G_V6TTM_European_Supercar_2_Exh" Street="G_V6TTM_European_Supercar_2_Exh" Sport="G_V6TTM_European_Supercar_2_Exh" Race="G_V6TTM_European_Supercar_2_Exh" />
+    <Channel Name="Intake" Stock="G_V6NM_Asian_Sport_2_Int" Street="G_V6NM_Asian_Sport_2_Int" Sport="G_V6NM_Asian_Sport_2_Int" Race="G_V6NM_Asian_Sport_2_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_Small" />
+    <Channel Name="SuperCSC" Profile="Race" />
+    <Channel Name="SuperDSC" Profile="Race" />
+    <Channel Name="Transmission" Profile="Race" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernV6Race" />
+    <Property Name="Backfire" Value="RST_BF_JP_Modern_V6_PandB_S3" />
+    <Property Name="AntiLag" Value="RST_BF_JP_Modern_V6_PandB_S3" />
+    <Property Name="TurboBOV" Value="RST_BOV_V6_Asian_Psht" />
+    <Property Name="CentrifugalBOV" Value="Race" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="GearCrack_Sequential" />
+  </Properties>
+</ModularCar>

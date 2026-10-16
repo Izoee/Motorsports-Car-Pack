@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="0.95" Street="0.95" Sport="0.95" Race="0.95" />
+    <Channel Name="Engine" Stock="G_V8NM_European_Hypercar_1_Eng" Street="G_V8NM_European_Hypercar_1_Eng" Sport="G_V8NM_European_Hypercar_1_Eng" Race="G_V8NM_European_Hypercar_1_Eng" />
+    <Channel Name="Exhaust" Stock="G_V8NM_European_Race_2_Exh" Street="G_V8NM_European_Race_2_Exh" Sport="G_V8NM_European_Race_2_Exh" Race="G_V8NM_European_Race_2_Exh" />
+    <Channel Name="Intake" Stock="G_V8NM_UK_Race_5_Int" Street="G_V8NM_UK_Race_5_Int" Sport="G_V8NM_UK_Race_5_Int" Race="G_V8NM_UK_Race_5_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="TrackToy" />
+    <Channel Name="SuperCSC" Profile="TrackToy" />
+    <Channel Name="SuperDSC" Profile="TrackToy" />
+    <Channel Name="Transmission" Profile="Electric_Hypercar" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernF6Race" />
+    <Property Name="Backfire" Value="RST_BF_DE_Modern_V8_Modern_S2" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Modern_V8_Modern_S2" />
+    <Property Name="TurboBOV" Value="TrackToy" />
+    <Property Name="CentrifugalBOV" Value="TrackToy" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="Sequential" />
+  </Properties>
+</ModularCar>

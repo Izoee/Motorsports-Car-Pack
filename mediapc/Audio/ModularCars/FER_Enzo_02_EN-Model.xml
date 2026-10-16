@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <Properties>
+    <PropertyTemplate Source="Forzavista/ModernSupercar" />
+    <PropertyTemplate Source="ForzavistaPositions/Standard" />
+    <PropertyTemplate Source="Chassis/AL_Premium" />
+    <Property Name="CockpitIR" Value="CockpitIR_SportsCar" />
+    <Property Name="CockpitFiltering" Value="0.9" />
+    <Property Name="Cooling" Value="Cooling_Modern" />
+    <Property Name="WipersFrontExternal" Value="Wipers_ModernFrontExternal" />
+    <Property Name="WipersFrontInternal" Value="Wipers_ModernFrontInternal" />
+    <Property Name="WipersRearExternal" Value="None" />
+    <Property Name="WipersRearInternal" Value="None" />
+    <Property Name="GearsInternal" Value="ModernSupercarPaddle" />
+    <Property Name="GearsExternal" Value="ModernSupercarPaddle" />
+    <Property Name="PassbyProfile" Value="Car_V12" />
+    <Property Name="AV_DOOROPEN_L" Value="AV_DOOROPEN_L_ModernConvertible_01" />
+    <Property Name="AV_DOOROPEN_R" Value="AV_DOOROPEN_R_ModernConvertible_01" />
+    <Property Name="CockpitSnapshot" Value="4" />
+    <Property Name="CockpitGain" Value="0" />
+  </Properties>
+</ModularCar>

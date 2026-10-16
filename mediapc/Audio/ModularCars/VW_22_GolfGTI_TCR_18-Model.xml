@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <Properties>
+    <PropertyTemplate Source="Forzavista/ModernRace" />
+    <PropertyTemplate Source="ForzavistaPositions/Standard" />
+    <PropertyTemplate Source="Chassis/AL_Tight" />
+    <Property Name="CockpitIR" Value="CockpitIR_Race" />
+    <Property Name="CockpitFiltering" Value="0.8" />
+    <Property Name="Cooling" Value="Cooling_Modern" />
+    <Property Name="WipersFrontExternal" Value="Wipers_ModernFrontExternal" />
+    <Property Name="WipersFrontInternal" Value="Wipers_ModernFrontInternal" />
+    <Property Name="WipersRearExternal" Value="None" />
+    <Property Name="WipersRearInternal" Value="None" />
+    <Property Name="GearsInternal" Value="ModernSportsCarPaddle" />
+    <Property Name="GearsExternal" Value="ModernSportsCarPaddle" />
+    <Property Name="PassbyProfile" Value="Car_I4" />
+    <Property Name="CockpitSnapshot" Value="1" />
+    <Property Name="CockpitGain" Value="0" />
+    <Property Name="IdleRPM" Value="938" />
+  </Properties>
+</ModularCar>

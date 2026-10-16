@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModularCar>
+  <GranularEngine>
+    <Parameter Name="RPMScalar" Stock="1" Street="1" Sport="1" Race="1" />
+    <Channel Name="Engine" Stock="D_I4TC_Asian_Truck_1_Eng" Street="D_I4TC_Asian_Truck_1_Eng" Sport="D_I4TC_Asian_Truck_1_Eng" Race="D_I4TC_Asian_Truck_1_Eng" />
+    <Channel Name="Exhaust" Stock="D_I4TC_European_Offroad_1_Exh" Street="D_I4TC_European_Offroad_1_Exh" Sport="D_I4TC_European_Offroad_1_Exh" Race="D_I4TC_European_Offroad_1_Exh" />
+    <Channel Name="Intake" Stock="D_V8NC_American_Truck_1_Int" Street="D_V8NC_American_Truck_1_Int" Sport="D_V8NC_American_Truck_1_Int" Race="D_V8NC_American_Truck_1_Int" />
+    <Channel Name="InternalL" />
+    <Channel Name="InternalR" />
+    <Channel Name="Turbo" Profile="RST_TBO_I4I5_Race" />
+    <Channel Name="SuperCSC" Profile="HotHatch" />
+    <Channel Name="SuperDSC" Profile="HotHatch" />
+    <Channel Name="Transmission" Profile="Race" />
+  </GranularEngine>
+  <Properties>
+    <Property Name="EngineBank" Value="GS_ModularCar" />
+    <Property Name="Burbles" Value="ModernI4Race" />
+    <Property Name="Backfire" Value="RST_BF_DE_Modern_F4_Modern_S3" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Modern_F4_Modern_S3" />
+    <Property Name="TurboBOV" Value="Diesel" />
+    <Property Name="CentrifugalBOV" Value="HotHatch" />
+    <Property Name="ThrottleBody" Value="ThrottleBody_Classic" />
+    <Property Name="Limiter" Value="Limiter_Modern" />
+    <Property Name="GearCrack" Value="GearCrack_DSG" />
+  </Properties>
+</ModularCar>
