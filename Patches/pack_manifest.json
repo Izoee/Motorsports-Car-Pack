@@ -32,7 +32,16 @@
       "requires": []
     },
     {
-      "order": 3,
+      "file": "FER_V12_65_engine_inserts.sql",
+      "description": "Engine 9006: 6.5L V12 (Forza Motorsport swap engine 3479, MediaName FER_Enzo_02_EN, sound = stock Enzo pair under FER_Enzo_02_EN) - swap on the Senna GTR, Chiron, Veyron; part rows $0. Was missing from this list (found by the Pack Manager dry run 2026-10-16).",
+      "adds": [
+        "engine 9006"
+      ],
+      "requires": [],
+      "order": 3
+    },
+    {
+      "order": 4,
       "file": "POR_9_911GT3R_FM_23.sql",
       "description": "NEW car 9500 POR_9_911GT3R_FM_23 (media name changed 2026-09-26; FM body) (911 GT3 R '23, Autoshow $0): stock 935 rows cloned + GT3 R deltas + own drivetrain 4029 + ladder 4095/420/2886/3346/9002/3919/2420/46 at price 0 + own wheel 14678 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
       "adds": [
@@ -46,7 +55,7 @@
       ]
     },
     {
-      "order": 4,
+      "order": 5,
       "file": "POR_5_Penske963_24.sql",
       "description": "NEW car 9501 POR_5_Penske963_24 (#5 Porsche Penske Motorsport 963 '24, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 4063 4.6L V8-TT, drivetrain 3998, 7-speed, wheel 14600, brakes); FM aero (drag x0.70 rule, downforce LMP factors). ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
       "adds": [
@@ -58,7 +67,7 @@
       "requires": []
     },
     {
-      "order": 5,
+      "order": 6,
       "file": "POR_2_919Hybrid_17.sql",
       "description": "NEW car 9502 POR_2_919Hybrid_17 (#2 Porsche Team 919 Hybrid '17, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 2905, drivetrain, wheel 13049, brakes); FM aero rule; Exige's carried swap dropped. ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
       "adds": [
@@ -69,7 +78,7 @@
       "requires": []
     },
     {
-      "order": 6,
+      "order": 7,
       "file": "AUD_17_Rotek_TTRS_16.sql",
       "description": "NEW car 9503 AUD_17_Rotek_TTRS_16 (#17 Rotek Racing TT RS '16, Autoshow $0): DAT_269_240Z_72 baseline rows (handling; differential from the Integra WTA FWD row) + identity + FM geometry overlay; FM powertrain (engine 2990, FWD, differential re-based on the Integra WTA row); FM aero rule. ONE file per car (gen_fm_car.py).; section 5: URBN Dexa I5 swap (engine 9600, 2.3L I5-T, redline 8300 / curve end 8600 on the DAZA curve, 1250 hp with the stage-3 turbo stock; nodes = Restrictor Plate +100/+200 hp, stage-4 turbo) at level 1, price 0 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
       "adds": [
@@ -80,17 +89,19 @@
       "requires": []
     },
     {
-      "order": 7,
+      "order": 8,
       "file": "MCL_7_SennaGTR_19.sql",
       "description": "NEW car 9504 MCL_7_SennaGTR_19 (McLaren Senna GTR '19, Autoshow $0): Essenza SCV12 baseline rows + identity + FM geometry overlay; FM powertrain (engine 3287 4.0L V8-TT, ref 3614 for FH6-only columns; differential re-based on the Essenza row); aero: drag x0.70, downforce on the FXX K Evo FM->FH6 ratios (x1.046/x1.554, clamps x3.935/x3.280). ONE file per car (gen_fm_car.py).",
       "adds": [
         "car 9504",
         "engine 3287"
       ],
-      "requires": []
+      "requires": [
+        "engine 9006"
+      ]
     },
     {
-      "order": 8,
+      "order": 9,
       "file": "VW_22_GolfGTI_TCR_18.sql",
       "description": "NEW car 9505 VW_22_GolfGTI_TCR_18 (#22 Experion Racing Golf GTI '18, Autoshow $0): 240Z baseline rows (handling, as the TT RS) + identity + FM geometry overlay; FM powertrain (engine 3293 2.0L I4-T, FWD; ref 3545 Golf R '19; differential re-based on the Integra WTA FWD row); aero rule (LMP ratios, as the TT RS); level-2 shared drivetrain cloned car-local (95052); section 6 (Dexa swap) REMOVED 2026-09-28. ONE file per car (gen_fm_car.py). Section 7 (2026-09-28) = URBN Spore I4TD (engine 9601, level 1): AHU 1.9 TDI stroked to 2.2 L, user-authored curve, 1100 hp with the stage-3 turbo, plates +150/+300, redline 7500/curve 8000. Section 8 (2026-09-29) = race brakes upgrade level 3 (PG Golf R '19 level-2->3 ratios), $0.",
       "adds": [
@@ -102,7 +113,7 @@
       "requires": []
     },
     {
-      "order": 9,
+      "order": 10,
       "file": "ACU_36_NSXGT3_18.sql",
       "description": "NEW car 9506 ACU_36_NSXGT3_18 (#36 NSX GT3 '18, Autoshow $0): R8 LMS '09 baseline rows + identity + FM geometry overlay; FM powertrain (engine 3372 3.5L V6-TT, ref 3905 NSX Type S; differential re-based on the R8 LMS row); section 6 GT3 spec overrides: weight balance 0.43 (FH5 Mosler MT900 GT3), body aero + tunable aero ranges + tyre sizes/brand/pressures from the FH5 Mercedes-AMG GT3 '18; level-2 shared drivetrain cloned car-local (95062). ONE file per car. Section 7 (2026-09-29) = race brakes upgrade level 3 = FH5 AMG GT3 '18 race row verbatim, $0.",
       "adds": [
@@ -111,7 +122,7 @@
       "requires": []
     },
     {
-      "order": 10,
+      "order": 11,
       "file": "AUD_R8GT3_18.sql",
       "description": "NEW car 9507 AUD_R8GT3_18 (#44 R8 LMS GT3 '18, Autoshow $0): R8 LMS '09 baseline rows + identity + FM geometry overlay; FM powertrain (engine 3361 5.2L V10, ref 659; differential re-based on the R8 LMS row); section 6 GT3 spec overrides (Mosler balance 0.43, AMG GT3 '18 aero + tunable ranges + tyre sizes/brand/pressures); section 7 race brakes upgrade by PG's rule; level-2 shared drivetrain cloned car-local (95072). ONE file per car.",
       "adds": [
@@ -120,7 +131,7 @@
       "requires": []
     },
     {
-      "order": 11,
+      "order": 12,
       "file": "AUD_01_RS3LMS_TCR_18.sql",
       "description": "NEW car 9508 AUD_01_RS3LMS_TCR_18 (#1 Audi Sport RS 3 LMS '18, Autoshow $0): Integra WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 2983 2.0L I4-T, FWD, ref 3545 Golf R '19; differential re-based on the Integra row); section 6 TCR spec overrides (FH5 Elantra N TCR '21 aero + tunable ranges + tyres/pressures, FM balance 0.59 kept); section 7 race brakes by PG's rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; level-2 shared drivetrain cloned car-local (95082). ONE file per car.",
       "adds": [
@@ -129,7 +140,7 @@
       "requires": []
     },
     {
-      "order": 12,
+      "order": 13,
       "file": "AUD_2_R18_etron_14.sql",
       "description": "NEW car 9509 AUD_2_R18_etron_14 (#2 Audi Team Joest R18 e-tron quattro '14, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 2401 4.0L V6 turbodiesel, Diesel flag kept, AWD hybrid; ref 3905; differential re-based on the 918 Spyder row); aero rule (LMP ratios as the 963); FM stock brakes already race level; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; level-2 shared drivetrain cloned car-local (95092). ONE file per car.",
       "adds": [
@@ -138,7 +149,7 @@
       "requires": []
     },
     {
-      "order": 13,
+      "order": 14,
       "file": "AUD_4_90_IMSA_GTO_89.sql",
       "description": "new car 9510: FM Audi 90 quattro IMSA GTO (240Z rows, Skyline WTA AWD diff, 240Z RWD swap level 1, Dexa swap, race brakes, gearbox ladder)",
       "adds": [
@@ -147,7 +158,7 @@
       "requires": []
     },
     {
-      "order": 14,
+      "order": 15,
       "file": "AST_7_V12VantageGT3_17.sql",
       "description": "new car 9511: FM Aston Martin V12 Vantage GT3 (Vulcan AMR Pro rows, FH5 Lexus RC F GT3 aero + tyres, race brakes, gearbox ladder)",
       "adds": [
@@ -156,7 +167,7 @@
       "requires": []
     },
     {
-      "order": 15,
+      "order": 16,
       "file": "AST_18_AMR1_89.sql",
       "description": "new car 9512: FM Aston Martin AMR1 (787B rows, Group C aero conversion, race brakes, gearbox ladder)",
       "adds": [
@@ -165,7 +176,7 @@
       "requires": []
     },
     {
-      "order": 16,
+      "order": 17,
       "file": "BEN_17_BentleyGT3_14.sql",
       "description": "new car 9513: FM Bentley Continental GT3 (Vulcan AMR Pro rows, FH5 Cadillac ATS-V.R GT3 aero + tyres, race brakes, gearbox ladder)",
       "adds": [
@@ -174,25 +185,29 @@
       "requires": []
     },
     {
-      "order": 17,
+      "order": 18,
       "file": "BUG_ChironFM_17.sql",
       "description": "new car 9514: Bugatti Chiron (FM body, installed Chiron rows, W16 stock, no swaps, Bugatti make 58)",
       "adds": [
         "car 9514"
       ],
-      "requires": []
+      "requires": [
+        "engine 9006"
+      ]
     },
     {
-      "order": 18,
+      "order": 19,
       "file": "BUG_VeyronSS_11.sql",
       "description": "new car 9515: Bugatti Veyron Super Sport (FM body, FH5 rows, W16 stock = pack engine 9004, no swaps)",
       "adds": [
         "car 9515"
       ],
-      "requires": []
+      "requires": [
+        "engine 9006"
+      ]
     },
     {
-      "order": 19,
+      "order": 20,
       "file": "BEN_7_Speed8_LM_03.sql",
       "description": "2003 Bentley #7 Team Bentley Speed 8: Exige WTA rows, FM powertrain 252 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -201,7 +216,7 @@
       "requires": []
     },
     {
-      "order": 20,
+      "order": 21,
       "file": "BMW_25_M_Hybrid_23.sql",
       "description": "2023 BMW #25 BMW M Team RLL M Hybrid V8: Exige WTA rows, FM powertrain 4056 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -210,7 +225,7 @@
       "requires": []
     },
     {
-      "order": 21,
+      "order": 22,
       "file": "BMW_M8GTE_18.sql",
       "description": "2018 BMW #1 BMW M Motorsport M8 GTE: FH5 rows, own FH5 engine as pack engine 9005, FH5 engine swaps dropped, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -219,7 +234,7 @@
       "requires": []
     },
     {
-      "order": 22,
+      "order": 23,
       "file": "BMW_24_M6_17.sql",
       "description": "2017 BMW #24 BMW Team RLL M6 GTLM: FM powertrain 2955 (ref engine 3650) + FM geometry on the FH5 AMG GT3 baseline rows, M8 GTE aero ratios, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -228,7 +243,7 @@
       "requires": []
     },
     {
-      "order": 23,
+      "order": 24,
       "file": "BMW_16_V12_LMR.sql",
       "description": "1999 BMW #16 V12 LMR: 787B rows, FM powertrain 2430 (ref engine 92), 787B aero ratios + wing/splitter rule, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -237,7 +252,7 @@
       "requires": []
     },
     {
-      "order": 24,
+      "order": 25,
       "file": "BMW_M1_79.sql",
       "description": "1979 BMW #6 M1 Procar: M1 '81 rows, FM powertrain 2231 (ref engine 475), Skyline '84 aero ratios, PG race-wing rows as stock aero, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -246,7 +261,7 @@
       "requires": []
     },
     {
-      "order": 25,
+      "order": 26,
       "file": "BMW_25_30_CSL_75.sql",
       "description": "1975 BMW #25 3.0 CSL: 2002 Turbo rows, FM powertrain 2240 (ref engine 729), PG 2002 race-wing rows as stock aero, race brakes by rule, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -255,7 +270,7 @@
       "requires": []
     },
     {
-      "order": 26,
+      "order": 27,
       "file": "BRA_BT62_GT_19.sql",
       "description": "2019 Brabham BT62: FH5 rows, pack engine 9007 (FH5 5.4L V8), FH5 swaps kept, race tyre layout, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -264,7 +279,7 @@
       "requires": []
     },
     {
-      "order": 27,
+      "order": 28,
       "file": "BRM_14_P201.sql",
       "description": "1974 BRM #14 P201: Mono rows, FM powertrain 3398 (ref engine 2168), FM stock aero rows, race brakes by rule, gearbox ladder 7-11, all car-local rows free",
       "adds": [
@@ -273,7 +288,7 @@
       "requires": []
     },
     {
-      "order": 28,
+      "order": 29,
       "file": "POR_1_GT3R_27.sql",
       "description": "NEW car 9525 POR_1_GT3R_27 (911 Mission RSR): FH5 AMG GT3 handling baseline, GT3 R weight / drivetrain / rims / bucket, own engine 9010 (GT3 RS '16 4.0 F6 curve @ 830 hp + GT3 R restrictor tree), GT3 R interior swap (v91), camera row = GT3 R's; car-local $0",
       "adds": [
@@ -286,7 +301,7 @@
       ]
     },
     {
-      "order": 29,
+      "order": 30,
       "file": "MER_71_AMG_GT3_TEAM_18.sql",
       "description": "NEW car 9526 MER_71_AMG_GT3_TEAM_18 (#71 Mercedes-AMG GT3 '18, Autoshow $0): FH5 AMG GT3 rows (3197) + FM body on the GT Black Series WP donor; pack engine 9009 = FH5 engine 3329 (6.2L V8) stock, FH5 swaps 2292 / 468 kept $0; car-local drivetrains 95260 (FH5 3275) / 95262 (AWD conversion clone); FH5 wheel 13495; race tyre layout; gearbox ladder 7-11; section 7 (2026-10-16): swaps AMG One V6-T 3780 (L3) + GT Black Series WP V8-TT 4410 (L4), $0",
       "adds": [
