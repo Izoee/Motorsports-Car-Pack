@@ -13,9 +13,9 @@
     <Property Name="WipersRearInternal" Value="None" />
     <Property Name="GearsInternal" Value="ModernTrackToyPaddle" />
     <Property Name="GearsExternal" Value="ModernTrackToyPaddle" />
-    <Property Name="PassbyProfile" Value="Car_V8" />
+    <Property Name="PassbyProfile" Value="Car_F6" />
     <Property Name="CockpitSnapshot" Value="1" />
     <Property Name="CockpitGain" Value="0" />
-    <Property Name="IdleRPM" Value="1100" />
+    <Property Name="IdleRPM" Value="918" />
   </Properties>
 </ModularCar>
