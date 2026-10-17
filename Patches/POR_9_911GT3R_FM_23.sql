@@ -185,16 +185,15 @@ INSERT INTO [List_UpgradeDrivetrainTransmission] ([Id], [DrivetrainID], [Level],
 INSERT INTO [List_UpgradeDrivetrainTransmission] ([Id], [DrivetrainID], [Level], [IsStock], [ManufacturerID], [MassDiff], [Price], [MomentInertia], [GearShiftTime], [FinalDriveRatio], [NumGears], [GearRatio0], [GearRatio1], [GearRatio2], [GearRatio3], [GearRatio4], [GearRatio5], [GearRatio6], [GearRatio7], [GearRatio8], [CVTShiftTime], [GearRatio9], [GearRatio10], [releaseOrder], [RequiresClutchWhenShifting]) VALUES (4029007, 4029, 10, 0, 0, 8.0, 3000, 0.0078, 0.02, 5.5323, 11, -3.154, 4.17, 2.73, 1.94, 1.49, 1.21, 1.04, 0.92, 0.84, -1.0, 0.78, 0.72, 0, 0);
 INSERT INTO [List_UpgradeDrivetrainTransmission] ([Id], [DrivetrainID], [Level], [IsStock], [ManufacturerID], [MassDiff], [Price], [MomentInertia], [GearShiftTime], [FinalDriveRatio], [NumGears], [GearRatio0], [GearRatio1], [GearRatio2], [GearRatio3], [GearRatio4], [GearRatio5], [GearRatio6], [GearRatio7], [GearRatio8], [CVTShiftTime], [GearRatio9], [GearRatio10], [releaseOrder], [RequiresClutchWhenShifting]) VALUES (4029008, 4029, 11, 0, 0, -4.0, 3000, 0.0078, 0.02, 3.9833, 5, -3.154, 2.89, 1.99, 1.35, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 6, 0);
 
--- ===== 3. engine ladder (user-specified, prices 0) and own stock wheel, from the FH5-based build =====
+-- ===== 3. engine ladder (user 2026-10-17: 919 2.0 V4-T 2905, GT2 RS 3.8 F6TT 2886, WTAC 3.9 F6 9002, GT3 RS '18 4.0 F6 3203, 918 4.6 V8 hybrid 2420, Carrera GT 5.7 V10 46; cylinders then displacement, $0) and own stock wheel =====
 DELETE FROM [List_UpgradeEngine] WHERE [Ordinal]=9500;
 INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500000, 9500, 0, 4095, 1, 39, 0, 0.0, 0.0, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500001, 9500, 1, 420, 0, 39, 0, 62.0, -0.012, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500001, 9500, 1, 2905, 0, 39, 0, -113.0, 0.022, 1.0, 1.0, 0);
 INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500002, 9500, 2, 2886, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500003, 9500, 3, 3346, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500004, 9500, 4, 9002, 0, 39, 0, 32.0, -0.0062, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500005, 9500, 5, 3919, 0, 39, 0, 42.0, -0.0082, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500006, 9500, 6, 2420, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500007, 9500, 7, 46, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500003, 9500, 3, 9002, 0, 39, 0, 32.0, -0.0062, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500004, 9500, 4, 3203, 0, 39, 0, 42.0, -0.0082, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500005, 9500, 5, 2420, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500006, 9500, 6, 46, 0, 39, 0, 57.0, -0.0111, 1.0, 1.0, 0);
 INSERT INTO [List_Wheels] ([ID], [MediaName], [DisplayName], [PartManufacturerID], [Mass], [MassLevel], [Price], [IsStock], [Type], [Lip], [CenterCap], [Logo], [ActualColor], [WheelColor], [RGB], [BrakeDrawOffset], [IconPath], [releaseOrder]) VALUES (14678, 'POR_9_911GT3R_FM_23', '911 GT3 R ''24', 238, 37.0, 4, 0, 1, '', 0, 0, 0, '', '', 0, 0.0, 'POR_9_911GT3R_FM_23', 0);
 UPDATE [Data_Car] SET [StockWheelID]=14678 WHERE [Id]=9500;
 
@@ -247,8 +246,7 @@ UPDATE [List_UpgradeEngineTurboTwin] SET [Price]=0 WHERE [EngineID]=4095;
 UPDATE [List_UpgradeEngineValves] SET [Price]=0 WHERE [EngineID]=4095;
 
 -- ---------- greenlit engine swaps (user 2026-10-04): source-game swaps the import had dropped; car-local rows, $0 ----------
--- FH5 911 GT3 R swap: Racing V12 (FER_F50GT_96)
-INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9500008, 9500, 8, 468, 0, 39, 0, -47.0, 0.009, 1.0, 1.0, 0);
+-- (Racing V12 swap removed 2026-10-17: ladder re-specified by the user)
 
 -- ---------- re-based on the FH5 GT3 R rows (user 2026-10-04): the stock-935 leftovers of the original clone replaced by FH5 car 3951's rows ----------
 -- kept: CameraOverrides row, engine swaps, $0 prices, Autoshow availability, thumbnail / ModelId, ClassID (FH6 PI band), FH6 tyre model names
