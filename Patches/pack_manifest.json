@@ -311,6 +311,15 @@
         "swap 9526004 -> engine 4410"
       ],
       "requires": []
+    },
+    {
+      "order": 31,
+      "file": "CAD_01_VSeriesR_23.sql",
+      "description": "NEW car 9527 CAD_01_VSeriesR_23 (#01 Cadillac Racing V-Series.R '23, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 4009 5.5L V8, 7-speed, RWD hybrid); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95272. ONE file per car.",
+      "adds": [
+        "car 9527"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1054,6 +1063,31 @@
       },
       "status": "v7 INSTALLED (test pending)",
       "scripts": "Z:\\Forza\\MyMods\\AMG GT3 Import\\scripts (make_gen_amggt3.py -> gen_amggt3.py from Tools/active/gen_bt62.py; body: convert_car.py FM + fm_post_pipeline.py)"
+    },
+    {
+      "id": 9527,
+      "media": "CAD_01_VSeriesR_23",
+      "name": "#01 Cadillac Racing V-Series.R",
+      "source": "Forza Motorsport cad_01_vlmdh_23 (FM id 3866); body donor + DB baseline LOT_00_ExigeWTA_18 (the 963 recipe); FM engine 4009 (5.5L V8 NA) as stock via ref engine 3904 (Corvette Z06 '23 5.5 V8)",
+      "files": [
+        "mediapc/Cars/CAD_01_VSeriesR_23.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9527_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Engine.xml (user-authored 5.5 V8 sound, 2026-10-17)",
+        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Model.xml (user-authored 5.5 V8 sound, 2026-10-17)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/cad_01_vseriesr_23.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/cad_01_vseriesr_23/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/cad_01_vseriesr_23/Scene/animations/Mojo/clip/carclips_9527.clipd"
+      ],
+      "build": {
+        "zip": "CAD_01_VSeriesR_23.v7",
+        "md5": "7bcd87d550857255f274b2d2ea79d690",
+        "pipeline": "convert_car.py (FM, cad_01_vlmdh_23 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9527 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (0.182, 0.101, 0.590) -> (-0.380, 0.395, 1.017), q (0.22, 0.21, -0.65, 0.69) -> v3: carLocator_seatCamLF ['-0.155981', '0.739667', '0.277223'] -> ['-0.155981', '0.639667', '0.277223']; carLocator_seatCamRF ['0.263119', '0.799195', '0.277223'] -> ['0.263119', '0.699195', '0.277223'] -> v4: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.380, 0.395, 1.017) -> (-0.300, 0.325, 1.117), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.395, 1.017) -> (-0.140, 0.325, 1.117), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.373, 0.987) -> (-0.181, 0.303, 1.087), q (-0.61, -0.70, -0.28, 0.24) -> v5: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.300, 0.325, 1.117) -> (-0.300, 0.325, 1.267), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.325, 1.117) -> (-0.140, 0.325, 1.267), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.303, 1.087) -> (-0.181, 0.303, 1.237), q (-0.61, -0.70, -0.28, 0.24) -> v6: steering_pivot_offset.OffsetY 0.0110 -> -0.0090; steering_ik_scale.ScaleX 1.0200 -> 0.9686; steering_ik_scale.ScaleY 1.0200 -> 0.9686; steering_ik_scale.ScaleZ 1.0200 -> 0.9686; carLocator_seatCamLF ['-0.155981', '0.639667', '0.277223'] -> ['-0.155981', '0.639667', '0.427223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.277223'] -> ['0.263119', '0.699195', '0.427223'] -> v7: carLocator_seatCamLF ['-0.155981', '0.639667', '0.427223'] -> ['-0.155981', '0.639667', '0.477223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.427223'] -> ['0.263119', '0.699195', '0.477223']"
+      },
+      "status": "v7 INSTALLED 2026-10-17 (user dials: feet v2/v4/v5, camera v3/v6/v7, hands v6; user audio)"
     }
   ],
   "shared_files": [
