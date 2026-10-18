@@ -320,6 +320,15 @@
         "car 9527"
       ],
       "requires": []
+    },
+    {
+      "order": 32,
+      "file": "CAD_31_DPiVR_WR_21.sql",
+      "description": "NEW car 9528 CAD_31_DPiVR_WR_21 (#31 Whelen Racing DPi-V.R '21, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 3799 5.5L V8, 6-speed, RWD); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95282. ONE file per car.",
+      "adds": [
+        "car 9528"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -330,7 +339,7 @@
       "source": "Forza Motorsport por_00_911gt3r_24 body (was FH5 POR_00_911GT3R_24); DB row from the FH5 transplant; body donor POR_00_CaymanWTA_05",
       "files": [
         "mediapc/Cars/POR_9_911GT3R_FM_23.zip",
-        "mediapc/Audio/ModularCars/POR_9_911GT3R_FM_23-Engine.xml (user-authored; audio override is keyed by the CAR media name)",
+        "mediapc/Audio/ModularCars/POR_9_911GT3R_FM_23-Engine.xml (user-authored; audio override is keyed by the CAR media name) ; stock engine 4095 is ENGINE-keyed POR_00_911GT3R_24 (shared_files)",
         "mediapc/Audio/ModularCars/POR_9_911GT3R_FM_23-Model.xml (user-authored)",
         "mediapc/Stripped/RC0/Thumbnail_9500_Big.swatchbin"
       ],
@@ -998,8 +1007,8 @@
       "source": "Z:/Forza/Mods/POR_911GT3R_27.zip (user's mod of FH6 POR_911GT3_21, 3667) renamed/re-keyed to POR_1_GT3R_27 ordinal 9525; rows: FH5 AMG GT3 (slot 4265) baseline, GT3 R weight/drivetrain/rims/bucket/sound, engine 9010 = GT3 RS '16 4.0 F6 curve @ 830 hp + GT3 R restrictor tree, redline 9500; track outers 2.05/2.00",
       "files": [
         "mediapc/Cars/POR_1_GT3R_27.zip",
-        "mediapc/Audio/ModularCars/POR_1_GT3R_27-Engine.xml (= pack GT3 R pair, the 4.2 F6 stock sound)",
-        "mediapc/Audio/ModularCars/POR_1_GT3R_27-Model.xml (= pack GT3 R pair, the 4.2 F6 stock sound)",
+        "mediapc/Audio/ModularCars/POR_1_GT3R_27-Engine.xml (car-keyed pair, the old Mission RSR stock sound; the stock 4.2 F6 sound is the ENGINE-keyed shared pair POR_00_911GT3R_24 = Data_Engine 4095 MediaName, see shared_files)",
+        "mediapc/Audio/ModularCars/POR_1_GT3R_27-Model.xml (car-keyed pair)",
         "mediapc/Stripped/RC0/Thumbnail_9525_Big.swatchbin",
         "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Engine.xml (4.8 F8 TT swap sound, user-authored 2026-10-17 from the 918 Spyder)",
         "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Model.xml (4.8 F8 TT swap sound)"
@@ -1088,6 +1097,31 @@
         "pipeline": "convert_car.py (FM, cad_01_vlmdh_23 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9527 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (0.182, 0.101, 0.590) -> (-0.380, 0.395, 1.017), q (0.22, 0.21, -0.65, 0.69) -> v3: carLocator_seatCamLF ['-0.155981', '0.739667', '0.277223'] -> ['-0.155981', '0.639667', '0.277223']; carLocator_seatCamRF ['0.263119', '0.799195', '0.277223'] -> ['0.263119', '0.699195', '0.277223'] -> v4: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.380, 0.395, 1.017) -> (-0.300, 0.325, 1.117), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.395, 1.017) -> (-0.140, 0.325, 1.117), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.373, 0.987) -> (-0.181, 0.303, 1.087), q (-0.61, -0.70, -0.28, 0.24) -> v5: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.300, 0.325, 1.117) -> (-0.300, 0.325, 1.267), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.325, 1.117) -> (-0.140, 0.325, 1.267), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.303, 1.087) -> (-0.181, 0.303, 1.237), q (-0.61, -0.70, -0.28, 0.24) -> v6: steering_pivot_offset.OffsetY 0.0110 -> -0.0090; steering_ik_scale.ScaleX 1.0200 -> 0.9686; steering_ik_scale.ScaleY 1.0200 -> 0.9686; steering_ik_scale.ScaleZ 1.0200 -> 0.9686; carLocator_seatCamLF ['-0.155981', '0.639667', '0.277223'] -> ['-0.155981', '0.639667', '0.427223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.277223'] -> ['0.263119', '0.699195', '0.427223'] -> v7: carLocator_seatCamLF ['-0.155981', '0.639667', '0.427223'] -> ['-0.155981', '0.639667', '0.477223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.427223'] -> ['0.263119', '0.699195', '0.477223']"
       },
       "status": "v7 INSTALLED 2026-10-17 (user dials: feet v2/v4/v5, camera v3/v6/v7, hands v6; user audio)"
+    },
+    {
+      "id": 9528,
+      "media": "CAD_31_DPiVR_WR_21",
+      "name": "#31 Whelen Racing DPi-V.R",
+      "source": "Forza Motorsport cad_31_dpivr_21 (FM id 3669); body donor + DB baseline LOT_00_ExigeWTA_18 (the 963 recipe); FM engine 3799 (5.5L V8 NA) as stock via ref engine 3904 (Corvette Z06 '23 5.5 V8)",
+      "files": [
+        "mediapc/Cars/CAD_31_DPiVR_WR_21.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9528_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Engine.xml (user-authored 2026-10-17, synced from the game folder)",
+        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Model.xml (user-authored 2026-10-17, synced from the game folder)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/cad_31_dpivr_wr_21.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/cad_31_dpivr_wr_21/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/cad_31_dpivr_wr_21/Scene/animations/Mojo/clip/carclips_9528.clipd"
+      ],
+      "build": {
+        "zip": "CAD_31_DPiVR_WR_21.v6",
+        "md5": "c265718bd10018e9b18545ba85045bcb",
+        "pipeline": "convert_car.py (FM, cad_31_dpivr_21 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9528 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: carLocator_seatCamLF ['-0.176383', '0.408072', '0.437861'] -> ['-0.176383', '0.558072', '0.437861']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '1.142123', '-0.010732'] -> v3: steering_pivot_offset.OffsetY 0.0110 -> -0.0190; steering_ik_scale.ScaleX 1.0200 -> 1.0715; steering_ik_scale.ScaleY 1.0200 -> 1.0715; steering_ik_scale.ScaleZ 1.0200 -> 1.0715; carLocator_seatCamLF ['-0.176383', '0.558072', '0.437861'] -> ['-0.176383', '0.658072', '0.437861']; carLocator_seatCamRF ['0.380000', '1.142123', '-0.010732'] -> ['0.380000', '1.242123', '-0.010732'] -> v4: steering_ik_scale.ScaleX 1.0715 -> 1.1128; steering_ik_scale.ScaleY 1.0715 -> 1.1128; steering_ik_scale.ScaleZ 1.0715 -> 1.1128; carLocator_seatCamLF ['-0.176383', '0.658072', '0.437861'] -> ['-0.176383', '0.638072', '0.437861']; carLocator_seatCamRF ['0.380000', '1.242123', '-0.010732'] -> ['0.380000', '1.222123', '-0.010732'] -> v5: steering_ik_scale.ScaleX 1.1128 -> 0.9272; steering_ik_scale.ScaleY 1.1128 -> 0.9272; steering_ik_scale.ScaleZ 1.1128 -> 0.9272 -> v6: steering_pivot_offset.OffsetZ 0.0030 -> -0.0020"
+      },
+      "status": "v6 INSTALLED 2026-10-17 (test pending)"
     }
   ],
   "shared_files": [
@@ -1096,7 +1130,9 @@
     "mediapc/Audio/ModularCars/SC_GT3R_F6_39-Engine.xml",
     "mediapc/Audio/ModularCars/SC_GT3R_F6_39-Model.xml",
     "mediapc/Stripped/StringTables/EN.zip",
-    "mediapc/Stripped/StringTables/GB.zip"
+    "mediapc/Stripped/StringTables/GB.zip",
+    "mediapc/Audio/ModularCars/POR_00_911GT3R_24-Engine.xml",
+    "mediapc/Audio/ModularCars/POR_00_911GT3R_24-Model.xml"
   ],
   "rules": [
     "A pack car owns every drivetrain it lists: shared drivetrains (e.g. 2102 AWD conversion, 469 owners) are cloned car-local (id car*10+level) before any price change. Never zero a shared row (2026-09-27)."
@@ -1114,6 +1150,23 @@
         "POR_2_919Hybrid_17_EVO-Engine.xml"
       ],
       "backup": "Z:\\Forza\\Claude\\Backups\\audio_sync_20261014_134305"
+    },
+    {
+      "date": "2026-10-17",
+      "synced_from_game": [
+        "POR_00_911GT3R_24-Engine.xml",
+        "POR_00_911GT3R_24-Model.xml"
+      ],
+      "reason": "another user's install had no stock Rennsport engine sound: engine 4095 (stock on 9500 + 9525) keeps the FH5 MediaName POR_00_911GT3R_24 and the game resolves -Engine.xml by the installed ENGINE's MediaName; the pair existed only in the author's game folder (2026-09-29), byte-identical to POR_9_911GT3R_FM_23. Now shipped as shared_files. Audit tool: Tools/active/audit_audio_pairs.py"
+    },
+    {
+      "date": "2026-10-17",
+      "synced_from_game": [
+        "CAD_31_DPiVR_WR_21-Engine.xml",
+        "CAD_31_DPiVR_WR_21-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CAD_31_DPiVR_21 Import\\work\\audio_placeholder_pre_user_sound",
+      "note": "8 other pairs differ from the game copies by line endings only (Manager-installed repo copies are LF, pack working tree CRLF) - not synced"
     }
   ]
 }
