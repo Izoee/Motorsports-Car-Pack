@@ -14,7 +14,7 @@
   </GranularEngine>
   <Properties>
     <Property Name="EngineBank" Value="GS_ModularCar" />
-    <Property Name="Burbles" Value="ModernF6Race" />
+    <Property Name="Burbles" Value="ModernV8TrackToy" />
     <Property Name="Backfire" Value="RST_BF_US_Modern_V8_RaceExtreme_S1" />
     <Property Name="AntiLag" Value="RST_BF_US_Modern_V8_RaceExtreme_S1" />
     <Property Name="TurboBOV" Value="RST_BOV_Race_Antilag" />

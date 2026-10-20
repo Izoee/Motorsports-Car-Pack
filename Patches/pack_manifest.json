@@ -57,7 +57,7 @@
     {
       "order": 5,
       "file": "POR_5_Penske963_24.sql",
-      "description": "NEW car 9501 POR_5_Penske963_24 (#5 Porsche Penske Motorsport 963 '24, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 4063 4.6L V8-TT, drivetrain 3998, 7-speed, wheel 14600, brakes); FM aero (drag x0.70 rule, downforce LMP factors). ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
+      "description": "NEW car 9501 POR_5_Penske963_24 (#5 Porsche Penske Motorsport 963 '24, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 4063 4.6L V8-TT, drivetrain 3998, 7-speed, wheel 14600, brakes); FM aero (drag x0.70 rule, downforce LMP factors). ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices). 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9501",
         "engine 4063",
@@ -69,7 +69,7 @@
     {
       "order": 6,
       "file": "POR_2_919Hybrid_17.sql",
-      "description": "NEW car 9502 POR_2_919Hybrid_17 (#2 Porsche Team 919 Hybrid '17, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 2905, drivetrain, wheel 13049, brakes); FM aero rule; Exige's carried swap dropped. ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
+      "description": "NEW car 9502 POR_2_919Hybrid_17 (#2 Porsche Team 919 Hybrid '17, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain transplant (engine 2905, drivetrain, wheel 13049, brakes); FM aero rule; Exige's carried swap dropped. ONE file per car. 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices). 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9502",
         "engine 2905",
@@ -80,7 +80,7 @@
     {
       "order": 7,
       "file": "AUD_17_Rotek_TTRS_16.sql",
-      "description": "NEW car 9503 AUD_17_Rotek_TTRS_16 (#17 Rotek Racing TT RS '16, Autoshow $0): DAT_269_240Z_72 baseline rows (handling; differential from the Integra WTA FWD row) + identity + FM geometry overlay; FM powertrain (engine 2990, FWD, differential re-based on the Integra WTA row); FM aero rule. ONE file per car (gen_fm_car.py).; section 5: URBN Dexa I5 swap (engine 9600, 2.3L I5-T, redline 8300 / curve end 8600 on the DAZA curve, 1250 hp with the stage-3 turbo stock; nodes = Restrictor Plate +100/+200 hp, stage-4 turbo) at level 1, price 0 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices).",
+      "description": "NEW car 9503 AUD_17_Rotek_TTRS_16 (#17 Rotek Racing TT RS '16, Autoshow $0): DAT_269_240Z_72 baseline rows (handling; differential from the Integra WTA FWD row) + identity + FM geometry overlay; FM powertrain (engine 2990, FWD, differential re-based on the Integra WTA row); FM aero rule. ONE file per car (gen_fm_car.py).; section 5: URBN Dexa I5 swap (engine 9600, 2.3L I5-T, redline 8300 / curve end 8600 on the DAZA curve, 1250 hp with the stage-3 turbo stock; nodes = Restrictor Plate +100/+200 hp, stage-4 turbo) at level 1, price 0 2026-09-27: level-2 AWD conversion moved from the shared drivetrain 2102 to a car-local clone (car*10+2, sub-rows $0); the price rule no longer touches shared drivetrain rows (2102 / 4162 restored to stock prices). 2026-10-19 (user): AERO SPLIT - stock wing/splitter rows by PG's FH6 rule from the FM-derived body downforce (wing 45.9..198.9, splitter 48.6..145.8; drags = the 240Z rows' share); the former stock rows (the 240Z baseline's 123.75..536.25 / 168.75..506.25) are now a second non-stock race aero option (List_AeroPhysics 9503902 / 9506402, List_UpgradeRearWing 9503001 + List_UpgradeCarBodyFrontBumper 9503001: Level 3, Sequence 2, ManufacturerId 492, RequiresGraphics 0, $0).",
       "adds": [
         "car 9503",
         "engine 2990",
@@ -103,7 +103,7 @@
     {
       "order": 9,
       "file": "VW_22_GolfGTI_TCR_18.sql",
-      "description": "NEW car 9505 VW_22_GolfGTI_TCR_18 (#22 Experion Racing Golf GTI '18, Autoshow $0): 240Z baseline rows (handling, as the TT RS) + identity + FM geometry overlay; FM powertrain (engine 3293 2.0L I4-T, FWD; ref 3545 Golf R '19; differential re-based on the Integra WTA FWD row); aero rule (LMP ratios, as the TT RS); level-2 shared drivetrain cloned car-local (95052); section 6 (Dexa swap) REMOVED 2026-09-28. ONE file per car (gen_fm_car.py). Section 7 (2026-09-28) = URBN Spore I4TD (engine 9601, level 1): AHU 1.9 TDI stroked to 2.2 L, user-authored curve, 1100 hp with the stage-3 turbo, plates +150/+300, redline 7500/curve 8000. Section 8 (2026-09-29) = race brakes upgrade level 3 (PG Golf R '19 level-2->3 ratios), $0.",
+      "description": "NEW car 9505 VW_22_GolfGTI_TCR_18 (#22 Experion Racing Golf GTI '18, Autoshow $0): 240Z baseline rows (handling, as the TT RS) + identity + FM geometry overlay; FM powertrain (engine 3293 2.0L I4-T, FWD; ref 3545 Golf R '19; differential re-based on the Integra WTA FWD row); aero rule (LMP ratios, as the TT RS); level-2 shared drivetrain cloned car-local (95052); section 6 (Dexa swap) REMOVED 2026-09-28. ONE file per car (gen_fm_car.py). Section 7 (2026-09-28) = URBN Spore I4TD (engine 9601, level 1): AHU 1.9 TDI stroked to 2.2 L, user-authored curve, 1100 hp with the stage-3 turbo, plates +150/+300, redline 7500/curve 8000. Section 8 (2026-09-29) = race brakes upgrade level 3 (PG Golf R '19 level-2->3 ratios), $0. 2026-10-19 (user): Spore I4TD cutoffs - redline 7500 -> 5500, curve end 8000 -> 6000, same torque shape resampled onto 0..6000 (75-rpm steps), TorqueScale / turbo / plates untouched (peak stays ~1100 hp at 5025 rpm). 2026-10-19 (user): AERO SPLIT as on the TT RS - stock wing/splitter rows by PG's FH6 rule from the FM-derived body downforce (wing 18.36..79.56, splitter 19.44..58.32; drags = the 240Z rows' share); the former stock rows (the 240Z baseline's 123.75..536.25 / 168.75..506.25) are now a second non-stock race aero option (List_AeroPhysics 9505902 / 9508402, List_UpgradeRearWing 9505001 + List_UpgradeCarBodyFrontBumper 9505001: Level 3, Sequence 2, ManufacturerId 492, RequiresGraphics 0, $0).",
       "adds": [
         "car 9505",
         "engine 3293",
@@ -142,7 +142,7 @@
     {
       "order": 13,
       "file": "AUD_2_R18_etron_14.sql",
-      "description": "NEW car 9509 AUD_2_R18_etron_14 (#2 Audi Team Joest R18 e-tron quattro '14, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 2401 4.0L V6 turbodiesel, Diesel flag kept, AWD hybrid; ref 3905; differential re-based on the 918 Spyder row); aero rule (LMP ratios as the 963); FM stock brakes already race level; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; level-2 shared drivetrain cloned car-local (95092). ONE file per car.",
+      "description": "NEW car 9509 AUD_2_R18_etron_14 (#2 Audi Team Joest R18 e-tron quattro '14, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 2401 4.0L V6 turbodiesel, Diesel flag kept, AWD hybrid; ref 3905; differential re-based on the 918 Spyder row); aero rule (LMP ratios as the 963); FM stock brakes already race level; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; level-2 shared drivetrain cloned car-local (95092). ONE file per car. 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9509"
       ],
@@ -151,7 +151,7 @@
     {
       "order": 14,
       "file": "AUD_4_90_IMSA_GTO_89.sql",
-      "description": "new car 9510: FM Audi 90 quattro IMSA GTO (240Z rows, Skyline WTA AWD diff, 240Z RWD swap level 1, Dexa swap, race brakes, gearbox ladder)",
+      "description": "new car 9510: FM Audi 90 quattro IMSA GTO (240Z rows, Skyline WTA AWD diff, 240Z RWD swap level 1, Dexa swap, race brakes, gearbox ladder) 2026-10-19 (user): section 9 - the URBN Dexa I5 swap row (9510001, engine 9600 stays the TT RS's) and the second race aero option of 2026-10-01 (wing + front bumper 9510001, List_AeroPhysics 9510902 / 9513402 = the 240Z values) REMOVED; the stock FM-figure wing / splitter rows stay.",
       "adds": [
         "car 9510"
       ],
@@ -209,7 +209,7 @@
     {
       "order": 20,
       "file": "BEN_7_Speed8_LM_03.sql",
-      "description": "2003 Bentley #7 Team Bentley Speed 8: Exige WTA rows, FM powertrain 252 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free",
+      "description": "2003 Bentley #7 Team Bentley Speed 8: Exige WTA rows, FM powertrain 252 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9516"
       ],
@@ -218,7 +218,7 @@
     {
       "order": 21,
       "file": "BMW_25_M_Hybrid_23.sql",
-      "description": "2023 BMW #25 BMW M Team RLL M Hybrid V8: Exige WTA rows, FM powertrain 4056 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free",
+      "description": "2023 BMW #25 BMW M Team RLL M Hybrid V8: Exige WTA rows, FM powertrain 4056 (ref engine 4211), LMP aero ratios, gearbox ladder 7-11, all car-local rows free 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9517"
       ],
@@ -315,7 +315,7 @@
     {
       "order": 31,
       "file": "CAD_01_VSeriesR_23.sql",
-      "description": "NEW car 9527 CAD_01_VSeriesR_23 (#01 Cadillac Racing V-Series.R '23, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 4009 5.5L V8, 7-speed, RWD hybrid); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95272. ONE file per car.",
+      "description": "NEW car 9527 CAD_01_VSeriesR_23 (#01 Cadillac Racing V-Series.R '23, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 4009 5.5L V8, 7-speed, RWD hybrid); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95272. ONE file per car. 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9527"
       ],
@@ -324,9 +324,45 @@
     {
       "order": 32,
       "file": "CAD_31_DPiVR_WR_21.sql",
-      "description": "NEW car 9528 CAD_31_DPiVR_WR_21 (#31 Whelen Racing DPi-V.R '21, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 3799 5.5L V8, 6-speed, RWD); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95282. ONE file per car.",
+      "description": "NEW car 9528 CAD_31_DPiVR_WR_21 (#31 Whelen Racing DPi-V.R '21, Autoshow $0): Exige WTA baseline rows + identity + FM geometry overlay; FM powertrain (engine 3799 5.5L V8, 6-speed, RWD); LMP aero rule; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95282. ONE file per car. 2026-10-19: PG-rule stock aero rows + body multipliers were tried and REVERTED the same day (user: keep the Exige's verbatim rows).",
       "adds": [
         "car 9528"
+      ],
+      "requires": []
+    },
+    {
+      "order": 33,
+      "file": "CAD_57_CTSVTA_18.sql",
+      "description": "NEW car 9529 CAD_57_CTSVTA_18 (#57 TA CTS-V '18, Autoshow $0): M8 GTE baseline rows + identity + FM geometry overlay; FM powertrain (engine 3415 5.9L V8, 5-speed, RWD); aero = Skyline '84 FM->FH6 ratios, wing/splitter rows by PG's FH6 rule from the body downforce; upgrade gearbox ladder 7-11; every car-local row incl. the own engine $0; AWD conversion clone 95292. ONE file per car.",
+      "adds": [
+        "car 9529"
+      ],
+      "requires": []
+    },
+    {
+      "order": 34,
+      "file": "CAD_3_ATSVR.sql",
+      "description": "NEW car 9530 CAD_3_ATSVR (#3 Cadillac Racing ATS-V.R '15, Autoshow $0): FH5 car 3281 rows (identical schemas) + identity; FH5 engine 3413 as pack engine 9012 (all part rows + torque curve re-keyed, $0); car-local drivetrains 95300 (FH5 3359) / 95302 (AWD conversion clone); FH5 swaps dropped (pack race-car rule); pack race-car tyre layout (stock slick 13); upgrade gearbox ladder 7-11. ONE file per car.",
+      "adds": [
+        "car 9530"
+      ],
+      "requires": []
+    },
+    {
+      "order": 35,
+      "file": "CHE_10_KonicaDP_15.sql",
+      "description": "NEW car 9531 CHE_10_KonicaDP_15 (#10 Konica Minolta Corvette DP '15, Autoshow $0): FH5 C8.R rows over the Z06 '23 base + identity + FM geometry / body-weight / rim overlay; FM powertrain (engine 2615 5.5L V8, 6-speed 2563, RWD); C8.R swaps dropped, FH5-only drivetrain rows stripped, differential = C8.R's; aero = FM body x Essenza ratios, wing/splitter rows by PG's FH6 rule from the body; pack tyre tree; upgrade gearbox ladder 7-11; every car-local row $0; AWD conversion clone 95312. ONE file per car.",
+      "adds": [
+        "car 9531"
+      ],
+      "requires": []
+    },
+    {
+      "order": 36,
+      "file": "CHE_00_Indy_25.sql",
+      "description": "2025 Chevrolet #00 IndyCar (FM body on the Huayra R container, Exige-recipe rows, FM 2.2L V6-TT + 6-speed, Exige-recipe aero factors x1.08/x1.36, stock wing/splitter rows = Exige verbatim, race tyre tree, $0 car-local rows)",
+      "adds": [
+        "car 9532"
       ],
       "requires": []
     }
@@ -455,7 +491,7 @@
         "pipeline": "convert_car.py (FM, aud_17_ttrs_16 -> HON_33_IntegraWTA_01) -> rename_car_zip.py --ordinal 9503 -> fix_fm_post.py (donor IK kept: round wheel, family 3; base livery rebuilt on car_automotive_paint; foot medians) -> carbin AO ref glassr yshz5d0->wch2x1s (FM's own stale ref); wiper gradient checked (ramp matches sweep, no flip) -> interior-window decal instances moved into the livery paint group (glassfintlivery:Livery_transmissive, glassfintlivery:gls_windsheid_interior_banner) (2026-09-29) -> v10: clip dictionary rebuilt from FM with the corrected position decoding (I1 curves) and translation frame: 4 bone tracks now translate (hood_close track 0; hood_open track 0; trunk_close track 0; trunk_open track 0) -> v11: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.144 +0.093 +0.596) -> (-0.146 +0.261 +0.580); anchor_brake: world (-0.216 -0.066 +0.566) -> (-0.216 +0.319 +0.555); anchor_clutch: world (-0.360 -0.086 +0.580) -> (-0.378 +0.231 +0.583) -> v12: reverse lamps wired (user 2026-10-04): taillightLBulbs_a.modelbin 'lights_smooth_CH1' (taillightLBulbs_a): light function 18 -> 1; taillightLBulbs_a__SLOD.modelbin 'lights_smooth_CH1' (taillightLBulbs_a): light function 18 -> 1; taillightL_a.modelbin 'lights_smooth_CH1_FOG' (taillightL_a): light function 18 -> 1; taillightL_a__SLOD.modelbin 'lights_smooth_CH1_FOG' (taillightL_a): light function 18 -> 1; taillightRBulbs_a.modelbin 'lights_smooth_CH1' (taillightRBulbs_a): light function 18 -> 1; taillightRBulbs_a__SLOD.modelbin 'lights_smooth_CH1' (taillightRBulbs_a): light function 18 -> 1; taillightR_a.modelbin 'lights_smooth_CH1_FOG' (taillightR_a): light function 18 -> 1; taillightR_a__SLOD.modelbin 'lights_smooth_CH1_FOG' (taillightR_a): light function 18 -> 1",
         "dials": "camera 1 cm below the FM height (seatCam _42 -0.01), identity rotation; hands: steering_pivot_offset OffsetY -0.0301, OffsetZ -0.0074"
       },
-      "status": "v12 INSTALLED (test pending)"
+      "status": "v12 INSTALLED; db 2026-10-19 aero split (stock = PG rule from the FM body, 240Z rows = upgrade option)"
     },
     {
       "id": 9504,
@@ -515,7 +551,7 @@
         "md5": "8f99a9e95a861e8e4f0535ca8dc64b0f",
         "pipeline": "convert_car.py (FM, vw_22_golfwtcr_18 -> HON_33_IntegraWTA_01) -> rename_car_zip.py --ordinal 9505 -> fix_fm_post.py (Integra IK kept, foot medians, base-livery paths) -> wiper check (no flip) -> v2: FIX_FLASH_SCALE=0.5 (FM 1.0 s shift-light flash -> 0.5 s) -> v3: wiper mirror REVERTED (37/37 shared FM/FH6 cars keep FM's gradient; the sweep-sign rule was wrong) -> v4: steering_pivot_offset.OffsetY 0.0399 -> -0.0001; steering_ik_scale.ScaleX 0.8802 -> 0.9417; steering_ik_scale.ScaleY 0.8802 -> 0.9417; steering_ik_scale.ScaleZ 0.8802 -> 0.9417 -> v5: steering_pivot_offset.OffsetY -0.0001 -> -0.0201; steering_ik_scale.ScaleX 0.9417 -> 0.9724; steering_ik_scale.ScaleY 0.9417 -> 0.9724; steering_ik_scale.ScaleZ 0.9417 -> 0.9724 -> v6: tail-light glass 'lite' placeholder (carpacktypes ch1_normao_diffopac_lite = a 'CH_1' label texture) repointed to flat_texture_black on 8 SecondaryLights glass models -> interior-window decal instances moved into the livery paint group (glassfintlivery:Banner, glassfintlivery:gls_windshield_interior_banner) (2026-09-29) -> v7: clip dictionary rebuilt from FM with the corrected position decoding (I1 curves) and translation frame: 2 bone tracks now translate (hood_close track 0; hood_open track 0) -> v8: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.159 +0.371 +0.744) -> (-0.171 +0.411 +0.554); anchor_brake: world (-0.294 +0.374 +0.758) -> (-0.261 +0.394 +0.538); anchor_clutch: world (-0.405 +0.376 +0.758) -> (-0.414 +0.303 +0.566) -> v9: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.171 +0.411 +0.554) -> (-0.171 +0.331 +0.554); anchor_brake: world (-0.261 +0.394 +0.538) -> (-0.261 +0.314 +0.538) -> v10: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.171 +0.331 +0.554) -> (-0.171 +0.251 +0.594); anchor_brake: world (-0.261 +0.314 +0.538) -> (-0.261 +0.234 +0.578); anchor_clutch: world (-0.414 +0.303 +0.566) -> (-0.414 +0.223 +0.606) -> v11: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.171 +0.251 +0.594) -> (-0.171 +0.211 +0.634); anchor_brake: world (-0.261 +0.234 +0.578) -> (-0.261 +0.194 +0.618); anchor_clutch: world (-0.414 +0.223 +0.606) -> (-0.414 +0.183 +0.646)"
       },
-      "status": "v11 INSTALLED (test pending)"
+      "status": "v11 INSTALLED (test pending); db 2026-10-19 Spore cutoffs 5500 / 6000 + aero split (stock = PG rule from the FM body, 240Z rows = upgrade option)"
     },
     {
       "id": 9506,
@@ -640,7 +676,7 @@
         "md5": "e3af9cdee35b61a6a2c13e46896ab09b",
         "pipeline": "convert_car.py (FM, aud_4_90quattro_89 -> NIS_12_SkylineGTR_90) -> rename --ordinal 9510 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (1 models) -> FM wiper gradient kept | DB: 240Z rows, Skyline WTA '93 AWD differential, RWD swap = clone 95101 of the 240Z drivetrain 4162 (level 1), URBN Dexa I5 swap (9600, level 1), race brakes level 3 (PG rule), gearbox ladder 7-11 -> v2: wing_a 'carpaint_livery' + bumperf_a 'carpaint_livery_orange' sticker instances moved into the livery paint group (2026-09-30) -> v3: steering_pivot_offset.OffsetZ 0.0000 -> -0.1000; steering_ik_scale.ScaleX 1.0262 -> 0.9994; steering_ik_scale.ScaleY 1.0262 -> 0.9994; steering_ik_scale.ScaleZ 1.0262 -> 0.9994; carLocator_seatCamLF ['-0.326420', '0.877157', '-0.326336'] -> ['-0.326420', '0.837157', '-0.296336'] -> v4: steering_pivot_offset.OffsetY 0.0000 -> -0.0400; steering_pivot_offset.OffsetZ -0.1000 -> -0.1350 -> v5: carLocator_seatCamLF ['-0.326420', '0.837157', '-0.296336'] -> ['-0.326420', '0.837157', '-0.246336'] | DB 2026-10-01: stock aero = FM verbatim; model-less aero upgrade (wing + front bumper, level 3) = DAT_269_240Z_72 wing/splitter rows (SQL section 8) -> v6: clip dictionary rebuilt from FM with the corrected position decoding (I1 curves) and translation frame: 4 bone tracks now translate (hood_close track 1; hood_open track 1; trunk_close track 1; trunk_open track 1) -> v7: foot anchors re-placed in world terms (FM pedal-face anchor + PG pad-to-anchor offset, PG anchor orientation): anchor_gas: world (-0.225 +0.047 +0.580) -> (-0.224 +0.218 +0.605); anchor_brake: world (-0.313 +0.316 +0.593) -> (-0.313 +0.246 +0.603); anchor_clutch: world (-0.427 +0.226 +0.820) -> (-0.436 +0.153 +0.628)"
       },
-      "status": "v7 INSTALLED (test pending)"
+      "status": "v7 INSTALLED (test pending); db 2026-10-19 Dexa swap + second aero option removed"
     },
     {
       "id": 9511,
@@ -1081,8 +1117,8 @@
       "files": [
         "mediapc/Cars/CAD_01_VSeriesR_23.zip",
         "mediapc/Stripped/RC0/Thumbnail_9527_Big.swatchbin",
-        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Engine.xml (user-authored 5.5 V8 sound, 2026-10-17)",
-        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Model.xml (user-authored 5.5 V8 sound, 2026-10-17)"
+        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Engine.xml (user-authored, synced from the game folder 2026-10-19)",
+        "mediapc/Audio/ModularCars/CAD_01_VSeriesR_23-Model.xml (user-authored, synced from the game folder 2026-10-19)"
       ],
       "manifest_entries": [
         "game:/media/cars/cad_01_vseriesr_23.zip"
@@ -1096,7 +1132,7 @@
         "md5": "7bcd87d550857255f274b2d2ea79d690",
         "pipeline": "convert_car.py (FM, cad_01_vlmdh_23 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9527 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (0.182, 0.101, 0.590) -> (-0.380, 0.395, 1.017), q (0.22, 0.21, -0.65, 0.69) -> v3: carLocator_seatCamLF ['-0.155981', '0.739667', '0.277223'] -> ['-0.155981', '0.639667', '0.277223']; carLocator_seatCamRF ['0.263119', '0.799195', '0.277223'] -> ['0.263119', '0.699195', '0.277223'] -> v4: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.380, 0.395, 1.017) -> (-0.300, 0.325, 1.117), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.395, 1.017) -> (-0.140, 0.325, 1.117), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.373, 0.987) -> (-0.181, 0.303, 1.087), q (-0.61, -0.70, -0.28, 0.24) -> v5: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.300, 0.325, 1.117) -> (-0.300, 0.325, 1.267), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.140, 0.325, 1.117) -> (-0.140, 0.325, 1.267), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.181, 0.303, 1.087) -> (-0.181, 0.303, 1.237), q (-0.61, -0.70, -0.28, 0.24) -> v6: steering_pivot_offset.OffsetY 0.0110 -> -0.0090; steering_ik_scale.ScaleX 1.0200 -> 0.9686; steering_ik_scale.ScaleY 1.0200 -> 0.9686; steering_ik_scale.ScaleZ 1.0200 -> 0.9686; carLocator_seatCamLF ['-0.155981', '0.639667', '0.277223'] -> ['-0.155981', '0.639667', '0.427223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.277223'] -> ['0.263119', '0.699195', '0.427223'] -> v7: carLocator_seatCamLF ['-0.155981', '0.639667', '0.427223'] -> ['-0.155981', '0.639667', '0.477223']; carLocator_seatCamRF ['0.263119', '0.699195', '0.427223'] -> ['0.263119', '0.699195', '0.477223']"
       },
-      "status": "v7 INSTALLED 2026-10-17 (user dials: feet v2/v4/v5, camera v3/v6/v7, hands v6; user audio)"
+      "status": "v7 INSTALLED 2026-10-17 (user dials: feet v2/v4/v5, camera v3/v6/v7, hands v6"
     },
     {
       "id": 9528,
@@ -1106,8 +1142,8 @@
       "files": [
         "mediapc/Cars/CAD_31_DPiVR_WR_21.zip",
         "mediapc/Stripped/RC0/Thumbnail_9528_Big.swatchbin",
-        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Engine.xml (user-authored 2026-10-17, synced from the game folder)",
-        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Model.xml (user-authored 2026-10-17, synced from the game folder)"
+        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Engine.xml (user-authored, synced from the game folder 2026-10-19)",
+        "mediapc/Audio/ModularCars/CAD_31_DPiVR_WR_21-Model.xml (user-authored, synced from the game folder 2026-10-19)"
       ],
       "manifest_entries": [
         "game:/media/cars/cad_31_dpivr_wr_21.zip"
@@ -1122,6 +1158,106 @@
         "pipeline": "convert_car.py (FM, cad_31_dpivr_21 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9528 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: carLocator_seatCamLF ['-0.176383', '0.408072', '0.437861'] -> ['-0.176383', '0.558072', '0.437861']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '1.142123', '-0.010732'] -> v3: steering_pivot_offset.OffsetY 0.0110 -> -0.0190; steering_ik_scale.ScaleX 1.0200 -> 1.0715; steering_ik_scale.ScaleY 1.0200 -> 1.0715; steering_ik_scale.ScaleZ 1.0200 -> 1.0715; carLocator_seatCamLF ['-0.176383', '0.558072', '0.437861'] -> ['-0.176383', '0.658072', '0.437861']; carLocator_seatCamRF ['0.380000', '1.142123', '-0.010732'] -> ['0.380000', '1.242123', '-0.010732'] -> v4: steering_ik_scale.ScaleX 1.0715 -> 1.1128; steering_ik_scale.ScaleY 1.0715 -> 1.1128; steering_ik_scale.ScaleZ 1.0715 -> 1.1128; carLocator_seatCamLF ['-0.176383', '0.658072', '0.437861'] -> ['-0.176383', '0.638072', '0.437861']; carLocator_seatCamRF ['0.380000', '1.242123', '-0.010732'] -> ['0.380000', '1.222123', '-0.010732'] -> v5: steering_ik_scale.ScaleX 1.1128 -> 0.9272; steering_ik_scale.ScaleY 1.1128 -> 0.9272; steering_ik_scale.ScaleZ 1.1128 -> 0.9272 -> v6: steering_pivot_offset.OffsetZ 0.0030 -> -0.0020"
       },
       "status": "v6 INSTALLED 2026-10-17 (test pending)"
+    },
+    {
+      "id": 9529,
+      "media": "CAD_57_CTSVTA_18",
+      "name": "#57 TA CTS-V",
+      "source": "Forza Motorsport cad_57_ctsvta_18 (FM id 3283); body donor CAD_CTSVSedan_16 (16-char name, user's choice); DB baseline for the rows FM cannot supply = the pack M8 GTE rows (9518, user's choice for this car); FM engine 3415 (5.9L V8 NA) as stock via ref engine 3364 (Corvette FD 7.0 V8); aero analogue NIS_11_Skyline_84 ratios (user's choice)",
+      "files": [
+        "mediapc/Cars/CAD_57_CTSVTA_18.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9529_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CAD_57_CTSVTA_18-Engine.xml (user-authored, synced from the game folder 2026-10-19)",
+        "mediapc/Audio/ModularCars/CAD_57_CTSVTA_18-Model.xml (user-authored, synced from the game folder 2026-10-19)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/cad_57_ctsvta_18.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/cad_57_ctsvta_18/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/cad_57_ctsvta_18/Scene/animations/Mojo/clip/carclips_9529.clipd"
+      ],
+      "build": {
+        "zip": "CAD_57_CTSVTA_18.v7",
+        "md5": "e20fbef4b1baeda2cf8a4f47cf8bf977",
+        "pipeline": "convert_car.py (FM, cad_57_ctsvta_18 -> CAD_CTSVSedan_16) -> rename --ordinal 9529 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: material instance data copied from another car: taillightL_a.modelbin 'lbk_CH1_dynamicMaps_a': glass_detailed_ch1 -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a.modelbin 'lbk_CH1_dynamicMaps_a': glass_detailed_ch1 -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightL_a__SLOD.modelbin 'lbk_CH1_dynamicMaps_a': glass_detailed_ch1 -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a__SLOD.modelbin 'lbk_CH1_dynamicMaps_a': glass_detailed_ch1 -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params) -> v4: carLocator_seatCamLF ['-0.277143', '0.802300', '-0.593078'] -> ['-0.277143', '0.852300', '-0.553078'] -> v5: steering_pivot_offset.OffsetY 0.0110 -> -0.0040; steering_pivot_offset.OffsetZ 0.0030 -> -0.0070; steering_ik_scale.ScaleX 1.0200 -> 0.9725; steering_ik_scale.ScaleY 1.0200 -> 0.9725; steering_ik_scale.ScaleZ 1.0200 -> 0.9725; carLocator_seatCamLF ['-0.277143', '0.852300', '-0.553078'] -> ['-0.277143', '0.852300', '-0.503078'] -> v6: steering_pivot_offset.OffsetY -0.0040 -> -0.0090; carLocator_seatCamLF ['-0.277143', '0.852300', '-0.503078'] -> ['-0.277143', '0.852300', '-0.473078'] -> v7: carLocator_seatCamLF ['-0.277143', '0.852300', '-0.473078'] -> ['-0.277143', '0.872300', '-0.473078']"
+      },
+      "status": "v7 INSTALLED 2026-10-18 (yoke rig, reverse emitter, dials; user audio)"
+    },
+    {
+      "id": 9530,
+      "media": "CAD_3_ATSVR",
+      "name": "#3 Cadillac Racing ATS-V.R",
+      "source": "Forza Motorsport cad_3_atsgt3_15 body (FM id 3281 = FH5 id); rows = FH5 CAD_3_ATSGT3_15 (3281) via the hybrid route (gen_cad3atsvr.py from gen_m8gte.py + the gen_amggt3 tyre block); body donor CAD_ATSV_16 (road ATS-V, 11-char name, user's choice); FH5 engine 3413 3.6L V6-TT as pack engine 9012",
+      "files": [
+        "mediapc/Cars/CAD_3_ATSVR.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9530_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CAD_3_ATSVR-Engine.xml (user-authored, synced from the game folder 2026-10-19)",
+        "mediapc/Audio/ModularCars/CAD_3_ATSVR-Model.xml (user-authored, synced from the game folder 2026-10-19)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/cad_3_atsvr.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/cad_3_atsvr/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/cad_3_atsvr/Scene/animations/Mojo/clip/carclips_9530.clipd"
+      ],
+      "build": {
+        "zip": "CAD_3_ATSVR.v4",
+        "md5": "39f80c85eb5f15adbfb305485cf2230e",
+        "pipeline": "convert_car.py (FM, cad_3_atsgt3_15 -> CAD_ATSV_16) -> rename --ordinal 9530 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.437, 0.382, 0.458) -> (-0.437, 0.382, 0.658), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.193, 0.476, 0.461) -> (-0.193, 0.476, 0.661), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.278, 0.473, 0.430) -> (-0.278, 0.473, 0.630), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> 0.0210 -> v4: carLocator_seatCamLF ['-0.380000', '0.921906', '-0.275014'] -> ['-0.380000', '0.921906', '-0.225014']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.152615'] -> ['0.380000', '0.992123', '-0.102615']"
+      },
+      "status": "v4 INSTALLED 2026-10-19 (test pending)"
+    },
+    {
+      "id": 9531,
+      "media": "CHE_10_KonicaDP_15",
+      "name": "#10 Konica Minolta Corvette DP",
+      "source": "Forza Motorsport che_10_corvettedp_15 (FM id 2485); CORVETTE THREE-LAYER ROUTE (user 2026-10-19): FM numbers over the FH5 CHE_3_CorvetteC8R_20 (3490) rows over the FH6 CHE_CorvetteZ06_23 base (body donor, user's choice); FM engine 2615 5.5L V8 NA via ref engine 3904 (the Z06's 5.5 V8); aero analogue LAM_63_Essenza_21 ratios (user's choice); gen_konicadp.py from gen_fm_car.py",
+      "files": [
+        "mediapc/Cars/CHE_10_KonicaDP_15.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9531_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_10_KonicaDP_15-Engine.xml (user-authored 2026-10-19, synced from the game folder)",
+        "mediapc/Audio/ModularCars/CHE_10_KonicaDP_15-Model.xml (user-authored 2026-10-19, synced from the game folder)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_10_konicadp_15.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_10_konicadp_15/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_10_konicadp_15/Scene/animations/Mojo/clip/carclips_9531.clipd"
+      ],
+      "build": {
+        "zip": "CHE_10_KonicaDP_15.v19",
+        "md5": "bcab10958677d0ee1f8f3d7b3fb732e7",
+        "pipeline": "convert_car.py (FM, che_10_corvettedp_15 -> CHE_CorvetteZ06_23) -> rename --ordinal 9531 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (1 models) -> unbound CH_1-default slots bound neutral (1) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.531, 0.113, 0.790) -> (-0.431, 0.336, 1.029), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.069, 0.336, 0.829) -> (-0.069, 0.336, 1.029), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.146, 0.322, 0.800) -> (-0.146, 0.322, 1.000), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> 0.0150; steering_pivot_offset.OffsetZ 0.0030 -> -0.0040; steering_ik_scale.ScaleX 1.0200 -> 1.0107; steering_ik_scale.ScaleY 1.0200 -> 1.0107; steering_ik_scale.ScaleZ 1.0200 -> 1.0107; carLocator_seatCamLF ['-0.217741', '0.750735', '0.079175'] -> ['-0.217741', '0.700735', '0.129175']; carLocator_seatCamRF ['0.261345', '0.770532', '0.061643'] -> ['0.261345', '0.720532', '0.111643'] -> v4: carLocator_seatCamLF ['-0.217741', '0.700735', '0.129175'] -> ['-0.217741', '0.700735', '0.209175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.111643'] -> ['0.261345', '0.720532', '0.191643'] -> v5: carLocator_seatCamLF ['-0.217741', '0.700735', '0.209175'] -> ['-0.217741', '0.700735', '0.259175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.191643'] -> ['0.261345', '0.720532', '0.241643'] -> v6: carLocator_seatCamLF ['-0.217741', '0.700735', '0.259175'] -> ['-0.217741', '0.700735', '0.289175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.241643'] -> ['0.261345', '0.720532', '0.271643'] -> v7: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1' (taillightL_a): light function 71 -> 1; taillightL_a__SLOD.modelbin 'lights_smooth_CH1' (taillightL_a): light function 71 -> 1; taillightR_a.modelbin 'lights_smooth_CH1' (taillightR_a): light function 71 -> 1; taillightR_a__SLOD.modelbin 'lights_smooth_CH1' (taillightR_a): light function 71 -> 1 -> v8: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1' (taillightL_a): light function 1 -> 71; taillightL_a__SLOD.modelbin 'lights_smooth_CH1' (taillightL_a): light function 1 -> 71; taillightR_a.modelbin 'lights_smooth_CH1' (taillightR_a): light function 1 -> 71; taillightR_a__SLOD.modelbin 'lights_smooth_CH1' (taillightR_a): light function 1 -> 71 -> v9: material instance data copied from another car: taillightL_a.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params) -> v10: taillightL_a.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightR_a.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params) -> v11: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lbk_CH1_Custom' (taillightL_a): light function 69 -> 1; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' (taillightL_a): light function 69 -> 1; taillightR_a.modelbin 'lbk_CH1_Custom' (taillightR_a): light function 69 -> 1; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' (taillightR_a): light function 69 -> 1 -> v12: texture params re-pointed (taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin) -> v13 (from v11): UV ranges set (taillightL_a.modelbin mesh 'taillightL_a_LOD0' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD1' (lbk_ch1_custom) set 0 range (-0.799, 2.677, -0.006, 0.948) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD2' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD3' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD4' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD5' (lbk_ch1_custom) set 0 range (-0.582, 2.446, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a__SLOD.modelbin mesh 'taillightL_a_LODS' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.015, 0.909) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD0' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD1' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD2' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD3' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD4' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD5' (lbk_ch1_custom) set 0 range (-0.582, 2.446, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a__SLOD.modelbin mesh 'taillightR_a_LODS' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.015, 0.909) -> (0.000, 1.000, 0.000, 1.000)) -> v14: texture params re-pointed (added Textures/Lib/Swatches/che_10_konicadp_15_reverse_fullmask_931753c.swatchbin (43952 B); taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin) -> v15: texture params re-pointed (added Textures/Lib/Swatches/che_10_konicadp_15_reverse_fullmask_931753c.swatchbin (43952 B); taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; Manifest.xml: 4 swatchbin line(s) added) -> v16: param values set (taillightL_a.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightR_a.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314) -> v17 (from v16): UV ranges set (glassLTL_a.modelbin mesh 'glassLTL_a_LOD0' (gls_ch1_custom) LOD mask 2 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD1' (gls_ch1_custom) LOD mask 4 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD2' (gls_ch1_custom) LOD mask 8 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD3' (gls_ch1_custom) LOD mask 16 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD4' (gls_ch1_custom) LOD mask 32 -> 0 (disabled); glassLTL_a__SLOD.modelbin mesh 'glassLTL_a_LODS' (gls_ch1_custom) LOD mask 1 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD0' (gls_ch1_custom) LOD mask 2 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD1' (gls_ch1_custom) LOD mask 4 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD2' (gls_ch1_custom) LOD mask 8 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD3' (gls_ch1_custom) LOD mask 16 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD4' (gls_ch1_custom) LOD mask 32 -> 0 (disabled); glassRTL_a__SLOD.modelbin mesh 'glassRTL_a_LODS' (gls_ch1_custom) LOD mask 1 -> 0 (disabled)) -> v18: param values set (taillightL_a.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightR_a.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657) -> v19: clip dictionary rebuilt with FM's suspension travel / steer clips rebased on their MIDDLE (rest) sample like PG's own (sample 0 had parked the wheels at full lock and the suspension at full travel): 4 tracks changed (doorlf_close boneMirrorL_001; doorlf_open boneMirrorL_001; doorrf_close boneMirrorR_001; doorrf_open boneMirrorR_001)"
+      },
+      "status": "v19 INSTALLED 2026-10-19 (dials, user audio, reverse lamps = nested housings on the car's own emitter with a full-white mask, glass panes removed, mirror clips fixed)"
+    },
+    {
+      "id": 9532,
+      "media": "CHE_00_Indy_25",
+      "name": "#00 Chevrolet IndyCar",
+      "source": "2025 Chevrolet #00 IndyCar from Forza Motorsport (che_00_indy_25, FM id 4209); body donor PAG_HuayraR_22, DB rows LOT_00_ExigeWTA_18 (Exige recipe), ref engine 9012 (ATS-V.R 3.6 V6-TT)",
+      "files": [
+        "mediapc/Cars/CHE_00_Indy_25.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9532_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_00_Indy_25-Engine.xml (user-authored 2026-10-19)",
+        "mediapc/Audio/ModularCars/CHE_00_Indy_25-Model.xml (user-authored 2026-10-19)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_00_indy_25.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_00_indy_25/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_00_indy_25/Scene/animations/Mojo/clip/carclips_9532.clipd"
+      ],
+      "build": {
+        "zip": "CHE_00_Indy_25.v6",
+        "md5": "7ae0111654ced93bce4df0e7a4895f9f",
+        "pipeline": "convert_car.py (FM, che_00_indy_25 -> PAG_HuayraR_22) -> rename --ordinal 9532 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.360, 0.200, 0.953) -> (-0.060, 0.378, 1.025), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (0.052, 0.378, 0.925) -> (0.052, 0.378, 1.025), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.034, 0.358, 0.897) -> (-0.034, 0.358, 0.997), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetZ 0.0030 -> -0.0670; anchor_butt.OffsetY 0.1400 -> 0.0400; carLocator_seatCamRF ['0.018310', '0.762390', '0.201240'] -> ['0.018310', '0.662390', '0.201240']; carLocator_seatCamLF ['0.018313', '0.762390', '0.201238'] -> ['0.018313', '0.662390', '0.201238'] -> v4: steering_pivot_offset.OffsetY 0.0110 -> 0.0010; steering_ik_scale.ScaleX 1.0200 -> 0.9976; steering_ik_scale.ScaleY 1.0200 -> 0.9976; steering_ik_scale.ScaleZ 1.0200 -> 0.9976; anchor_butt.OffsetY 0.0400 -> -0.0100; carLocator_seatCamRF ['0.018310', '0.662390', '0.201240'] -> ['0.018310', '0.612390', '0.271240']; carLocator_seatCamLF ['0.018313', '0.662390', '0.201238'] -> ['0.018313', '0.612390', '0.271238'] -> v5: carLocator_seatCamRF ['0.018310', '0.612390', '0.271240'] -> ['0.018310', '0.632390', '0.341240']; carLocator_seatCamLF ['0.018313', '0.612390', '0.271238'] -> ['0.018313', '0.632390', '0.341238'] -> v6: carLocator_seatCamRF ['0.018310', '0.632390', '0.341240'] -> ['0.038310', '0.632390', '0.341240']; carLocator_seatCamLF ['0.018313', '0.632390', '0.341238'] -> ['0.038313', '0.632390', '0.341238']"
+      },
+      "status": "v6 INSTALLED 2026-10-19 (test pending)"
     }
   ],
   "shared_files": [
@@ -1149,7 +1285,8 @@
         "POR_1_GT3R_27-Model.xml",
         "POR_2_919Hybrid_17_EVO-Engine.xml"
       ],
-      "backup": "Z:\\Forza\\Claude\\Backups\\audio_sync_20261014_134305"
+      "backup": "Z:\\Forza\\Claude\\Backups\\audio_sync_20261014_134305",
+      "note": ""
     },
     {
       "date": "2026-10-17",
@@ -1157,7 +1294,8 @@
         "POR_00_911GT3R_24-Engine.xml",
         "POR_00_911GT3R_24-Model.xml"
       ],
-      "reason": "another user's install had no stock Rennsport engine sound: engine 4095 (stock on 9500 + 9525) keeps the FH5 MediaName POR_00_911GT3R_24 and the game resolves -Engine.xml by the installed ENGINE's MediaName; the pair existed only in the author's game folder (2026-09-29), byte-identical to POR_9_911GT3R_FM_23. Now shipped as shared_files. Audit tool: Tools/active/audit_audio_pairs.py"
+      "reason": "another user's install had no stock Rennsport engine sound: engine 4095 (stock on 9500 + 9525) keeps the FH5 MediaName POR_00_911GT3R_24 and the game resolves -Engine.xml by the installed ENGINE's MediaName; the pair existed only in the author's game folder (2026-09-29), byte-identical to POR_9_911GT3R_FM_23. Now shipped as shared_files. Audit tool: Tools/active/audit_audio_pairs.py",
+      "note": ""
     },
     {
       "date": "2026-10-17",
@@ -1167,6 +1305,43 @@
       ],
       "backup": "Z:\\Forza\\MyMods\\CAD_31_DPiVR_21 Import\\work\\audio_placeholder_pre_user_sound",
       "note": "8 other pairs differ from the game copies by line endings only (Manager-installed repo copies are LF, pack working tree CRLF) - not synced"
+    },
+    {
+      "date": "2026-10-18",
+      "synced_from_game": [
+        "CAD_57_CTSVTA_18-Engine.xml",
+        "CAD_57_CTSVTA_18-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CAD_57_CTSVTA_18 Import\\work\\audio_placeholder_pre_user_sound",
+      "note": ""
+    },
+    {
+      "date": "2026-10-19",
+      "synced_from_game": [
+        "CAD_01_VSeriesR_23-Engine.xml",
+        "CAD_31_DPiVR_WR_21-Engine.xml",
+        "CAD_57_CTSVTA_18-Engine.xml",
+        "CAD_3_ATSVR-Engine.xml",
+        "CAD_3_ATSVR-Model.xml"
+      ],
+      "note": "user updated the four Cadillac pairs; previous pack copies backed up in each car's work\u0007udio_pre_sync_* folder"
+    },
+    {
+      "date": "2026-10-19",
+      "synced_from_game": [
+        "CHE_10_KonicaDP_15-Engine.xml",
+        "CHE_10_KonicaDP_15-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_10_KonicaDP_15 Import\\work\\audio_placeholder_pre_user_sound",
+      "note": ""
+    },
+    {
+      "date": "2026-10-19",
+      "synced_from_game": [
+        "CHE_00_Indy_25-Engine.xml",
+        "CHE_00_Indy_25-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_00_Indy_25 Import\\work\\audio_placeholder_pre_user_sound"
     }
   ]
 }

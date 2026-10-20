@@ -271,3 +271,9 @@ UPDATE [List_UpgradeRimSizeFront] SET [FrontWheelDiameter]=18, [IsStock]=0, [Mas
 -- List_UpgradeRimSizeRear: donor ladder [18, 19] -> FM's [17, 18] (FM car 1573)
 UPDATE [List_UpgradeRimSizeRear] SET [RearWheelDiameter]=17, [IsStock]=1, [MassDiff]=0.0, [Price]=0 WHERE [Id]=9510000;
 UPDATE [List_UpgradeRimSizeRear] SET [RearWheelDiameter]=18, [IsStock]=0, [MassDiff]=1.36, [Price]=0 WHERE [Id]=9510001;
+
+-- ---------- 9. Dexa swap + second aero option REMOVED (user 2026-10-19: 'aero rows and dexa off'); stock wing / splitter rows (FM figures) kept ----------
+DELETE FROM [List_UpgradeEngine] WHERE [Id]=9510001 AND [Ordinal]=9510 AND [EngineID]=9600;
+DELETE FROM [List_UpgradeRearWing] WHERE [Id]=9510001 AND [Ordinal]=9510 AND [IsStock]=0;
+DELETE FROM [List_UpgradeCarBodyFrontBumper] WHERE [Id]=9510001 AND [CarBodyID]=9510000 AND [IsStock]=0;
+DELETE FROM [List_AeroPhysics] WHERE [AeroPhysicsID] IN (9510902, 9513402) AND [Ordinal]=9510;
