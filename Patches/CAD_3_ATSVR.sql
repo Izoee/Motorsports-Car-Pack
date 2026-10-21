@@ -208,3 +208,8 @@ UPDATE [List_UpgradeEngineTurboQuad] SET [Price]=0 WHERE [EngineID]=9012;   -- o
 UPDATE [List_UpgradeEngineTurboSingle] SET [Price]=0 WHERE [EngineID]=9012;   -- own stock engine
 UPDATE [List_UpgradeEngineTurboTwin] SET [Price]=0 WHERE [EngineID]=9012;   -- own stock engine
 UPDATE [List_UpgradeEngineValves] SET [Price]=0 WHERE [EngineID]=9012;   -- own stock engine
+
+-- ---------- FH5 engine swaps carried over (user 2026-10-20) ----------
+-- FH5 rows 3281001 / 3281002 (stock FH6 engines 468 Racing V12 / 2794 Racing 7.2L V8) re-keyed, Price 0; MassDiff / WeightDistDiff = FH5's (relative to the same 3.6L V6-TT stock engine). cad3_add_swaps.py
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9530001, 9530, 1, 468, 0, 8, 0, -119.0, -0.025, 1.0, 1.0, 0);
+INSERT INTO [List_UpgradeEngine] ([Id], [Ordinal], [Level], [EngineID], [IsStock], [ManufacturerID], [Price], [MassDiff], [WeightDistDiff], [DragScale], [WindInstabilityScale], [releaseOrder]) VALUES (9530002, 9530, 2, 2794, 0, 8, 0, -75.0, -0.016, 1.0, 1.0, 0);

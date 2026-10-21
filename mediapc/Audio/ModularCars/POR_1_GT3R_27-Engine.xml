@@ -2,9 +2,9 @@
 <ModularCar>
   <GranularEngine>
     <Parameter Name="RPMScalar" Stock="0.95" Street="0.95" Sport="0.95" Race="0.95" />
-    <Channel Name="Engine" Stock="G_V8NM_UK_Race_1_Eng" Street="G_V8NM_UK_Race_1_Eng" Sport="G_V8NM_UK_Race_1_Eng" Race="G_V8NM_UK_Race_1_Eng" />
-    <Channel Name="Exhaust" Stock="G_F6NM_European_Supercar_1_Exh" Street="G_F6NM_European_Supercar_1_Exh" Sport="G_F6NM_European_Supercar_1_Exh" Race="G_F6NM_European_Supercar_1_Exh" />
-    <Channel Name="Intake" Stock="G_F6NM_European_Race_4_Int" Street="G_F6NM_European_Race_4_Int" Sport="G_F6NM_European_Race_4_Int" Race="G_F6NM_European_Race_4_Int" />
+    <Channel Name="Engine" Stock="G_F6NM_European_Race_2_Eng" Street="G_F6NM_European_Race_2_Eng" Sport="G_F6NM_European_Race_2_Eng" Race="G_F6NM_European_Race_2_Eng" />
+    <Channel Name="Exhaust" Stock="G_F6NM_European_Sport_8_Exh" Street="G_F6NM_European_Sport_8_Exh" Sport="G_F6NM_European_Sport_8_Exh" Race="G_F6NM_European_Sport_8_Exh" />
+    <Channel Name="Intake" Stock="G_F12NV_European_Race_1_Int" Street="G_F12NV_European_Race_1_Int" Sport="G_F12NV_European_Race_1_Int" Race="G_F12NV_European_Race_1_Int" />
     <Channel Name="InternalL" />
     <Channel Name="InternalR" />
     <Channel Name="Turbo" Profile="RST_TBO_I6V6" />
@@ -15,8 +15,8 @@
   <Properties>
     <Property Name="EngineBank" Value="GS_ModularCar" />
     <Property Name="Burbles" Value="ModernF6Race" />
-    <Property Name="Backfire" Value="RST_BF_IT_Classic_V6_StockHot_S2" />
-    <Property Name="AntiLag" Value="RST_BF_IT_Classic_V6_StockHot_S2" />
+    <Property Name="Backfire" Value="RST_BF_DE_Neo_F6_Race_S1" />
+    <Property Name="AntiLag" Value="RST_BF_DE_Neo_F6_Race_S1" />
     <Property Name="TurboBOV" Value="RST_BOV_Race_Antilag" />
     <Property Name="CentrifugalBOV" Value="Race" />
     <Property Name="ThrottleBody" Value="ThrottleBody_Modern" />

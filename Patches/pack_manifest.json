@@ -290,7 +290,7 @@
     {
       "order": 29,
       "file": "POR_1_GT3R_27.sql",
-      "description": "NEW car 9525 POR_1_GT3R_27 (911 GT3 R Rennsport): FH5 AMG GT3 handling baseline, GT3 R weight / drivetrain / rims / bucket, own engine 9010 (GT3 RS '16 4.0 F6 curve @ 830 hp + GT3 R restrictor tree), GT3 R interior swap (v91), camera row = GT3 R's; car-local $0",
+      "description": "NEW car 9525 POR_1_GT3R_27 (911 GT3 R Rennsport): FH5 AMG GT3 handling baseline, GT3 R weight / drivetrain / rims / bucket, own engine 9010 (GT3 RS '16 4.0 F6 curve @ 830 hp + GT3 R restrictor tree), GT3 R interior swap (v91), camera row = GT3 R's; car-local $0; 2026-10-20: own stock engine 9014 (GT3 R engine 4095 copied, 620 hp, redline 9400, cutoff 9700, same part rows); STOCK ENGINE ID CHANGED 4095 -> 9014",
       "adds": [
         "car 9525",
         "engine 9010"
@@ -363,6 +363,33 @@
       "description": "2025 Chevrolet #00 IndyCar (FM body on the Huayra R container, Exige-recipe rows, FM 2.2L V6-TT + 6-speed, Exige-recipe aero factors x1.08/x1.36, stock wing/splitter rows = Exige verbatim, race tyre tree, $0 car-local rows)",
       "adds": [
         "car 9532"
+      ],
+      "requires": []
+    },
+    {
+      "order": 37,
+      "file": "CHE_00_NASCAR_24.sql",
+      "description": "2024 Chevrolet #00 NASCAR Next Gen Camaro ZL1 (FM body on the Camaro ZL1 '24 container, Pennzoil Skyline '98 rows, FM 5.9L V8 + 5-speed, Vulcan aero ratios, race tyre tree, $0 car-local rows)",
+      "adds": [
+        "car 9533"
+      ],
+      "requires": []
+    },
+    {
+      "order": 38,
+      "file": "CHE_03_CorvetteC8R.sql",
+      "description": "2020 Chevrolet #3 Corvette Racing C8.R (hybrid: FM body on the Corvette Z06 '23 container, FH5 CHE_3_CorvetteC8R_20 rows, FH5 5.5L V8 as pack engine 9013 + the FH5 swaps Racing V12 / Racing 7.2L V8 at $0, race tyre tree, own wheel row 95340, $0 car-local rows)",
+      "adds": [
+        "car 9534"
+      ],
+      "requires": []
+    },
+    {
+      "order": 39,
+      "file": "CHE_23_Corvette_TA.sql",
+      "description": "2018 Chevrolet #23 Ruman Racing TA Corvette (three-layer: FM numbers over the FH5 C8.R rows over the Corvette Z06 '15 base; FM 5.9L V8 + 5-speed, C8.R aero ratios + PG-rule stock aero rows, race tyre tree, $0 car-local rows); the C8.R engine swaps Racing V12 / Racing 7.2L V8 ($0, masses derived from the engines); level-6 race 6-speed gearbox row (PG's ratio set)",
+      "adds": [
+        "car 9535"
       ],
       "requires": []
     }
@@ -1061,7 +1088,7 @@
         "IDS_ModelShort_9525"
       ],
       "thumbnail": "the game's own 670x376 render (LocalStorage_Cache/CacheThumbnails webp, transparent) via make_thumb.py BC7, 2026-10-14",
-      "status": "v106 INSTALLED 2026-10-14 (test pending)",
+      "status": "v106 INSTALLED 2026-10-14 (test pending) | 2026-10-20 own 620 hp stock engine 9014 (DB installed; user's 620 hp sound pair staged)",
       "build": {
         "zip": "POR_1_GT3R_27.v106",
         "md5": "dfb946f199ac2e113aa4e21645de2b9a",
@@ -1081,7 +1108,8 @@
         "generator": "GT3R_27 Import/scripts/gt3r27_f8tt.py",
         "role": "swap (level 6) since 2026-10-17; stock engine = 4095 4.2 F6",
         "media": "POR_1_GT3R_27_F8TT"
-      }
+      },
+      "save_migration": "2026-10-20: stock engine id 4095 -> 9014. A garage Rennsport saved on engine 4095 must be put back on stock with the Manager's Crash Fix (save engine reset) before launching."
     },
     {
       "id": 9526,
@@ -1207,7 +1235,7 @@
         "md5": "39f80c85eb5f15adbfb305485cf2230e",
         "pipeline": "convert_car.py (FM, cad_3_atsgt3_15 -> CAD_ATSV_16) -> rename --ordinal 9530 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.437, 0.382, 0.458) -> (-0.437, 0.382, 0.658), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.193, 0.476, 0.461) -> (-0.193, 0.476, 0.661), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.278, 0.473, 0.430) -> (-0.278, 0.473, 0.630), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> 0.0210 -> v4: carLocator_seatCamLF ['-0.380000', '0.921906', '-0.275014'] -> ['-0.380000', '0.921906', '-0.225014']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.152615'] -> ['0.380000', '0.992123', '-0.102615']"
       },
-      "status": "v4 INSTALLED 2026-10-19 (test pending)"
+      "status": "v4 INSTALLED 2026-10-19 (test pending) | 2026-10-20 engine swaps added (test pending)"
     },
     {
       "id": 9531,
@@ -1232,7 +1260,7 @@
         "md5": "bcab10958677d0ee1f8f3d7b3fb732e7",
         "pipeline": "convert_car.py (FM, che_10_corvettedp_15 -> CHE_CorvetteZ06_23) -> rename --ordinal 9531 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (1 models) -> unbound CH_1-default slots bound neutral (1) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.531, 0.113, 0.790) -> (-0.431, 0.336, 1.029), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.069, 0.336, 0.829) -> (-0.069, 0.336, 1.029), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.146, 0.322, 0.800) -> (-0.146, 0.322, 1.000), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> 0.0150; steering_pivot_offset.OffsetZ 0.0030 -> -0.0040; steering_ik_scale.ScaleX 1.0200 -> 1.0107; steering_ik_scale.ScaleY 1.0200 -> 1.0107; steering_ik_scale.ScaleZ 1.0200 -> 1.0107; carLocator_seatCamLF ['-0.217741', '0.750735', '0.079175'] -> ['-0.217741', '0.700735', '0.129175']; carLocator_seatCamRF ['0.261345', '0.770532', '0.061643'] -> ['0.261345', '0.720532', '0.111643'] -> v4: carLocator_seatCamLF ['-0.217741', '0.700735', '0.129175'] -> ['-0.217741', '0.700735', '0.209175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.111643'] -> ['0.261345', '0.720532', '0.191643'] -> v5: carLocator_seatCamLF ['-0.217741', '0.700735', '0.209175'] -> ['-0.217741', '0.700735', '0.259175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.191643'] -> ['0.261345', '0.720532', '0.241643'] -> v6: carLocator_seatCamLF ['-0.217741', '0.700735', '0.259175'] -> ['-0.217741', '0.700735', '0.289175']; carLocator_seatCamRF ['0.261345', '0.720532', '0.241643'] -> ['0.261345', '0.720532', '0.271643'] -> v7: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1' (taillightL_a): light function 71 -> 1; taillightL_a__SLOD.modelbin 'lights_smooth_CH1' (taillightL_a): light function 71 -> 1; taillightR_a.modelbin 'lights_smooth_CH1' (taillightR_a): light function 71 -> 1; taillightR_a__SLOD.modelbin 'lights_smooth_CH1' (taillightR_a): light function 71 -> 1 -> v8: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1' (taillightL_a): light function 1 -> 71; taillightL_a__SLOD.modelbin 'lights_smooth_CH1' (taillightL_a): light function 1 -> 71; taillightR_a.modelbin 'lights_smooth_CH1' (taillightR_a): light function 1 -> 71; taillightR_a__SLOD.modelbin 'lights_smooth_CH1' (taillightR_a): light function 1 -> 71 -> v9: material instance data copied from another car: taillightL_a.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params); taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': chrome -> material of CAD_CTSVSedan_16.zip/taillightC_a.modelbin 'lights_smooth_CH1_custom_re' (emitter_ch1, 12 params) -> v10: taillightL_a.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightR_a.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params); taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': emitter_ch1 -> material of taillightL_a.modelbin 'lbk_CH1_Custom_a' (emitter, 10 params) -> v11: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lbk_CH1_Custom' (taillightL_a): light function 69 -> 1; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' (taillightL_a): light function 69 -> 1; taillightR_a.modelbin 'lbk_CH1_Custom' (taillightR_a): light function 69 -> 1; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' (taillightR_a): light function 69 -> 1 -> v12: texture params re-pointed (taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> flat_texture_maskonechnwhite_7l6gz7b.swatchbin) -> v13 (from v11): UV ranges set (taillightL_a.modelbin mesh 'taillightL_a_LOD0' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD1' (lbk_ch1_custom) set 0 range (-0.799, 2.677, -0.006, 0.948) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD2' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD3' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD4' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a.modelbin mesh 'taillightL_a_LOD5' (lbk_ch1_custom) set 0 range (-0.582, 2.446, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightL_a__SLOD.modelbin mesh 'taillightL_a_LODS' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.015, 0.909) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD0' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD1' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.012, 0.912) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD2' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD3' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD4' (lbk_ch1_custom) set 0 range (-0.768, 2.715, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a.modelbin mesh 'taillightR_a_LOD5' (lbk_ch1_custom) set 0 range (-0.582, 2.446, 0.107, 0.873) -> (0.000, 1.000, 0.000, 1.000); taillightR_a__SLOD.modelbin mesh 'taillightR_a_LODS' (lbk_ch1_custom) set 0 range (-0.782, 2.610, 0.015, 0.909) -> (0.000, 1.000, 0.000, 1.000)) -> v14: texture params re-pointed (added Textures/Lib/Swatches/che_10_konicadp_15_reverse_fullmask_931753c.swatchbin (43952 B); taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin) -> v15: texture params re-pointed (added Textures/Lib/Swatches/che_10_konicadp_15_reverse_fullmask_931753c.swatchbin (43952 B); taillightL_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': trilight_003_mask_1c752785-b5be-49b9-a983-c5bce2f7ecd9.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom': che_10_corvette_tl_mask_mask2_055af2f0-5265-4d45-bbee-4503be3c6b55.swatchbin -> che_10_konicadp_15_reverse_fullmask_931753c.swatchbin; Manifest.xml: 4 swatchbin line(s) added) -> v16: param values set (taillightL_a.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightR_a.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 22.627 -> 11.314) -> v17 (from v16): UV ranges set (glassLTL_a.modelbin mesh 'glassLTL_a_LOD0' (gls_ch1_custom) LOD mask 2 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD1' (gls_ch1_custom) LOD mask 4 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD2' (gls_ch1_custom) LOD mask 8 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD3' (gls_ch1_custom) LOD mask 16 -> 0 (disabled); glassLTL_a.modelbin mesh 'glassLTL_a_LOD4' (gls_ch1_custom) LOD mask 32 -> 0 (disabled); glassLTL_a__SLOD.modelbin mesh 'glassLTL_a_LODS' (gls_ch1_custom) LOD mask 1 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD0' (gls_ch1_custom) LOD mask 2 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD1' (gls_ch1_custom) LOD mask 4 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD2' (gls_ch1_custom) LOD mask 8 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD3' (gls_ch1_custom) LOD mask 16 -> 0 (disabled); glassRTL_a.modelbin mesh 'glassRTL_a_LOD4' (gls_ch1_custom) LOD mask 32 -> 0 (disabled); glassRTL_a__SLOD.modelbin mesh 'glassRTL_a_LODS' (gls_ch1_custom) LOD mask 1 -> 0 (disabled)) -> v18: param values set (taillightL_a.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightL_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightR_a.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657; taillightR_a__SLOD.modelbin 'lbk_CH1_Custom' e76c20ed: 11.314 -> 5.657) -> v19: clip dictionary rebuilt with FM's suspension travel / steer clips rebased on their MIDDLE (rest) sample like PG's own (sample 0 had parked the wheels at full lock and the suspension at full travel): 4 tracks changed (doorlf_close boneMirrorL_001; doorlf_open boneMirrorL_001; doorrf_close boneMirrorR_001; doorrf_open boneMirrorR_001)"
       },
-      "status": "v19 INSTALLED 2026-10-19 (dials, user audio, reverse lamps = nested housings on the car's own emitter with a full-white mask, glass panes removed, mirror clips fixed)"
+      "status": "v19 INSTALLED 2026-10-19 (dials, user audio, reverse lamps = nested housings on the car's own emitter with a full-white mask, glass panes removed, mirror clips fixed) | 2026-10-20 engine swaps added (test pending)"
     },
     {
       "id": 9532,
@@ -1258,6 +1286,81 @@
         "pipeline": "convert_car.py (FM, che_00_indy_25 -> PAG_HuayraR_22) -> rename --ordinal 9532 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.360, 0.200, 0.953) -> (-0.060, 0.378, 1.025), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (0.052, 0.378, 0.925) -> (0.052, 0.378, 1.025), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.034, 0.358, 0.897) -> (-0.034, 0.358, 0.997), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetZ 0.0030 -> -0.0670; anchor_butt.OffsetY 0.1400 -> 0.0400; carLocator_seatCamRF ['0.018310', '0.762390', '0.201240'] -> ['0.018310', '0.662390', '0.201240']; carLocator_seatCamLF ['0.018313', '0.762390', '0.201238'] -> ['0.018313', '0.662390', '0.201238'] -> v4: steering_pivot_offset.OffsetY 0.0110 -> 0.0010; steering_ik_scale.ScaleX 1.0200 -> 0.9976; steering_ik_scale.ScaleY 1.0200 -> 0.9976; steering_ik_scale.ScaleZ 1.0200 -> 0.9976; anchor_butt.OffsetY 0.0400 -> -0.0100; carLocator_seatCamRF ['0.018310', '0.662390', '0.201240'] -> ['0.018310', '0.612390', '0.271240']; carLocator_seatCamLF ['0.018313', '0.662390', '0.201238'] -> ['0.018313', '0.612390', '0.271238'] -> v5: carLocator_seatCamRF ['0.018310', '0.612390', '0.271240'] -> ['0.018310', '0.632390', '0.341240']; carLocator_seatCamLF ['0.018313', '0.612390', '0.271238'] -> ['0.018313', '0.632390', '0.341238'] -> v6: carLocator_seatCamRF ['0.018310', '0.632390', '0.341240'] -> ['0.038310', '0.632390', '0.341240']; carLocator_seatCamLF ['0.018313', '0.632390', '0.341238'] -> ['0.038313', '0.632390', '0.341238']"
       },
       "status": "v6 INSTALLED 2026-10-19 (test pending)"
+    },
+    {
+      "id": 9533,
+      "media": "CHE_00_NASCAR_24",
+      "name": "#00 Chevrolet NASCAR Camaro ZL1",
+      "source": "2024 Chevrolet #00 NASCAR Next Gen Camaro ZL1 from Forza Motorsport (che_00_nascar_24, FM id 3994); body donor CHE_CamaroZL1_24, DB rows NIS_23_Skyline_98 (Pennzoil Skyline), ref engine 3904 (Corvette Z06 '23 5.5 V8), aero analogue AST_Vulcan_16; wheel AO aliased to FM's Ford Next Gen wheel AO (the Chevy/Toyota ref dangles in FM itself, same rim)",
+      "files": [
+        "mediapc/Cars/CHE_00_NASCAR_24.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9533_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_00_NASCAR_24-Engine.xml (user-authored 2026-10-20)",
+        "mediapc/Audio/ModularCars/CHE_00_NASCAR_24-Model.xml (user-authored 2026-10-20)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_00_nascar_24.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_00_nascar_24/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_00_nascar_24/Scene/animations/Mojo/clip/carclips_9533.clipd"
+      ],
+      "build": {
+        "zip": "CHE_00_NASCAR_24.v5",
+        "md5": "e260f6ad70e6526d877fbe0d792faa6c",
+        "pipeline": "convert_car.py (FM, che_00_nascar_24 -> CHE_CamaroZL1_24) -> rename --ordinal 9533 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: carLocator_seatCamLF ['-0.358310', '0.837481', '0.018074'] -> ['-0.358310', '0.837481', '-0.181926']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '0.992123', '-0.210732'] -> v3: carLocator_seatCamLF ['-0.358310', '0.837481', '-0.181926'] -> ['-0.358310', '0.837481', '-0.381926']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.210732'] -> ['0.380000', '0.992123', '-0.410732'] -> v4: steering_pivot_offset.OffsetZ 0.0273 -> -0.0127 -> v5: steering_pivot_offset.OffsetZ -0.0127 -> 0.0013; steering_ik_scale.ScaleX 1.0000 -> 0.9815; steering_ik_scale.ScaleY 1.0000 -> 0.9815; steering_ik_scale.ScaleZ 1.0000 -> 0.9815"
+      },
+      "status": "v5 INSTALLED 2026-10-20 (test pending)"
+    },
+    {
+      "id": 9534,
+      "media": "CHE_03_CorvetteC8R",
+      "name": "#3 Corvette Racing C8.R",
+      "source": "2020 Chevrolet #3 Corvette Racing C8.R: body from Forza Motorsport (che_3_corvettec8r_20, FM id 3490 = the FH5 id), rows = the FH5 car's (hybrid route), FH5 5.5L V8 as pack engine 9013, FH5 engine swaps 468 / 2794 kept; body donor CHE_CorvetteZ06_23",
+      "files": [
+        "mediapc/Cars/CHE_03_CorvetteC8R.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9534_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_03_CorvetteC8R-Engine.xml (user-authored 2026-10-20)",
+        "mediapc/Audio/ModularCars/CHE_03_CorvetteC8R-Model.xml (user-authored 2026-10-20)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_03_corvettec8r.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_03_corvettec8r/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_03_corvettec8r/Scene/animations/Mojo/clip/carclips_9534.clipd"
+      ],
+      "build": {
+        "zip": "CHE_03_CorvetteC8R.v4",
+        "md5": "4564d12148a2a10564c6c3b60409bbfb",
+        "pipeline": "convert_car.py (FM, che_3_corvettec8r_20 -> CHE_CorvetteZ06_23) -> rename --ordinal 9534 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (4 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: steering_pivot_offset.OffsetZ 0.0030 -> 0.0000; steering_ik_scale.ScaleX 1.0200 -> 0.9948; steering_ik_scale.ScaleY 1.0200 -> 0.9948; steering_ik_scale.ScaleZ 1.0200 -> 0.9948 -> v3: carLocator_seatCamLF ['-0.345947', '0.796384', '-0.010783'] -> ['-0.345947', '0.796384', '0.039217']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '0.992123', '0.039268'] -> v4: steering_ik_scale.ScaleX 0.9948 -> 0.9823; steering_ik_scale.ScaleY 0.9948 -> 0.9823; steering_ik_scale.ScaleZ 0.9948 -> 0.9823; carLocator_seatCamLF ['-0.345947', '0.796384', '0.039217'] -> ['-0.345947', '0.766384', '0.039217']; carLocator_seatCamRF ['0.380000', '0.992123', '0.039268'] -> ['0.380000', '0.962123', '0.039268']"
+      },
+      "status": "v4 INSTALLED 2026-10-20 (test pending)"
+    },
+    {
+      "id": 9535,
+      "media": "CHE_23_Corvette_TA",
+      "name": "#23 Ruman Racing TA Corvette",
+      "source": "2018 Chevrolet #23 Ruman Racing TA Corvette: FM body (che_23_corvetteta_18, FM id 3256) on CHE_CorvetteZ06_15; three-layer rows = FM numbers over the FH5 CHE_3_CorvetteC8R_20 rows over the Z06 '15 base; ref engine 3364 (Corvette FD 7.0 V8); aero analogue = the pack C8.R 9534",
+      "files": [
+        "mediapc/Cars/CHE_23_Corvette_TA.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9535_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_23_Corvette_TA-Engine.xml (user-authored 2026-10-20)",
+        "mediapc/Audio/ModularCars/CHE_23_Corvette_TA-Model.xml (user-authored 2026-10-20)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_23_corvette_ta.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_23_corvette_ta/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_23_corvette_ta/Scene/animations/Mojo/clip/carclips_9535.clipd"
+      ],
+      "build": {
+        "zip": "CHE_23_Corvette_TA.v6",
+        "md5": "6989801255a0cfca9aa4d1b4a7fc8410",
+        "pipeline": "convert_car.py (FM, che_23_corvetteta_18 -> CHE_CorvetteZ06_15) -> rename --ordinal 9535 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (4 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1_null' (taillightL_a): light function 71 -> 1; taillightL_a__SLOD.modelbin 'lights_smooth_CH1_null' (taillightL_a): light function 71 -> 1; taillightR_a.modelbin 'lights_smooth_CH1_null' (taillightR_a): light function 71 -> 1; taillightR_a__SLOD.modelbin 'lights_smooth_CH1_null' (taillightR_a): light function 71 -> 1 -> v3: steering_ik_scale.ScaleX 1.0000 -> 0.8473; steering_ik_scale.ScaleY 1.0000 -> 0.8473; steering_ik_scale.ScaleZ 1.0000 -> 0.8473; carLocator_seatCamLF ['-0.277652', '0.863452', '-0.454353'] -> ['-0.277652', '0.863452', '-0.404353']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '0.992123', '0.039268'] -> v4: skeld foot anchors set to the model-skeleton positions: anchor_gas: skeld world (-0.166, 0.241, 0.260) -> (-0.166, 0.102, 0.263), q (-0.68, -0.64, -0.25, 0.27) -> v5: steering_pivot_offset.OffsetZ 0.0000 -> -0.0050; steering_ik_scale.ScaleX 0.8473 -> 0.8167; steering_ik_scale.ScaleY 0.8473 -> 0.8167; steering_ik_scale.ScaleZ 0.8473 -> 0.8167 -> v6: steering_pivot_offset.OffsetY 0.0000 -> -0.0250; steering_ik_scale.ScaleX 0.8167 -> 0.8473; steering_ik_scale.ScaleY 0.8167 -> 0.8473; steering_ik_scale.ScaleZ 0.8167 -> 0.8473"
+      },
+      "status": "v6 INSTALLED 2026-10-20 (test pending)"
     }
   ],
   "shared_files": [
@@ -1342,6 +1445,39 @@
         "CHE_00_Indy_25-Model.xml"
       ],
       "backup": "Z:\\Forza\\MyMods\\CHE_00_Indy_25 Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-20",
+      "synced_from_game": [
+        "CHE_00_NASCAR_24-Engine.xml",
+        "CHE_00_NASCAR_24-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_00_NASCAR_24 Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-20",
+      "synced_from_game": [
+        "CHE_03_CorvetteC8R-Engine.xml",
+        "CHE_03_CorvetteC8R-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_03_CorvetteC8R Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-20",
+      "synced_from_game": [
+        "CHE_23_Corvette_TA-Engine.xml",
+        "CHE_23_Corvette_TA-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_23_Corvette_TA Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-20",
+      "synced_from_game": [
+        "POR_1_GT3R_27-Engine.xml",
+        "POR_1_GT3R_27-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\GT3R_27 Import\\work\\audio_pre_620hp_sync_20261020",
+      "note": "Rennsport 620 hp engine 9014 sound (user)"
     }
   ]
 }
