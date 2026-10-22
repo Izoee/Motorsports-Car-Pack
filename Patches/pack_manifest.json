@@ -392,6 +392,24 @@
         "car 9535"
       ],
       "requires": []
+    },
+    {
+      "order": 40,
+      "file": "CHE_3_Corvette_C7R.sql",
+      "description": "2014 Chevrolet #3 Corvette Racing C7.R (three-layer: FM numbers over the FH5 C8.R rows over the Corvette Z06 '15 base; FM 5.5L V8 + 6-speed, C8.R aero ratios + PG-rule stock aero rows, race tyre tree, $0 car-local rows); the C8.R engine swaps Racing V12 / Racing 7.2L V8 ($0, masses derived from the engines)",
+      "adds": [
+        "car 9536"
+      ],
+      "requires": []
+    },
+    {
+      "order": 41,
+      "file": "CHE_55_OrecaFLM_10.sql",
+      "description": "2010 Chevrolet #55 Level 5 Motorsports Oreca FLM09 (FM body on the Exige WTA container, Exige-recipe rows, FM 6.2L V8 + 6-speed, Exige-recipe aero factors x1.08/x1.36, stock wing/splitter rows by PG's rule with the Exige as reference, race tyre tree, $0 car-local rows)",
+      "adds": [
+        "car 9537"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1361,6 +1379,56 @@
         "pipeline": "convert_car.py (FM, che_23_corvetteta_18 -> CHE_CorvetteZ06_15) -> rename --ordinal 9535 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (4 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_smooth_CH1_null' (taillightL_a): light function 71 -> 1; taillightL_a__SLOD.modelbin 'lights_smooth_CH1_null' (taillightL_a): light function 71 -> 1; taillightR_a.modelbin 'lights_smooth_CH1_null' (taillightR_a): light function 71 -> 1; taillightR_a__SLOD.modelbin 'lights_smooth_CH1_null' (taillightR_a): light function 71 -> 1 -> v3: steering_ik_scale.ScaleX 1.0000 -> 0.8473; steering_ik_scale.ScaleY 1.0000 -> 0.8473; steering_ik_scale.ScaleZ 1.0000 -> 0.8473; carLocator_seatCamLF ['-0.277652', '0.863452', '-0.454353'] -> ['-0.277652', '0.863452', '-0.404353']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '0.992123', '0.039268'] -> v4: skeld foot anchors set to the model-skeleton positions: anchor_gas: skeld world (-0.166, 0.241, 0.260) -> (-0.166, 0.102, 0.263), q (-0.68, -0.64, -0.25, 0.27) -> v5: steering_pivot_offset.OffsetZ 0.0000 -> -0.0050; steering_ik_scale.ScaleX 0.8473 -> 0.8167; steering_ik_scale.ScaleY 0.8473 -> 0.8167; steering_ik_scale.ScaleZ 0.8473 -> 0.8167 -> v6: steering_pivot_offset.OffsetY 0.0000 -> -0.0250; steering_ik_scale.ScaleX 0.8167 -> 0.8473; steering_ik_scale.ScaleY 0.8167 -> 0.8473; steering_ik_scale.ScaleZ 0.8167 -> 0.8473"
       },
       "status": "v6 INSTALLED 2026-10-20 (test pending)"
+    },
+    {
+      "id": 9536,
+      "media": "CHE_3_Corvette_C7R",
+      "name": "#3 Corvette Racing C7.R",
+      "source": "2014 Chevrolet #3 Corvette Racing C7.R: FM body (che_3_corvettec7r_14, FM id 2226) on CHE_CorvetteZ06_15; three-layer rows = FM numbers over the FH5 CHE_3_CorvetteC8R_20 rows over the Z06 '15 base; ref engine 3904 (Z06 '23 5.5 V8); aero analogue = the pack C8.R 9534",
+      "files": [
+        "mediapc/Cars/CHE_3_Corvette_C7R.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9536_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_3_Corvette_C7R-Engine.xml (PLACEHOLDER = GT3 R pair; user to replace)",
+        "mediapc/Audio/ModularCars/CHE_3_Corvette_C7R-Model.xml (PLACEHOLDER = GT3 R pair; user to replace)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_3_corvette_c7r.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_3_corvette_c7r/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_3_corvette_c7r/Scene/animations/Mojo/clip/carclips_9536.clipd"
+      ],
+      "build": {
+        "zip": "CHE_3_Corvette_C7R.v6",
+        "md5": "45bd2975d881f82c7f65b1a5ac65c7b0",
+        "pipeline": "convert_car.py (FM, che_3_corvettec7r_14 -> CHE_CorvetteZ06_15) -> rename --ordinal 9536 -> fix_fm_post (flash x0.5) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: light function ids set (user 2026-10-04): taillightL_a.modelbin 'lights_bump_CH1_Reverse' (taillightL_a): light function 71 -> 1; taillightL_a.modelbin 'lights_bump_CH1_Turn' (taillightL_a): light function 71 -> 70; taillightL_a__SLOD.modelbin 'lights_bump_CH1_Reverse' (taillightL_a): light function 71 -> 1; taillightL_a__SLOD.modelbin 'lights_bump_CH1_Turn' (taillightL_a): light function 71 -> 70; taillightR_a.modelbin 'lights_bump_CH1_Reverse' (taillightR_a): light function 71 -> 1; taillightR_a.modelbin 'lights_bump_CH1_Turn' (taillightR_a): light function 71 -> 70; taillightR_a__SLOD.modelbin 'lights_bump_CH1_Reverse' (taillightR_a): light function 71 -> 1; taillightR_a__SLOD.modelbin 'lights_bump_CH1_Turn' (taillightR_a): light function 71 -> 70 -> v3: carLocator_seatCamLF ['-0.380000', '0.779743', '-0.603183'] -> ['-0.380000', '0.829743', '-0.453183'] -> v4: anchor_butt.OffsetY 0.0000 -> 0.0755; anchor_butt.OffsetZ 0.0000 -> -0.0065 -> v5: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (-0.446, 0.182, 0.268) -> (-0.446, 0.162, 0.328), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (-0.302, 0.296, 0.240) -> (-0.302, 0.162, 0.328), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (-0.329, 0.275, 0.243) -> (-0.329, 0.255, 0.303), q (-0.61, -0.70, -0.28, 0.24) -> v6: carLocator_seatCamLF ['-0.380000', '0.829743', '-0.453183'] -> ['-0.380000', '0.809743', '-0.353183']"
+      },
+      "status": "v6 INSTALLED 2026-10-20 (test pending)"
+    },
+    {
+      "id": 9537,
+      "media": "CHE_55_OrecaFLM_10",
+      "name": "#55 Level 5 Motorsports FLM09",
+      "source": "2010 Chevrolet #55 Level 5 Motorsports Oreca FLM09 from Forza Motorsport (che_55_flm09_10, FM id 1317); body donor + DB rows LOT_00_ExigeWTA_18 (Exige recipe), ref engine 3501 (Corvette C8 '20 6.2 V8)",
+      "files": [
+        "mediapc/Cars/CHE_55_OrecaFLM_10.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9537_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_55_OrecaFLM_10-Engine.xml (user-authored 2026-10-21)",
+        "mediapc/Audio/ModularCars/CHE_55_OrecaFLM_10-Model.xml (user-authored 2026-10-21)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_55_orecaflm_10.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_55_orecaflm_10/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_55_orecaflm_10/Scene/animations/Mojo/clip/carclips_9537.clipd"
+      ],
+      "build": {
+        "zip": "CHE_55_OrecaFLM_10.v6",
+        "md5": "254dd7d971830e5b62ae00bfcb650813",
+        "pipeline": "convert_car.py (FM, che_55_flm09_10 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9537 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (0.134, 0.297, 0.942) -> (0.135, 0.197, 1.142), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (0.247, 0.412, 0.944) -> (0.247, 0.197, 1.142), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (0.255, 0.392, 0.915) -> (0.255, 0.292, 1.115), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> -0.0340; steering_ik_scale.ScaleX 1.0200 -> 0.8375; steering_ik_scale.ScaleY 1.0200 -> 0.8375; steering_ik_scale.ScaleZ 1.0200 -> 0.8375; carLocator_seatCamRF ['0.185754', '0.659482', '0.483587'] -> ['0.185754', '0.559482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.744565', '0.128827'] -> ['0.186824', '0.644565', '0.128827'] -> v4: carLocator_seatCamRF ['0.185754', '0.559482', '0.483587'] -> ['0.185754', '0.609482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.644565', '0.128827'] -> ['0.186824', '0.694565', '0.128827'] -> v5: steering_pivot_offset.OffsetZ 0.0030 -> -0.0090; carLocator_seatCamRF ['0.185754', '0.609482', '0.483587'] -> ['0.215754', '0.609482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.694565', '0.128827'] -> ['0.216824', '0.694565', '0.128827'] -> v6: steering_ik_scale.ScaleX 0.8375 -> 0.8485; steering_ik_scale.ScaleY 0.8375 -> 0.8485; steering_ik_scale.ScaleZ 0.8375 -> 0.8485"
+      },
+      "status": "v6 INSTALLED 2026-10-21 (test pending)"
     }
   ],
   "shared_files": [
@@ -1478,6 +1546,14 @@
       ],
       "backup": "Z:\\Forza\\MyMods\\GT3R_27 Import\\work\\audio_pre_620hp_sync_20261020",
       "note": "Rennsport 620 hp engine 9014 sound (user)"
+    },
+    {
+      "date": "2026-10-21",
+      "synced_from_game": [
+        "CHE_55_OrecaFLM_10-Engine.xml",
+        "CHE_55_OrecaFLM_10-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_55_OrecaFLM_10 Import\\work\\audio_placeholder_pre_user_sound"
     }
   ]
 }
