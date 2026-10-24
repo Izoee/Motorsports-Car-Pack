@@ -410,6 +410,24 @@
         "car 9537"
       ],
       "requires": []
+    },
+    {
+      "order": 42,
+      "file": "CHE_76_Corvette_76.sql",
+      "description": "1976 Chevrolet #76 Greenwood Corvette (FM body on the Corvette ZR1 '70 container, Skyline '84 rows, FM 7.7L V8 + 4-speed, Skyline '84 aero ratios + PG-rule stock aero rows, race tyre tree, $0 car-local rows); level-6 race 6-speed gearbox row (PG's ratio set)",
+      "adds": [
+        "car 9538"
+      ],
+      "requires": []
+    },
+    {
+      "order": 44,
+      "file": "DAT_33_280ZX_79.sql",
+      "description": "1979 Datsun #33 280ZX Turbo (FM body on the 240Z hillclimb container, Skyline '84 rows, FM 4.2L V8-TT + 4-speed, Skyline '84 aero ratios + PG-rule stock aero rows, race tyre tree, $0 car-local rows); level-6 race 6-speed gearbox row (PG's ratio set)",
+      "adds": [
+        "car 9539"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1429,6 +1447,56 @@
         "pipeline": "convert_car.py (FM, che_55_flm09_10 -> LOT_00_ExigeWTA_18) -> rename --ordinal 9537 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (0 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: skeld foot anchors set to the model-skeleton positions: anchor_clutch: skeld world (0.134, 0.297, 0.942) -> (0.135, 0.197, 1.142), q (0.22, 0.21, -0.65, 0.69); anchor_gas: skeld world (0.247, 0.412, 0.944) -> (0.247, 0.197, 1.142), q (-0.68, -0.64, -0.25, 0.27); anchor_brake: skeld world (0.255, 0.392, 0.915) -> (0.255, 0.292, 1.115), q (-0.61, -0.70, -0.28, 0.24) -> v3: steering_pivot_offset.OffsetY 0.0110 -> -0.0340; steering_ik_scale.ScaleX 1.0200 -> 0.8375; steering_ik_scale.ScaleY 1.0200 -> 0.8375; steering_ik_scale.ScaleZ 1.0200 -> 0.8375; carLocator_seatCamRF ['0.185754', '0.659482', '0.483587'] -> ['0.185754', '0.559482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.744565', '0.128827'] -> ['0.186824', '0.644565', '0.128827'] -> v4: carLocator_seatCamRF ['0.185754', '0.559482', '0.483587'] -> ['0.185754', '0.609482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.644565', '0.128827'] -> ['0.186824', '0.694565', '0.128827'] -> v5: steering_pivot_offset.OffsetZ 0.0030 -> -0.0090; carLocator_seatCamRF ['0.185754', '0.609482', '0.483587'] -> ['0.215754', '0.609482', '0.483587']; carLocator_seatCamLF ['0.186824', '0.694565', '0.128827'] -> ['0.216824', '0.694565', '0.128827'] -> v6: steering_ik_scale.ScaleX 0.8375 -> 0.8485; steering_ik_scale.ScaleY 0.8375 -> 0.8485; steering_ik_scale.ScaleZ 0.8375 -> 0.8485"
       },
       "status": "v6 INSTALLED 2026-10-21 (test pending)"
+    },
+    {
+      "id": 9538,
+      "media": "CHE_76_Corvette_76",
+      "name": "#76 Greenwood Corvette",
+      "source": "1976 Chevrolet #76 Greenwood Corvette from Forza Motorsport (che_76_corvette_76, FM id 2776); body donor CHE_CorvetteZR1_70, DB rows NIS_11_Skyline_84, ref engine 3260 (Ultra4 Bronco 7.0 V8), aero analogue NIS_11_Skyline_84",
+      "files": [
+        "mediapc/Cars/CHE_76_Corvette_76.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9538_Big.swatchbin",
+        "mediapc/Audio/ModularCars/CHE_76_Corvette_76-Engine.xml (user-authored 2026-10-22)",
+        "mediapc/Audio/ModularCars/CHE_76_Corvette_76-Model.xml (user-authored 2026-10-22)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/che_76_corvette_76.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/che_76_corvette_76/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/che_76_corvette_76/Scene/animations/Mojo/clip/carclips_9538.clipd"
+      ],
+      "build": {
+        "zip": "CHE_76_Corvette_76.v6",
+        "md5": "6fb67298bb38da997cc34eb4d29fbf2d",
+        "pipeline": "convert_car.py (FM, che_76_corvette_76 -> CHE_CorvetteZR1_70) -> rename --ordinal 9538 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (2 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: steering_pivot_offset.OffsetZ 0.0106 -> -0.0494; steering_ik_scale.ScaleX 1.0447 -> 0.8919; steering_ik_scale.ScaleY 1.0447 -> 0.8919; steering_ik_scale.ScaleZ 1.0447 -> 0.8919; carLocator_seatCamLF ['-0.357905', '0.809919', '-0.538265'] -> ['-0.357905', '0.809919', '-0.458265']; carLocator_seatCamRF ['0.380000', '0.992123', '-0.010732'] -> ['0.380000', '0.992123', '0.069268'] -> v3: steering_pivot_offset.OffsetY 0.0000 -> -0.0350; steering_ik_scale.ScaleX 0.8919 -> 0.8308; steering_ik_scale.ScaleY 0.8919 -> 0.8308; steering_ik_scale.ScaleZ 0.8919 -> 0.8308; carLocator_seatCamLF ['-0.357905', '0.809919', '-0.458265'] -> ['-0.357905', '0.769919', '-0.458265']; carLocator_seatCamRF ['0.380000', '0.992123', '0.069268'] -> ['0.380000', '0.952123', '0.069268'] -> v4: steering_pivot_offset.OffsetY -0.0350 -> -0.0300; steering_ik_scale.ScaleX 0.8308 -> 0.8460; steering_ik_scale.ScaleY 0.8308 -> 0.8460; steering_ik_scale.ScaleZ 0.8308 -> 0.8460 -> v5: steering_pivot_offset.OffsetZ -0.0494 -> -0.0694; carLocator_seatCamLF ['-0.357905', '0.769919', '-0.458265'] -> ['-0.327905', '0.769919', '-0.458265']; carLocator_seatCamRF ['0.380000', '0.952123', '0.069268'] -> ['0.410000', '0.952123', '0.069268'] -> v6: gauges: GAUGE: donor 'fuel' normaliser dropped (no fuel clip shipped); GAUGE: donor 'speedometer' normaliser dropped (no speedometer clip shipped); GAUGE: tachometer normaliser [(0.0, 0.0), (7.0, 1.0)] -> [(0, 0), (10.0, 1)] (1001 samples)"
+      },
+      "status": "v6 INSTALLED (test pending)"
+    },
+    {
+      "id": 9539,
+      "media": "DAT_33_280ZX_79",
+      "name": "#33 280ZX Turbo",
+      "source": "1979 Datsun #33 280ZX Turbo from Forza Motorsport (dat_33_280zx_79, FM id 2488); body donor DAT_269_240Z_72, DB rows NIS_11_Skyline_84, ref engine 174 (Audi RS6 '03 4.2 V8-TT), aero analogue NIS_11_Skyline_84",
+      "files": [
+        "mediapc/Cars/DAT_33_280ZX_79.zip",
+        "mediapc/Stripped/RC0/Thumbnail_9539_Big.swatchbin",
+        "mediapc/Audio/ModularCars/DAT_33_280ZX_79-Engine.xml (user-authored, synced 2026-10-24)",
+        "mediapc/Audio/ModularCars/DAT_33_280ZX_79-Model.xml (user-authored, synced 2026-10-24)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/dat_33_280zx_79.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/dat_33_280zx_79/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/dat_33_280zx_79/Scene/animations/Mojo/clip/carclips_9539.clipd"
+      ],
+      "build": {
+        "zip": "DAT_33_280ZX_79.v8",
+        "md5": "6074e6521f53fabd22b91435c40f0df4",
+        "pipeline": "convert_car.py (FM, dat_33_280zx_79 -> DAT_269_240Z_72) -> rename --ordinal 9539 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (2 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: steering_pivot_offset.OffsetZ -0.0020 -> -0.0140; steering_ik_scale.ScaleX 1.0000 -> 1.0716; steering_ik_scale.ScaleY 1.0000 -> 1.0716; steering_ik_scale.ScaleZ 1.0000 -> 1.0716; carLocator_seatCamLF ['-0.370164', '0.819626', '-0.737490'] -> ['-0.370164', '0.819626', '-0.587490']; carLocator_seatCamRF ['0.361200', '0.817610', '-0.736922'] -> ['0.361200', '0.817610', '-0.586922'] -> v3: steering_ik_scale.ScaleX 1.0716 -> 1.1060; steering_ik_scale.ScaleY 1.0716 -> 1.1060; steering_ik_scale.ScaleZ 1.0716 -> 1.1060 -> v4: stick-shift hand anchor added (user: no shift animation): 1 modelbin skeletons: boneShifter_001 -> shifter_ik_pivot_offset (0.003, 0.164, 0.001 local) -> anchor_shifter appended; anchor world (-0.039, 0.455, -0.117); skeleton.skeld: no donor shifter pivot / anchor -> shifter_ik_pivot_offset + anchor_shifter APPENDED under boneShifter_001 (94 bones), anchor world (-0.039, 0.455, -0.117) -> v5: skeld bones renamed in place: bonePaddleShifterL (index 44) -> bonePaddleShifterL_off; bonePaddleShifterR (index 45) -> bonePaddleShifterR_off -> v6: root.ShiftingFamily 3 -> - -> v7: carLocator_seatCamLF ['-0.370164', '0.819626', '-0.587490'] -> ['-0.370164', '0.819626', '-0.537490']; carLocator_seatCamRF ['0.361200', '0.817610', '-0.586922'] -> ['0.361200', '0.817610', '-0.536922'] -> v8: gauges: boost clip rebuilt (animType 1 -> 0, 101 samples); GAUGE: boost normaliser (none) -> [(-9.784, 0), (22.141, 1)] (101 samples); GAUGE: tachometer normaliser (none) -> [(0, 0), (9.0, 1)] (901 samples)"
+      },
+      "status": "v8 INSTALLED (test pending)"
     }
   ],
   "shared_files": [
@@ -1554,6 +1622,22 @@
         "CHE_55_OrecaFLM_10-Model.xml"
       ],
       "backup": "Z:\\Forza\\MyMods\\CHE_55_OrecaFLM_10 Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-22",
+      "synced_from_game": [
+        "CHE_76_Corvette_76-Engine.xml",
+        "CHE_76_Corvette_76-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\CHE_76_Corvette_76 Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-10-24",
+      "synced_from_game": [
+        "DAT_33_280ZX_79-Engine.xml",
+        "DAT_33_280ZX_79-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\DAT_33_280ZX_79 Import\\work\\audio_placeholder_pre_user_sound"
     }
   ]
 }
