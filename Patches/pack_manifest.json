@@ -10,7 +10,8 @@
     "Rebuild after every game update (the database is a full replacement of the stock one).",
     "One SQL file per car (user rule 2026-09-26): never split a car into stage/aero/suspension files.",
     "Every car-local upgrade row (per-car / per-body / per-drivetrain tables) is priced 0 (user rule 2026-09-26); engine-family rows keep their prices; each car's sql carries the UPDATE section.",
-    "Upgrades.str: IDS_Name_162 / IDS_Name_270 texts swapped (level 1 = 'Remove Restrictors', level 2 = 'No Restrictor Plate'; user 2026-09-26) - GLOBAL labels, affect every car's restrictor plate; re-apply on every string-table rebuild."
+    "Upgrades.str: IDS_Name_162 / IDS_Name_270 texts swapped (level 1 = 'Remove Restrictors', level 2 = 'No Restrictor Plate'; user 2026-09-26) - GLOBAL labels, affect every car's restrictor plate; re-apply on every string-table rebuild.",
+    "shared_zips (2026-10-24): library archives that are not cars (first: _library/forgedcarbon = the Forged Carbon paint materials). Each is registered in zipmanifest.xml like a car zip (manifest_entry; local mediapc/Cars/<media>.zip, media may contain a folder) by the Manager and by every generic tool, and copied 1:1 like every mediapc file; its strings live in the pack EN/GB.zip tables (every non-stock entry of every table is carried), its database rows in a listed patch."
   ],
   "patches": [
     {
@@ -426,6 +427,16 @@
       "description": "1979 Datsun #33 280ZX Turbo (FM body on the 240Z hillclimb container, Skyline '84 rows, FM 4.2L V8-TT + 4-speed, Skyline '84 aero ratios + PG-rule stock aero rows, race tyre tree, $0 car-local rows); level-6 race 6-speed gearbox row (PG's ratio set)",
       "adds": [
         "car 9539"
+      ],
+      "requires": []
+    },
+    {
+      "order": 45,
+      "file": "ForgedCarbon_paint_materials.sql",
+      "description": "Paint-shop materials 9001 Forged Carbon Polished / 9002 Forged Carbon Matte under the Carbon Fiber entries (SortOrder 11100 / 11200), tintable (NumInputColors 1, default white); files in mediapc/Cars/_library/forgedcarbon.zip (shared_zips)",
+      "adds": [
+        "livery material 9001",
+        "livery material 9002"
       ],
       "requires": []
     }
@@ -1638,6 +1649,20 @@
         "DAT_33_280ZX_79-Model.xml"
       ],
       "backup": "Z:\\Forza\\MyMods\\DAT_33_280ZX_79 Import\\work\\audio_placeholder_pre_user_sound"
+    }
+  ],
+  "shared_zips": [
+    {
+      "media": "_library\\forgedcarbon",
+      "file": "mediapc/Cars/_library/forgedcarbon.zip",
+      "manifest_entry": "game:/media/cars/_library/forgedcarbon.zip",
+      "description": "Forged Carbon Polished / Matte paint-shop materials on PG's carbon fibre paint class (car_carbonfiber_user): carbonfiberpolished clones (matte = ClearCoatRoughness 0.6), WeaveMask = chip mask from the user's forged carbon diffuse (BC4 2048 + mips), WeaveNormal = its normal map (BC5 2048 + mips), U/V_Tiling 1.0, WeaveNormal_Intensity 0.8, user tint (UserColorSwitch, default white), two 78x213 preview tiles; List_LiveryMaterials rows 9001 / 9002 (Patches/ForgedCarbon_paint_materials.sql), strings in EN/GB.zip",
+      "build": {
+        "script": "Z:/Forza/MyMods/ForgedCarbon Paint/scripts/forgedcarbon_build_cf.py",
+        "md5": "009eec4ac2043587d96e9aacde6455e5",
+        "version": "v17"
+      },
+      "status": "v17 user-approved 2026-10-24 (tiling 1, normal 0.8, mask window 25..43, tint default white)"
     }
   ]
 }
