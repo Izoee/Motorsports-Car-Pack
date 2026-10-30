@@ -439,6 +439,19 @@
         "livery material 9002"
       ],
       "requires": []
+    },
+    {
+      "order": 45,
+      "file": "IAN_PORBUG_911SS_26.sql",
+      "description": "2026 IANTIC 911 Super Sport (custom model on the Chiron animation rig; Cayman WTAC rows, GT3 RS '18 handling, GT3 RS '23 weight, Cayman aero, own W16 engine 9015 = Chiron 9003 x1.0669 = 1578 hp, stock AWD drivetrain 95400 (own gearbox ladder + AWD diffs) + RWD swap 95401 (clone of PG's shared RWD conversion 2170, -3.5 x CurbWeight), own wheel 95400, $0 car-local rows; new make 300 IANTIC.DESIGN, logos pending)",
+      "adds": [
+        "car 9540",
+        "engine 9015",
+        "make 300 IANTIC.DESIGN"
+      ],
+      "requires": [
+        "BUG_ChironFM_17.sql (engine 9003 = clone source at generation time only; the patch is self-contained)"
+      ]
     }
   ],
   "cars": [
@@ -1508,6 +1521,87 @@
         "pipeline": "convert_car.py (FM, dat_33_280zx_79 -> DAT_269_240Z_72) -> rename --ordinal 9539 -> fix_fm_post (flash x1) -> CH_1 placeholder repoint (2 models) -> unbound CH_1-default slots bound neutral (0) -> FM wiper gradient kept -> v2: steering_pivot_offset.OffsetZ -0.0020 -> -0.0140; steering_ik_scale.ScaleX 1.0000 -> 1.0716; steering_ik_scale.ScaleY 1.0000 -> 1.0716; steering_ik_scale.ScaleZ 1.0000 -> 1.0716; carLocator_seatCamLF ['-0.370164', '0.819626', '-0.737490'] -> ['-0.370164', '0.819626', '-0.587490']; carLocator_seatCamRF ['0.361200', '0.817610', '-0.736922'] -> ['0.361200', '0.817610', '-0.586922'] -> v3: steering_ik_scale.ScaleX 1.0716 -> 1.1060; steering_ik_scale.ScaleY 1.0716 -> 1.1060; steering_ik_scale.ScaleZ 1.0716 -> 1.1060 -> v4: stick-shift hand anchor added (user: no shift animation): 1 modelbin skeletons: boneShifter_001 -> shifter_ik_pivot_offset (0.003, 0.164, 0.001 local) -> anchor_shifter appended; anchor world (-0.039, 0.455, -0.117); skeleton.skeld: no donor shifter pivot / anchor -> shifter_ik_pivot_offset + anchor_shifter APPENDED under boneShifter_001 (94 bones), anchor world (-0.039, 0.455, -0.117) -> v5: skeld bones renamed in place: bonePaddleShifterL (index 44) -> bonePaddleShifterL_off; bonePaddleShifterR (index 45) -> bonePaddleShifterR_off -> v6: root.ShiftingFamily 3 -> - -> v7: carLocator_seatCamLF ['-0.370164', '0.819626', '-0.587490'] -> ['-0.370164', '0.819626', '-0.537490']; carLocator_seatCamRF ['0.361200', '0.817610', '-0.586922'] -> ['0.361200', '0.817610', '-0.536922'] -> v8: gauges: boost clip rebuilt (animType 1 -> 0, 101 samples); GAUGE: boost normaliser (none) -> [(-9.784, 0), (22.141, 1)] (101 samples); GAUGE: tachometer normaliser (none) -> [(0, 0), (9.0, 1)] (901 samples)"
       },
       "status": "v8 INSTALLED (test pending)"
+    },
+    {
+      "id": 9540,
+      "media": "IAN_PORBUG_911SS_26",
+      "name": "2026 IANTIC 911 Super Sport",
+      "source": "custom model (IANTIC 911 Super Sport, Blender) exported by scripts\\export_911ss.py on the pack Chiron's animation container; rows = stock POR_00_CaymanWTA_05 clone + GT3 RS '18 handling + GT3 RS '23 weight + Cayman aero + Chiron W16 9003 cloned to 9015 at 1578 hp; make 300 IANTIC (new; logos pending)",
+      "files": [
+        "mediapc/Cars/IAN_PORBUG_911SS_26.zip",
+        "mediapc/Audio/ModularCars/IAN_PORBUG_911SS_26-Engine.xml (PLACEHOLDER = pack Chiron W16 pair)",
+        "mediapc/Audio/ModularCars/IAN_PORBUG_911SS_26-Model.xml (PLACEHOLDER = pack Chiron W16 pair)",
+        "Patches/IAN_PORBUG_911SS_26.sql",
+        "mediapc/Stripped/RC0/Manu_Logo_IAN.swatchbin (PENDING - user supplies the IANTIC.DESIGN logo)",
+        "mediapc/Stripped/RC0/L_Manu_Logo_IAN.swatchbin (PENDING - user supplies the IANTIC.DESIGN logo)"
+      ],
+      "manifest_entries": [
+        "game:/media/cars/ian_porbug_911ss_26.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/ian_porbug_911ss_26/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/ian_porbug_911ss_26/Scene/animations/Mojo/clip/carclips_9540.clipd"
+      ],
+      "thumbnail": "NONE yet - user takes it from the game's cache after the first garage save (2026-10-27)",
+      "build": {
+        "zip": "IAN_PORBUG_911SS_26.v45",
+        "md5": "d7034deefc2826e03d0c6ef35036549a",
+        "pipeline": "scripts/export_911ss.py: Blender dump (213 meshes, hi 779k / lo 472k tris) -> 9 body models on the Chiron body_a template (provisional MATMAP, flat AO, uv1 side projection) -> skeleton 42 bones (Chiron rotations, our positions, GT3 R single wiper chain mirrored) -> skeld rebuilt on the Chiron order (key carskeleton_9540) -> clipd = Chiron clips minus hood/speedometer + GT3 R wiper clip mirrored (carclips_9540) -> carbin: CarBody 9 models / Chiron brakes / own rims LF+RF, no upgradable parts -> Chiron sidecars + textures kept (paths renamed, Lights.bin dead until re-authored) -> validate_output ALL CHECKS PASSED -> IAN_PORBUG_911SS_26.v2: v2: carbin body-part parts 9/34/35/36/37 (wing, bumperf, bumperr, hood, skirts) like the P201/BT62; Lights.bin emptied (the Chiron's 4 attachments pointed at models not in the zip); OpenHood/CloseHood pins removed -> IAN_PORBUG_911SS_26.v3: v3: one model per root-bound object (159 models; largest buffers 5.7 MB VerB / 3.8 MB IndB vs 40/70 MB before), PG index layout with Shadow meshes re-using the casters' range, unique HorizonIds -> IAN_PORBUG_911SS_26.v4: v4: writer fix - Mesh VLay field = array index (shadow meshes had written the empty layout's Id 0xFFFFFFFF -> NULL layout -> crash at exe+0x774e40 in CarScene RecordMeshesIntoDrawBundle, IDA 2026-10-27) -> IAN_PORBUG_911SS_26.v5: v5: all body paint groups cleared (to be defined from scratch with the user); rims keep Rims/Rims2/RimsInner -> IAN_PORBUG_911SS_26.v6: v6: wing rest pose = CLOSED (the Chiron wing_open end delta inverted on the wing chain; the clip now opens it to the artist's modelled pose) -> IAN_PORBUG_911SS_26.v7: v7: wing closed rest re-fitted to wingClosed_geo (+21.6 deg tail-down, -12.2 cm) + 3.5 mm, rig v21 bone heads, 8 wing clips authored from per-bone deltas on the skeld hierarchy -> IAN_PORBUG_911SS_26.v8: v8: door parts swing with the doors - door cards/pockets/handles (18 interior_0xx + bodyBit_57) bound to boneDoorLF/RF as doorcardlf/rf_a (Interior/Doors, 39) + door shells; side panes split out of windscreen_geo as glasslf/rf_a (Exterior/Windows); door shells draw groups 39 as the Chiron -> IAN_PORBUG_911SS_26.v9: v9: remaining door parts - interior_011/012/042/053 card pieces, trim_001 window sills + inner window surrounds, body_003 lower door strips, midDetails_004 carbon window frames split L/R onto the door bones; midDetails_002 mirror glass onto the mirror bones -> IAN_PORBUG_911SS_26.v10: v10: inner AO blockers (hood/doors/fenders/fascia/deck skins + rear bay shell), scoop duct holes both sides (user-shaped, mirrored), wheel-well inner walls 15 cm inboard + user's arch/intake/cabin fixes mirrored, mirror glass = mirrorright MatI in own wingmirror models, quarter panel + trim restored from the FBX -> IAN_PORBUG_911SS_26.v11: v11: user's hand-built door jambs (passenger side) mirrored to the driver side on interior_028/017 + door card 037->078, doors restored to place, smooth shading on the jamb pieces and midDetails_005; my jambFix objects removed -> IAN_PORBUG_911SS_26.v12: v12: anchor_butt by the corpus seat rule (15 cm forward, 3 cm lower), AO blockers on PG's blackhole material (backfacingGeo), vantablack back sides for all body panels (evaluated skins flipped 0.5 mm inward) -> IAN_PORBUG_911SS_26.v13: v13: player 15 cm forward / 10 cm down (anchor_butt), left foot 6 cm up / 2 cm back (anchor_clutch placed from the Chiron skeld + offset), vantablack back sides for the liner and the interior tub (interior_017/028) -> IAN_PORBUG_911SS_26.v14: v14: five TEXCOORD sets authored PG-style (uv_project_911ss.py: livery atlas in sets 0/3 at 205.3 px/m, glass panes 306.5 px/m, set 1 cube 2 u/m, set 2 per-model 0..1 / windshield wiper frame, set 4 constant), 7 livery sections + masks + Masks.xml, toolkit writer UV range offset/scale fix -> IAN_PORBUG_911SS_26.v15: v15: InteriorWindows models (glassfint_a / glasslfint_a / glassrfint_a = the artist's pane inner skins, Chiron interior glass instances, v21 flag 1, lod 3) + livery guard (inward-facing body/bumper triangles out of every livery section) -> IAN_PORBUG_911SS_26.v16: v16: paint groups (user separation: Body / Body_SecondaryColor / Body_TertiaryColor / Body0 / Body1 / Hood / Wing / Mirror, carPaint clone per group, ManufacturerColors rebuilt with 8 single-tone Porsche options) + material roles re-matched to the artist's materials (true plastic / black leather / alcantara / dark carpet / dark brushed aluminum, GT3 RS instances) -> IAN_PORBUG_911SS_26.v17: v17 sills/fastener/interior_015-076-082 paint ungrouped (carPaint_static, hash 0) -> IAN_PORBUG_911SS_26.v18: v18 midDetails_006 group 3, WindowTint on side+rear panes (rear window = glassr_a/glassrint_a), Porsche crest texture on mfr_badge_ch1, blackhole exhaust caps, backfire locators on the pipe tips -> IAN_PORBUG_911SS_26.v19: v19 WindowTint on the exterior panes only (user) -> IAN_PORBUG_911SS_26.v20: v20 draw groups: exterior 39 (bumpers/skirts/wing/wipers/exhaust too), fenders+front clip 47, steering wheel 23; wing-mirror glass set-0 chart like stock -> IAN_PORBUG_911SS_26.v21: v22 Front/Back livery sections = painted bumper faces (body_001 front, bodyRear/bodyRearTop/body_002 rear), carbon not liveryable; sills carbon; artist tiling on carbon -> IAN_PORBUG_911SS_26.v22: v22 paint-only livery sections (Front = body_001 forward faces, Back = bodyRear/bodyRearTop/body_002 rear faces), carbon never charted -> IAN_PORBUG_911SS_26.v23: v23 backfire emitters 4 cm behind the pipe tips -> IAN_PORBUG_911SS_26.v24: v24 set 2 per-model chart normalised over charted rows and hidden rows separately (dirt streaks) -> IAN_PORBUG_911SS_26.v25: v25 COLOR0.r = world height x128 (stock dirt/snow apron gate), g/b 0 -> IAN_PORBUG_911SS_26.v26: v26 advanced paint slots: 4 quarter intakes, 5 carbon (splitter/diffusers/sills), 6 rear deck, 7 w16 covers; MNCL Body1 = library carbon -> IAN_PORBUG_911SS_26.v27: v27 hidden rows keep the section projection in set 0 (forged carbon paint on the carbon parts); slots 5/6 swapped (5 rear deck, 6 carbon) -> IAN_PORBUG_911SS_26.v28: v28 paintable carbon group drops the Chiron weave texture overrides (forged carbon paint applied as regular weave x32) -> IAN_PORBUG_911SS_26.v29: v29 set 1 = artist unwrap x(2/median) on every exterior object with a usable unwrap (cube seams = the scars) -> IAN_PORBUG_911SS_26.v30: v31 diagnostic all-white Textures/Damage/impactMask + v30 wiper gradient -> IAN_PORBUG_911SS_26.v31: v32 cowl-trim ends (interior_053 door halves) unbound to root; quarter intakes back on the cube tiling -> IAN_PORBUG_911SS_26.v32: v33 set 2 per-model chart normalised with one scale for both axes (isotropic like stock) -> IAN_PORBUG_911SS_26.v33: v34 livery masks closed (2 px dilation) + anti-aliased + real BC4 (candy paint reads atlas alpha: black cracks = scars) -> IAN_PORBUG_911SS_26.v34: v35 horizon_unk_v21_path (Chiron per-model detail maps) cleared on every model like PG; glass_Back mask own GUID; windows receives_damage 1 -> IAN_PORBUG_911SS_26.v35: v36 glass masks back to the hard raster (windshield artefact), interior_042 door halves unbound to root -> IAN_PORBUG_911SS_26.v36: v37 InteriorWindows panes COLOR0 = white like stock (rain/frost layer gate) -> IAN_PORBUG_911SS_26.v37: v38 glass panes set 1 back on the world projection (outer windshield frost since v29); interior panes white vertex colour -> IAN_PORBUG_911SS_26.v38: v40: lights - markerFL/FR = headlights (13) + headlightL/R side markers (15), taillightBarTop tail (32), taillightL/R_1162 brake (0), trim_011_geo reverse lines (1); Lights.bin 3 attachments 30 records -> IAN_PORBUG_911SS_26.v39: v41: lenses back to glass; emitters on inner meshes only - lights_001_geo headlights (13, PrimaryLights/headlights_a), trim_008/009_geo brake (0), trim_011_geo reverse (1); taillightBarTop plain glass (no tail emitter yet); Lights.bin 2 attachments 30 records -> IAN_PORBUG_911SS_26.v40: v42: trim_003_geo always-on tail emitter (32); trim_009_geo = mirrored trim_008_geo; frontDetails_009_geo1 = passenger-side mirror of frontDetails_009_geo -> IAN_PORBUG_911SS_26.v41: v43: emitter intensities = stock flat-white medians (head 1.0, tail 1.414, brake 8.0, reverse 1.414); LightPresets.bin rebuilt with all 14 presets our records use (7 were dead); Projection_Xenon_WIDE added -> IAN_PORBUG_911SS_26.v42: v44: body lowered in the model (Y_SHIFT -0.1275, GT3 RS 18 spring rows restored), frontDetails_004 -> group 3, sills not liveryable, smoothed livery section split, cabin mirror = mirrorcenter -> IAN_PORBUG_911SS_26.v43: v45: smooth livery seams (field cut), roof rail = side, mirror housings not liveryable; DB: stock AWD + RWD swap -> IAN_PORBUG_911SS_26.v44: v46: corpus-derived panel sections (682 stock cars + 911 set): one section per panel, smooth field cuts at per-panel angles, doors whole side, centre spine in the sides, rear bumper Back+sides, per-station inward test; AWD stock + RWD swap; mirror housings not liveryable -> IAN_PORBUG_911SS_26.v45: v47: quarter intakes = whole side panels (user)"
+      },
+      "status": "v1 INSTALLED 2026-10-30 (test pending)",
+      "make": {
+        "id": 300,
+        "code": "IAN",
+        "name": "IANTIC",
+        "strings": "IDS_DisplayName_300 / IDS_Profile_300 in List_CarMake (EN/GB)"
+      },
+      "build_history": [
+        "01ea23791879e35a0a96e49346c3e0a5",
+        "4349f7e2da035067719a3abd91d213d6",
+        "b4b5d8e550c8e581835e8002328bb781",
+        "7773fae846fe9be3f18237f677e2544b",
+        "1ee2cc1aebdd33bb2800d7c74ccb7f39",
+        "34e7196b13665f3da44c7de84849ae56",
+        "5652baa88ba6cc487644a3e5083e8523",
+        "7179ec14b397d01feea3890a068656b3",
+        "c01c419eb2a337efc7069efde8b0d36b",
+        "f2abdc8915a963d29ed14855035fdf9e",
+        "f263a797b82cb5d0d69babe1ca17ba8a",
+        "09a9556e868ca172d58037db8baae878",
+        "ecf85068f742d4626edd81cfbb2b451a",
+        "ca37a93a0eb3e02d9b1bb1a189c3c997",
+        "b24583274bb769929cd59a9460ae2672",
+        "6fb11e9beebdcf6a90b4501897a437ee",
+        "9289d681600c8cda99ff7d500b8c627a",
+        "02c643db4a5a3cd5332abeef4c0a068b",
+        "67f488f41538a9dbffd2688a628f6a1b",
+        "285d20d8f446b0443d2ce00dbff4611f",
+        "7400e223f08ebfb09a5135a022873407",
+        "01a17d08ff382c19de8dcdb4b04b5fbc",
+        "d7545f6c2ddf63f8c19b91702eaacaad",
+        "c0f4850ea2831d2ab9a9e252f03a9b02",
+        "e50aa7d356959edce4ab3de4768309b4",
+        "cacf1e11440b495621213e989ad2b2e9",
+        "b8b1d69a1bf3dfadd90d1ca85ae5307d",
+        "5f8fa5baf2d0c88798ec70eecf58cb43",
+        "baac27042cbfdb3b4b21ff28a4dc2452",
+        "938c1d2b86723e5a60a75c5b42e8a3ef",
+        "3c31e07659c167dcaf263b526d1afa4c",
+        "baa75ee3fce5ea006562602f1d7f228d",
+        "d518bc436bdb65154dd8c375cbd8ef5d",
+        "1fed1ebabd7ceed875f7235d4cbbe5a2",
+        "ea75ad7e9dc0a212b14cceee82c512fc",
+        "c4043d90adf69e9722d1582c14d5c014",
+        "63377c884d3f20e6dd878d186baa004e",
+        "36f6a3026e9a8141aafde585d20d51c9",
+        "a2d4fde2c3aeb53a943c5c44e3a9d469",
+        "ba3b3b6ad428c6b819582e79d37bcef1",
+        "93d02d839f1fdfc6f537a8b54e8f1f53",
+        "52d9111dde6301237af2dbc87561d587",
+        "db829f5552d86bf64a844a05ed0bb0b0",
+        "152ba8ab227ae7e773adda89f8ab8370"
+      ],
+      "save_migration": "2026-10-30: stock drive type RWD -> AWD; List_UpgradeDrivetrain 9540001 is now the RWD swap (Level 1, drivetrain 95401) instead of the AWD swap (Level 2, 95402, dropped). A save that had the old AWD swap fitted references a drivetrain row that no longer exists -> run the Manager Crash Fix / sterilize before driving the car."
     }
   ],
   "shared_files": [
