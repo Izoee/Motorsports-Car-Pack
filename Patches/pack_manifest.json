@@ -452,6 +452,17 @@
       "requires": [
         "BUG_ChironFM_17.sql (engine 9003 = clone source at generation time only; the patch is self-contained)"
       ]
+    },
+    {
+      "order": 47,
+      "file": "BRB_900Rocket_23.sql",
+      "description": "2023 Brabus 900 Rocket R (custom model on the Turbo S '23 rig; Turbo S rows, own engine 9016 = Turbo S 4097 x1.4042 = 900 hp, car-local drivetrains 95410 / 95411, own wheel 95410, user downforce 190..540 lb 60:40 on the stock tuning rows, $0 car-local rows; new make 301 Brabus, logos pending)",
+      "adds": [
+        "car 9541",
+        "engine 9016",
+        "make 301 Brabus"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1133,8 +1144,8 @@
         "mediapc/Audio/ModularCars/POR_1_GT3R_27-Engine.xml (car-keyed pair, the old Mission RSR stock sound; the stock 4.2 F6 sound is the ENGINE-keyed shared pair POR_00_911GT3R_24 = Data_Engine 4095 MediaName, see shared_files)",
         "mediapc/Audio/ModularCars/POR_1_GT3R_27-Model.xml (car-keyed pair)",
         "mediapc/Stripped/RC0/Thumbnail_9525_Big.swatchbin",
-        "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Engine.xml (4.8 F8 TT swap sound, user-authored 2026-10-17 from the 918 Spyder)",
-        "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Model.xml (4.8 F8 TT swap sound)"
+        "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Engine.xml (4.8 F8 TT swap sound, user-authored 2026-10-17 from the 918 Spyder; user revision 2026-10-31 copied back from the game)",
+        "mediapc/Audio/ModularCars/POR_1_GT3R_27_F8TT-Model.xml (4.8 F8 TT swap sound; user revision 2026-10-31 copied back from the game)"
       ],
       "manifest_entries": [
         "game:/media/cars/por_1_gt3r_27.zip"
@@ -1606,6 +1617,57 @@
       ],
       "save_migration": "2026-10-30: stock drive type RWD -> AWD; List_UpgradeDrivetrain 9540001 is now the RWD swap (Level 1, drivetrain 95401) instead of the AWD swap (Level 2, 95402, dropped). A save that had the old AWD swap fitted references a drivetrain row that no longer exists -> run the Manager Crash Fix / sterilize before driving the car.",
       "aero_modes": "2026-10-30 v48: Race Mode toggle (Data_Car RaceMode 1 + ConvertibleType 1, neutral List_DrivingMode row 9540 like the pack Chiron / Veyron) = 2nd aero mode holding the wing up; bespoke aero network Scene/animations/Mojo/network.netd re-keyed CarAeroNetworkBespoke_9540 (was the Chiron's 9514 key = never bound); mode 1 = raise >= 110 mph / stow <= 90 mph (v50), mode 2 = wing_open held, no speed / brake edges; AnimResourceConfig NetworkDictionary line already registered"
+    },
+    {
+      "id": 9541,
+      "media": "BRB_900Rocket_23",
+      "name": "2023 Brabus 900 Rocket R",
+      "source": "custom model (Brabus 900 Rocket R, Blender) exported by scripts\\export_brabus.py on the stock POR_911TurboS_23 animation / sidecar donor; rows = stock POR_911TurboS_23 clone (suspension, steering, brakes, AWD drivetrain + RWD swap, tyres, weight), engine = Turbo S 4097 cloned to 9016 at 900 hp, aero = the user's 190 / 420 / 540 lb 60:40 figures on the stock tuning rows; make 301 Brabus (new; logos pending)",
+      "files": [
+        "mediapc/Cars/BRB_900Rocket_23.zip",
+        "mediapc/Audio/ModularCars/BRB_900Rocket_23-Engine.xml (own pair, user-tuned 2026-10-31, copied back from the game)",
+        "mediapc/Audio/ModularCars/BRB_900Rocket_23-Model.xml (own pair, user-tuned 2026-10-31, copied back from the game)",
+        "Patches/BRB_900Rocket_23.sql",
+        "mediapc/Stripped/RC0/Manu_Logo_BRB.swatchbin (from the stock Brabus part-manufacturer decal063, RGBA8 440x368 = the RC0HiRes size the UI draws 1:1; 2026-10-31, twice the first 220x184 build)",
+        "mediapc/Stripped/RC0/L_Manu_Logo_BRB.swatchbin (same art, RGBA8 374x500)"
+      ],
+      "make": {
+        "id": 301,
+        "code": "BRB",
+        "name": "Brabus",
+        "strings": "IDS_DisplayName_301 / IDS_Profile_301 in List_CarMake (EN/GB)"
+      },
+      "manifest_entries": [
+        "game:/media/cars/brb_900rocket_23.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/brb_900rocket_23/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/brb_900rocket_23/Scene/animations/Mojo/clip/carclips_9541.clipd"
+      ],
+      "thumbnail": "NONE yet - user takes it from the game's cache after the first garage save",
+      "build": {
+        "zip": "BRB_900Rocket_23.v15",
+        "md5": "87e432fdd36c9f67fc0d792b6c63c6ee",
+        "pipeline": "scripts/export_brabus.py: Blender dump (285 meshes, 2.74 M tris; Decimate LOD sets) -> one model per object on the Turbo S body_a template (donor material instances cloned by name, artist interior / badge textures as RGBA8, flat AO) -> skeleton = the Turbo S 68 bones placed by the full rig corpus (rig_brabus.py bones_v2) -> skeld rebuilt on the donor order (carskeleton_9541) -> donor clips verbatim (carclips_9541) -> carbin non-upgradable parts 2/4/9/34/35/36/37/43, one rim model on all four corners, donor brakes + control arms -> Lights.bin = donor records on our body, Locators moved, exhaust locators on our tips -> validate_output ALL CHECKS PASSED -> BRB_900Rocket_23.v2: build 5: hands +3 cm / +1 cm apart (IKAnchorBones), left foot anchor = right foot height/depth, Mesh.334/335 on the wheel, Mesh.231/233 on the door cards -> BRB_900Rocket_23.v3: build 6: tail bar red (flat red RGBA8 = donor lam_gradient_014 colour), anchor_clutch IK OffsetZ = anchor_gas, hands net +1 cm -> BRB_900Rocket_23.v4: build 7: tail bar EmissiveColor tint = donor brake red (1.0, 0.0086, 0.0012); IK xml clutch edit reverted (feet by bone only) -> BRB_900Rocket_23.v5: build 9: rim LOD0 planar dissolve 5 deg + artist normals (lumpy fix), blur disc UV = donor mapping (centred), wheel paint groups Rims1 satin ring / Rims2 carbon ring / Inner Barrel spokes+barrel+valve -> BRB_900Rocket_23.v6: build 10: rim LOD0 back to collapse (0.30 rim face / 0.15 rest, surface error max 0.17 mm) with the artist's normals transferred; planar 5 deg (max 2.3 mm, clipped the carbon ring) dropped -> BRB_900Rocket_23.v7: build 11: rim planar x-ray UV projection (one row per vertex, artist normals), advanced paint groups: exterior carbon -> Body_SecondaryColor, exterior plastic -> Body_TertiaryColor, roof carbon -> Hood_SecondaryColor, mirror housings 252/254/336/337 -> Mirror, mirror bases -> Mirror_SecondaryColor; MNCL entries per group -> BRB_900Rocket_23.v8: build 12: Mesh.189 -> Body_SecondaryColor; Body_TertiaryColor = bumper + diffuser plastics only (16 objects) -> BRB_900Rocket_23.v9: build 13: wiper bones take the donor Turbo S frames (verbatim relative wiper clip), tachometer clip re-expressed on our skeld rest (needle was parked at the donor dial centre inside the dash) -> BRB_900Rocket_23.v10: build 14: hood underside (flipped 1 mm inner skin, plastic_matte, no paint group); label textures: symbols keep the glyph alpha, button alpha 0 (no night glow) -> BRB_900Rocket_23.v11: build 15: engine cover static (Mesh.115 on root, trunk Forzavista pins dropped), boneTach on the needle hub disc centre, pack audio pairs refreshed from the user's game copies -> BRB_900Rocket_23.v12: build 16: boneSteeringWheel moved onto the wheel axis (spindle local = donor), rim LOD0 = the artist's full mesh with its own normals -> BRB_900Rocket_23.v13: build 17: steering spindle axis through the centre of Mesh.335 (user), boneSteeringWheel follows -> BRB_900Rocket_23.v14: build 18: hands compensated for the spindle shift (steering_pivot_offset OffsetY -0.0194) -> BRB_900Rocket_23.v15: build 19: hand compensation sign flipped (steering_pivot_offset OffsetY +0.0194)"
+      },
+      "status": "BRB_900Rocket_23.v15 INSTALLED 2026-10-31 (test pending)",
+      "strings": "IDS_DisplayName_9541 / IDS_ModelShort_9541 = '900 Rocket R' / '900 Rocket R'; make 301 Brabus",
+      "build_history": [
+        "f9b659cd262c1f0548fe0ca7a7493894",
+        "83267c5a9c077857e1f1f833b3684426",
+        "7b0052e974d96d58efcb843ae43eaec1",
+        "586b1fdbbced78d565753ea411b973fa",
+        "e51a2aa4565c18944781886bc42c29f8",
+        "a08c197c23e577ea48b5d85f7ae3b83c",
+        "00d5680a75d5bcfd4ce7c5ac9fae5bc6",
+        "24020f45f95ad060143bcc19b7d2e475",
+        "c3015402bc831294065a5aca313038e0",
+        "5bf57b02c2f958464d1815eae094ef63",
+        "1b61ed33dfd18a736b579af4d2b80f91",
+        "08795019d846e0701687d326b3ac3210",
+        "a6045c516799b746b34ff723ffa9583b",
+        "88aef1902ba440b52b41679b19da2c61"
+      ]
     }
   ],
   "shared_files": [

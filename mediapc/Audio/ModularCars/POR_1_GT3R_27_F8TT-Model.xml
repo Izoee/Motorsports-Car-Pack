@@ -16,6 +16,6 @@
     <Property Name="PassbyProfile" Value="Car_V8" />
     <Property Name="CockpitSnapshot" Value="1" />
     <Property Name="CockpitGain" Value="0" />
-    <Property Name="IdleRPM" Value="1100" />
+    <Property Name="IdleRPM" Value="992" />
   </Properties>
 </ModularCar>
