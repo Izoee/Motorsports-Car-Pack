@@ -463,6 +463,16 @@
         "make 301 Brabus"
       ],
       "requires": []
+    },
+    {
+      "order": 47,
+      "file": "POR_912Hoonipig_66.sql",
+      "description": "1966 Porsche 912 Hoonipigasus (custom model on the Exige WTA rig; Exige WTA rows, own engine 9017 = GT3 R 4095 destroked 4.0 + Turbo S twin turbo at 750 hp (estimate), restrictor plates x1.2 / x1.4, no intercooler upgrade, Turbo S race-level stock diff, tyre widths to 320 / 340, ride height +3 cm, AWD stock: car-local drivetrains 95420 (AWD, Turbo S diff ladder) / 95421 (RWD race-grade conversion), own wheel 95420, user downforce 3000..6000 lb 40:60 on the stock tuning rows, $0 car-local rows)",
+      "adds": [
+        "car 9542",
+        "engine 9017"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1678,6 +1688,63 @@
         "6572e121fcb00a66515b37843de28d83",
         "e42e6cda2ecb9e7b81c03ee4981382f8",
         "dc47310c3c3e4ed033a485b255332ad2"
+      ]
+    },
+    {
+      "id": 9542,
+      "media": "POR_912Hoonipig_66",
+      "name": "1966 Porsche 912 Hoonipigasus",
+      "source": "custom model (Porsche 912 Hoonipigasus, Sketchfab GLTF, Blender) exported by scripts\\export_hoonipig.py on the stock LOT_00_ExigeWTA_18 animation / sidecar donor; rows = stock LOT_00_ExigeWTA_18 clone (suspension, steering, brakes, AWD stock drivetrain (Exige gearbox + Turbo S '23 AWD differential ladder) + race-grade RWD conversion car-local, tyres, weight), engine = pack GT3 R 4095 cloned to 9017 4.0L F6-TT (Turbo S race twin turbo, 750 hp estimate, restrictor plates +150 / +300 hp, no intercooler upgrade, race-level stock diff, ride height +3 cm), aero = the user's 3000..6000 lb 40:60 on the stock tuning rows; make 39 Porsche",
+      "files": [
+        "mediapc/Cars/POR_912Hoonipig_66.zip",
+        "mediapc/Audio/ModularCars/POR_912Hoonipig_66-Engine.xml (= the pack GT3 R sound pair, placeholder)",
+        "mediapc/Audio/ModularCars/POR_912Hoonipig_66-Model.xml (= the pack GT3 R sound pair, placeholder)",
+        "Patches/POR_912Hoonipig_66.sql",
+        "mediapc/Stripped/RC0/Thumbnail_9542_Big.swatchbin (the game's own Autoshow render from the user's cache 2026-11-02 00:06, make_thumb.py BC7 670x376)"
+      ],
+      "make": {
+        "id": 39,
+        "code": "POR",
+        "name": "Porsche"
+      },
+      "manifest_entries": [
+        "game:/media/cars/por_912hoonipig_66.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/por_912hoonipig_66/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/por_912hoonipig_66/Scene/animations/Mojo/clip/carclips_9542.clipd"
+      ],
+      "thumbnail": "mediapc/Stripped/RC0/Thumbnail_9542_Big.swatchbin (game cache render, 2026-11-02)",
+      "build": {
+        "zip": "POR_912Hoonipig_66.v24",
+        "md5": "9a23ca0f33c70b5c04a598f8e2e4cd01",
+        "pipeline": "scripts/export_hoonipig.py: Blender dump (51 meshes, 236k tris; Decimate LOD sets) -> one model per object on the Exige WTA body_a template (artist textures as BC1 / RGBA8 swatchbins on library instances, graffiti body sheet as a car-local base-livery paint material, decal meshes as livery_sticker layers, flat AO) -> skeleton = the Exige 38 bones placed by the rig corpus (rig_hoonipig.py bones_v1) -> skeld rebuilt on the donor order (carskeleton_9542) -> donor clips verbatim (carclips_9542; doors / hood / trunk unbound) -> carbin non-upgradable parts 2 / 4 / 9 / 43, LF + RF rim models (red / blue centre-lock), donor brakes -> Lights.bin = donor bar / beam records on our lamps -> validate_output ALL CHECKS PASSED -> POR_912Hoonipig_66.v2: v2: yoke IK rig (Chiron chain), driver anchor by the corpus seat rule, cameras / dash / gauges by the stock corpus, wiper parked on the right -> POR_912Hoonipig_66.v3: v3: player down 10 cm (BUTT_DELTA), seat cams down 10 cm / forward 20 cm (CAM_DELTA) -> POR_912Hoonipig_66.v4: v4: wheel_back joined into the steering wheel, spindle on the hub bore (hands compensated, 4 cm together), artist textures at tiling 1 / TEXCOORD0 / white tint, rims likewise, decal sheet + carbon trims 1.5 mm off the surface -> POR_912Hoonipig_66.v5: v4c: wheel_back joined into the steering wheel, spindle on the hub bore (hands compensated, 4 cm together), artist textures at tiling 1 / white tint (stock-exact car_standard records), rims rebuilt (v4 duplicate MatI crash fixed), decal sheet + carbon trims 1.5 mm off the surface -> POR_912Hoonipig_66.v6: v6: UVChoice On (TEXCOORD0 artist unwrap) on every artist-textured instance incl. rims, from the plastic_ch1 library materialbin record; + v5 (tiling 1 / white tint, hub-bore spindle, duplicate rim MatI fix) -> POR_912Hoonipig_66.v7: v7: hands 5 cm back along the wheel normal + 1 cm more together (5 cm total), seat cams +3 cm right / +4 cm up (net -6 cm down, +20 cm fwd) -> POR_912Hoonipig_66.v8: v7b: hands 5 cm back toward the driver (sign fixed) + 1 cm more together, seat cams +3 cm right / +4 cm up -> POR_912Hoonipig_66.v9: v9: hand dials through the documented IKAnchorBones knobs (pivot OffsetZ -0.05 back, ik_scale -0.01/(2r) together); skeld anchors back to the v6 state; cams +3 cm right / +4 cm up kept -> POR_912Hoonipig_66.v10: v10: hands 3 cm further back (pivot OffsetZ -0.0662) and 2 cm more together (ik_scale 1.0336) via IKAnchorBones -> POR_912Hoonipig_66.v11: v11: hands 1 cm forward (pivot OffsetZ -0.0562) and 1 cm more together (ik_scale 0.9951) via IKAnchorBones -> POR_912Hoonipig_66.v12: v12: split_01/03 textured (out of Body), split_14 on-body decals -> Body, mesh_0.011 rest stays with liveries, 0x38 decal flags, z-clip layer stack -> POR_912Hoonipig_66.v13: v13: live digital dash on the wheel display quad split_15 (user selection off split_06): library digitalscreen instance 'digitalGauge' in steeringwheel_a, UV0 = page band u 0.0105..0.9895 x v 0..1, own UI page UI/POR_912Hoonipig_66.xaml from digidash_hoonipig.py (mockup Asset/digidash/hillclimb-dash.html: RPM bar / MPH / BOOST PSI bar, redline 9300 from the DB); donor UI folder dropped -> POR_912Hoonipig_66.v14: v14: digital dash page gets the user's logo (77 selected faces of mesh_0.011, BBi mark on the left nose) rasterised as one XAML Path in the Placeholder_Logo box; v13 = live digital screen on split_15 + own UI page -> POR_912Hoonipig_66.v15: v15: dash page fonts = Horizon_C labels / Moire values (user picks from the game-font picker; v14's DG1_ArialBold has no letters M B O S I H) -> POR_912Hoonipig_66.v16: v16: split_14 decal art composited into the body sheet's free block + its UV0 remapped there (Body paint samples TEXCOORD0); wiper follow tracks (hub pitch <= 6.9 deg, blade <= 5.7 deg per sample, contact band 3 mm over the glass, was -17 mm mid-sweep) + clearing gradient recomputed for the sweep -> POR_912Hoonipig_66.v17: v17: digital dash face = quad + the user's 8 bezel faces (12 faces, 1.81:1 -> full page width, v band 0.008..0.992); wiper clearing gradient to PG's single-wiper convention (R only, linear 0..255 park->far; validated by reproducing the Exige's own gradient, IoU 0.885 / corr 0.998), fitter reads the donor clip directly -> POR_912Hoonipig_66.v18: v18: wheel shift lights = the 10 LED squares (split_16) on the digital-screen material, each mapped to a cell of a 72 px LED strip at the top of the UI page (screen face now maps below the strip); pairs light from the centre at 7000 rpm to the outer pair at the 9300 redline -> POR_912Hoonipig_66.v19: v19: LED squares -> 24-gon discs at the artist's circle radius (wheel shows around them); pairs 5000/6000/7000/8000 green, outer pair red flashing at 9300 (Exige forever-storyboard pattern) -> POR_912Hoonipig_66.v20: v20: shift lights colours = centre 2 pairs (5000/6000) green, 7000/8000 pairs amber, outer pair red flashing at 9300 -> POR_912Hoonipig_66.v21: v21: shift lights colours = centre 2 pairs (5000/6000) green, 7000/8000 pairs amber, outer pair red flashing at 9300 (v20 shipped unchanged from v19 by mistake) -> POR_912Hoonipig_66.v22: v22: hands together 6 mm (steering_ik_scale knob, HAND_APART -0.046) -> POR_912Hoonipig_66.v23: v23: rims rebuilt - centre cap (rim_cap), hub pieces (split_05) and valves now ship the full mesh at LODs 0/1 (the builder used the decimated rimN sets: cap 22 of 148 tris, hub 3 of 24) -> POR_912Hoonipig_66.v24: v24: windshield-top banner split_04 = painted body part in Body_SecondaryColor (paint group 2) with its own stock base livery (decal sheet), out of the Stripes layer; bannerBack = interior model with the Exige dash plastic (no cabin-side rain)"
+      },
+      "status": "POR_912Hoonipig_66.v24 INSTALLED 2026-11-02 (test pending)",
+      "build_history": [
+        "f0faf436fe5dd8b5e2a07054a81d25ff",
+        "2c65c9f176de29c7393c900b8c32c8bb",
+        "83ea44de522548a4fbb7937f053c11f6",
+        "afae8c1124b992de735a965cd7ad71bb",
+        "405102ea79e8530323eb0fa995e97d5f",
+        "1c9fe14ff0335bb0e0da3f3e51de9e48",
+        "92ebd3a93277db654d54be60963eb3d7",
+        "498a763c4646b096aa8f3277e3d348f4",
+        "0b9ca1c148143d610e7ce0209e3b5f6a",
+        "40ef0716952f9d40bab5070a5e9f8eb8",
+        "0dadc934505b7c7da08fcda60c8e9b42",
+        "d06af0f518210268efe8a1f2b7e493a9",
+        "d99fd73d35a41d4c8020e6aa959b3097",
+        "b7efa2a8fb1df8509ebd5f70f4914dca",
+        "49884ccf45fac76bdf1f216c4e29978f",
+        "f0e146c9f97b6b86aa70c5cc7e91f561",
+        "6a50171831035dcb279599e421e0be6c",
+        "a9ccc935aa030e875009d66694ef60d7",
+        "74b214d5eca68986c2b81e97b3379c76",
+        "106af778161da33445a4b0008edfeafb",
+        "a8e46d08acf813d6282a91d2b76d5523",
+        "8566a5fd2047726b1ba44276030f9eb5",
+        "651aa84ddf67a404f177d436e1ed2840"
       ]
     }
   ],
