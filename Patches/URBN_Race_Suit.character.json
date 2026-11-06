@@ -1,0 +1,30 @@
+{
+ "format": 1,
+ "kind": "character_item",
+ "asset": "Outfit_URBN_Race_Suit",
+ "item": "Outfit_URBN_Race_Suit_1",
+ "customisation_assets": {
+  "insert_after_asset": "Outfit_Race_Suit_Modern",
+  "block": "\t<Asset animationPath=\"\" excludeTags=\"\" id=\"Outfit_URBN_Race_Suit\" slots=\"Outfit,Hands,LeftWrist,Wristband,UpperBodyLayer1,UpperBodyLayer2,LowerBody,Feet,Socks\" tags=\"noScarf,useScarfTight\">\n\t\t<Variants>\n \t\t\t<variant background=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_M\\Outfit_URBN_Race_Suit_M.modelbin\"\n\t\t\t\t\t closeup=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_M\\Outfit_URBN_Race_Suit_M.modelbin\"\n\t\t\t\t\t cullgroups=\"OutfitFullBody\"\n\t\t\t\t\t cullslots=\"Body,ProstheticArms_left,ProstheticArms_right,ProstheticLegs_right,ProstheticLegs_left\"\n\t\t\t\t\t driverbuildskeleton=\"driver_m_chad\"\n\t\t\t\t\t excludetags=\"\"\n\t\t\t\t\t foreground=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_M\\Outfit_URBN_Race_Suit_M.modelbin\"\n\t\t\t\t\t nonplayer=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_M_AI\\Outfit_URBN_Race_Suit_M_AI.modelbin\"\n\t\t\t\t\t player=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_M_Driver\\Outfit_URBN_Race_Suit_M_Driver.modelbin\"\n\t\t\t\t\t requiredtags=\"\"\n\t\t\t\t\t skeleton=\"male\">\n\t\t\t\t<ExposedMaterials/>\n\t\t\t</variant>\n \t\t\t<variant background=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_F\\Outfit_URBN_Race_Suit_F.modelbin\"\n\t\t\t\t\t closeup=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_F\\Outfit_URBN_Race_Suit_F.modelbin\"\n\t\t\t\t\t cullgroups=\"OutfitFullBody\"\n\t\t\t\t\t cullslots=\"Body,ProstheticArms_left,ProstheticArms_right,ProstheticLegs_left,ProstheticLegs_right\"\n\t\t\t\t\t driverbuildskeleton=\"driver_f_kim\"\n\t\t\t\t\t excludetags=\"\"\n\t\t\t\t\t foreground=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_F\\Outfit_URBN_Race_Suit_F.modelbin\"\n\t\t\t\t\t nonplayer=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_F_AI\\Outfit_URBN_Race_Suit_F_AI.modelbin\"\n\t\t\t\t\t player=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_F_Driver\\Outfit_URBN_Race_Suit_F_Driver.modelbin\"\n\t\t\t\t\t requiredtags=\"\"\n\t\t\t\t\t skeleton=\"female\">\n\t\t\t\t<ExposedMaterials/>\n\t\t\t</variant>\n \t\t\t<variant background=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_N\\Outfit_URBN_Race_Suit_N.modelbin\"\n\t\t\t\t\t closeup=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_N\\Outfit_URBN_Race_Suit_N.modelbin\"\n\t\t\t\t\t cullgroups=\"OutfitFullBody\"\n\t\t\t\t\t cullslots=\"Body,ProstheticArms_right,ProstheticArms_left,ProstheticLegs_right,ProstheticLegs_left\"\n\t\t\t\t\t driverbuildskeleton=\"driver_f_kim\"\n\t\t\t\t\t excludetags=\"\"\n\t\t\t\t\t foreground=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_N\\Outfit_URBN_Race_Suit_N.modelbin\"\n\t\t\t\t\t nonplayer=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_N_AI\\Outfit_URBN_Race_Suit_N_AI.modelbin\"\n\t\t\t\t\t player=\"Cinematic_Assets\\Characters\\Garments\\Outfit\\Outfit_URBN_Race_Suit_N_Driver\\Outfit_URBN_Race_Suit_N_Driver.modelbin\"\n\t\t\t\t\t requiredtags=\"\"\n\t\t\t\t\t skeleton=\"neutral\">\n\t\t\t\t<ExposedMaterials/>\n\t\t\t</variant>\n\t\t</Variants>\n\t</Asset>\n"
+ },
+ "customisation_items": {
+  "insert_after_assetid": "Outfit_Race_Suit_Modern",
+  "line": "\t<Item assetid=\"Outfit_URBN_Race_Suit\" id=\"Outfit_URBN_Race_Suit_1\"/>\n"
+ },
+ "object_model": {
+  "guid": "75726262-6e2d-7261-6365-737569743031",
+  "template_item": "Outfit_Race_Suit_Modern",
+  "fields": {
+   "NetworkID": "9010",
+   "PlayFabID": "9010",
+   "ThumbnailGenerationID": "9010",
+   "SortOrder": "88014",
+   "CreditsCost": "0",
+   "IsInitiallyUnlocked": "True",
+   "Rarity": "Common",
+   "DisplayName": "ItemData.IDS_DisplayName_757262626e2d72616365737569743031",
+   "Id": "75726262-6e2d-7261-6365-737569743031",
+   "ItemID": "Outfit_URBN_Race_Suit_1"
+  }
+ }
+}

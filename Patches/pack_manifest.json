@@ -473,6 +473,15 @@
         "engine 9017"
       ],
       "requires": []
+    },
+    {
+      "order": 48,
+      "file": "POR_MissionSC_27.sql",
+      "description": "2027 Porsche Mission S (custom model on the 918 Spyder rig; 918 rows, race suspension / race aero as stock (tunable), AWD stock + RWD conversion, engine 9011 4.8L F8 TT, 21 / 22 in rims, $0 car-local rows)",
+      "adds": [
+        "car 9543"
+      ],
+      "requires": []
     }
   ],
   "cars": [
@@ -1662,11 +1671,11 @@
       ],
       "thumbnail": "NONE yet - user takes it from the game's cache after the first garage save",
       "build": {
-        "zip": "BRB_900Rocket_23.v20",
-        "md5": "bb06d8c58c04a8762ebc1023177d2231",
-        "pipeline": "scripts/export_brabus.py: Blender dump (285 meshes, 2.74 M tris; Decimate LOD sets) -> one model per object on the Turbo S body_a template (donor material instances cloned by name, artist interior / badge textures as RGBA8, flat AO) -> skeleton = the Turbo S 68 bones placed by the full rig corpus (rig_brabus.py bones_v2) -> skeld rebuilt on the donor order (carskeleton_9541) -> donor clips verbatim (carclips_9541) -> carbin non-upgradable parts 2/4/9/34/35/36/37/43, one rim model on all four corners, donor brakes + control arms -> Lights.bin = donor records on our body, Locators moved, exhaust locators on our tips -> validate_output ALL CHECKS PASSED -> BRB_900Rocket_23.v2: build 5: hands +3 cm / +1 cm apart (IKAnchorBones), left foot anchor = right foot height/depth, Mesh.334/335 on the wheel, Mesh.231/233 on the door cards -> BRB_900Rocket_23.v3: build 6: tail bar red (flat red RGBA8 = donor lam_gradient_014 colour), anchor_clutch IK OffsetZ = anchor_gas, hands net +1 cm -> BRB_900Rocket_23.v4: build 7: tail bar EmissiveColor tint = donor brake red (1.0, 0.0086, 0.0012); IK xml clutch edit reverted (feet by bone only) -> BRB_900Rocket_23.v5: build 9: rim LOD0 planar dissolve 5 deg + artist normals (lumpy fix), blur disc UV = donor mapping (centred), wheel paint groups Rims1 satin ring / Rims2 carbon ring / Inner Barrel spokes+barrel+valve -> BRB_900Rocket_23.v6: build 10: rim LOD0 back to collapse (0.30 rim face / 0.15 rest, surface error max 0.17 mm) with the artist's normals transferred; planar 5 deg (max 2.3 mm, clipped the carbon ring) dropped -> BRB_900Rocket_23.v7: build 11: rim planar x-ray UV projection (one row per vertex, artist normals), advanced paint groups: exterior carbon -> Body_SecondaryColor, exterior plastic -> Body_TertiaryColor, roof carbon -> Hood_SecondaryColor, mirror housings 252/254/336/337 -> Mirror, mirror bases -> Mirror_SecondaryColor; MNCL entries per group -> BRB_900Rocket_23.v8: build 12: Mesh.189 -> Body_SecondaryColor; Body_TertiaryColor = bumper + diffuser plastics only (16 objects) -> BRB_900Rocket_23.v9: build 13: wiper bones take the donor Turbo S frames (verbatim relative wiper clip), tachometer clip re-expressed on our skeld rest (needle was parked at the donor dial centre inside the dash) -> BRB_900Rocket_23.v10: build 14: hood underside (flipped 1 mm inner skin, plastic_matte, no paint group); label textures: symbols keep the glyph alpha, button alpha 0 (no night glow) -> BRB_900Rocket_23.v11: build 15: engine cover static (Mesh.115 on root, trunk Forzavista pins dropped), boneTach on the needle hub disc centre, pack audio pairs refreshed from the user's game copies -> BRB_900Rocket_23.v12: build 16: boneSteeringWheel moved onto the wheel axis (spindle local = donor), rim LOD0 = the artist's full mesh with its own normals -> BRB_900Rocket_23.v13: build 17: steering spindle axis through the centre of Mesh.335 (user), boneSteeringWheel follows -> BRB_900Rocket_23.v14: build 18: hands compensated for the spindle shift (steering_pivot_offset OffsetY -0.0194) -> BRB_900Rocket_23.v15: build 19: hand compensation sign flipped (steering_pivot_offset OffsetY +0.0194) -> BRB_900Rocket_23.v16: build 20: our wiper_motion_gradient (fans from our sweep on our glass set 2) replaces the donor's -> BRB_900Rocket_23.v17: build 21: 'Alcantara ' trailing space stripped -> Mesh.053/061/068/070/073/077 interior alcantara (no rain on the headliner) -> BRB_900Rocket_23.v18: build 22: ManufacturerColors from the user's R900_0..10 designs (body/hood/mirror/wing/rim groups, Wheel1/Wheel2 from Rims/Rims2) -> BRB_900Rocket_23.v19: build 23: design colours baked into car-local paint materials (stock car_automotive_paint recipe), MNCL rgb = swatch only -> BRB_900Rocket_23.v20: build 24: design colour bytes read as BGR (proven on the previews)"
+        "zip": "BRB_900Rocket_23.v21",
+        "md5": "b9c3a5647d9102ba6d15ba0bc4f1602e",
+        "pipeline": "scripts/export_brabus.py: Blender dump (285 meshes, 2.74 M tris; Decimate LOD sets) -> one model per object on the Turbo S body_a template (donor material instances cloned by name, artist interior / badge textures as RGBA8, flat AO) -> skeleton = the Turbo S 68 bones placed by the full rig corpus (rig_brabus.py bones_v2) -> skeld rebuilt on the donor order (carskeleton_9541) -> donor clips verbatim (carclips_9541) -> carbin non-upgradable parts 2/4/9/34/35/36/37/43, one rim model on all four corners, donor brakes + control arms -> Lights.bin = donor records on our body, Locators moved, exhaust locators on our tips -> validate_output ALL CHECKS PASSED -> BRB_900Rocket_23.v2: build 5: hands +3 cm / +1 cm apart (IKAnchorBones), left foot anchor = right foot height/depth, Mesh.334/335 on the wheel, Mesh.231/233 on the door cards -> BRB_900Rocket_23.v3: build 6: tail bar red (flat red RGBA8 = donor lam_gradient_014 colour), anchor_clutch IK OffsetZ = anchor_gas, hands net +1 cm -> BRB_900Rocket_23.v4: build 7: tail bar EmissiveColor tint = donor brake red (1.0, 0.0086, 0.0012); IK xml clutch edit reverted (feet by bone only) -> BRB_900Rocket_23.v5: build 9: rim LOD0 planar dissolve 5 deg + artist normals (lumpy fix), blur disc UV = donor mapping (centred), wheel paint groups Rims1 satin ring / Rims2 carbon ring / Inner Barrel spokes+barrel+valve -> BRB_900Rocket_23.v6: build 10: rim LOD0 back to collapse (0.30 rim face / 0.15 rest, surface error max 0.17 mm) with the artist's normals transferred; planar 5 deg (max 2.3 mm, clipped the carbon ring) dropped -> BRB_900Rocket_23.v7: build 11: rim planar x-ray UV projection (one row per vertex, artist normals), advanced paint groups: exterior carbon -> Body_SecondaryColor, exterior plastic -> Body_TertiaryColor, roof carbon -> Hood_SecondaryColor, mirror housings 252/254/336/337 -> Mirror, mirror bases -> Mirror_SecondaryColor; MNCL entries per group -> BRB_900Rocket_23.v8: build 12: Mesh.189 -> Body_SecondaryColor; Body_TertiaryColor = bumper + diffuser plastics only (16 objects) -> BRB_900Rocket_23.v9: build 13: wiper bones take the donor Turbo S frames (verbatim relative wiper clip), tachometer clip re-expressed on our skeld rest (needle was parked at the donor dial centre inside the dash) -> BRB_900Rocket_23.v10: build 14: hood underside (flipped 1 mm inner skin, plastic_matte, no paint group); label textures: symbols keep the glyph alpha, button alpha 0 (no night glow) -> BRB_900Rocket_23.v11: build 15: engine cover static (Mesh.115 on root, trunk Forzavista pins dropped), boneTach on the needle hub disc centre, pack audio pairs refreshed from the user's game copies -> BRB_900Rocket_23.v12: build 16: boneSteeringWheel moved onto the wheel axis (spindle local = donor), rim LOD0 = the artist's full mesh with its own normals -> BRB_900Rocket_23.v13: build 17: steering spindle axis through the centre of Mesh.335 (user), boneSteeringWheel follows -> BRB_900Rocket_23.v14: build 18: hands compensated for the spindle shift (steering_pivot_offset OffsetY -0.0194) -> BRB_900Rocket_23.v15: build 19: hand compensation sign flipped (steering_pivot_offset OffsetY +0.0194) -> BRB_900Rocket_23.v16: build 20: our wiper_motion_gradient (fans from our sweep on our glass set 2) replaces the donor's -> BRB_900Rocket_23.v17: build 21: 'Alcantara ' trailing space stripped -> Mesh.053/061/068/070/073/077 interior alcantara (no rain on the headliner) -> BRB_900Rocket_23.v18: build 22: ManufacturerColors from the user's R900_0..10 designs (body/hood/mirror/wing/rim groups, Wheel1/Wheel2 from Rims/Rims2) -> BRB_900Rocket_23.v19: build 23: design colours baked into car-local paint materials (stock car_automotive_paint recipe), MNCL rgb = swatch only -> BRB_900Rocket_23.v20: build 24: design colour bytes read as BGR (proven on the previews) -> BRB_900Rocket_23.v21: build 25: every glass pane (exterior + interior) UV set 1 = one planar map on the pane at 2 u/m (stock rule, Mission S v17/v18); installed zip + 12 glass modelbins swapped, everything else byte-identical to bb06d8c5"
       },
-      "status": "BRB_900Rocket_23.v20 INSTALLED 2026-11-01 (test pending)",
+      "status": "BRB_900Rocket_23.v21 INSTALLED 2026-11-06 (test pending)",
       "strings": "IDS_DisplayName_9541 / IDS_ModelShort_9541 = '900 Rocket R' / '900 Rocket R'; make 301 Brabus",
       "build_history": [
         "f9b659cd262c1f0548fe0ca7a7493894",
@@ -1687,7 +1696,8 @@
         "5e887abc2ed73c7a65201a25f6c08a01",
         "6572e121fcb00a66515b37843de28d83",
         "e42e6cda2ecb9e7b81c03ee4981382f8",
-        "dc47310c3c3e4ed033a485b255332ad2"
+        "dc47310c3c3e4ed033a485b255332ad2",
+        "bb06d8c58c04a8762ebc1023177d2231"
       ]
     },
     {
@@ -1745,6 +1755,56 @@
         "a8e46d08acf813d6282a91d2b76d5523",
         "8566a5fd2047726b1ba44276030f9eb5",
         "651aa84ddf67a404f177d436e1ed2840"
+      ]
+    },
+    {
+      "id": 9543,
+      "media": "POR_MissionSC_27",
+      "name": "2027 Porsche Mission S",
+      "source": "custom model (Porsche Mission S, Blender) exported by scripts/export_missions.py on the stock POR_918Spyder_14 animation / sidecar donor; rows = stock POR_918Spyder_14 clone (race suspension + race aero as stock, AWD stock + the 918 RWD conversion, 21/22 in rims), engine = pack 9011 4.8L F8 TT (shared, untouched); make 39 Porsche",
+      "files": [
+        "mediapc/Cars/POR_MissionSC_27.zip",
+        "mediapc/Audio/ModularCars/POR_MissionSC_27-Engine.xml (= the F8 TT sound pair, copied from POR_1_GT3R_27_F8TT)",
+        "mediapc/Audio/ModularCars/POR_MissionSC_27-Model.xml (= the F8 TT sound pair, copied from POR_1_GT3R_27_F8TT)",
+        "Patches/POR_MissionSC_27.sql"
+      ],
+      "make": {
+        "id": 39,
+        "code": "POR",
+        "name": "Porsche"
+      },
+      "manifest_entries": [
+        "game:/media/cars/por_missionsc_27.zip"
+      ],
+      "anim_config_lines": [
+        "SkeletonDictionary, game:/media/cars/por_missionsc_27/Scene/animations/Mojo/skeleton.skeld",
+        "ClipDictionary, game:/media/cars/por_missionsc_27/Scene/animations/Mojo/clip/carclips_9543.clipd"
+      ],
+      "thumbnail": "NONE yet - user takes it from the game's cache after the first garage save",
+      "build": {
+        "zip": "POR_MissionSC_27.v18",
+        "md5": "1955f8b096ebd9e88dba61aeb6816565",
+        "pipeline": "scripts/export_missions.py: Blender dump (67 meshes, 1.78 M tris after the 1-deg dissolve) -> one model per object on the 918 body_a template (918 library instances by role, Guards Red stock option, five-patch digital dash on the 918 page) -> skeleton = the 918 57 bones (rig_missions.py) + boneEngineRotate (T.50 spin clip) -> skeld rebuilt on the donor order (carskeleton_9543) -> 918 clips, wing clips rewritten as translations (+0.15 / +0.08) -> carbin non-upgradable parts 2 / 4 / 9 / 43, LF + RF rim models (Final Asset rims), 918 brakes -> Lights.bin re-targeted (sphere headlights, 3 tail bars) -> validate_output ALL CHECKS PASSED -> POR_MissionSC_27.v2: v2: rims x in metres (brake clip), draw groups 39/47, back skins, dark grey leather, chrome rear lettering, 918 crest geometry, roof/deck int panes, frit + cowl trims, aero 110/90/180 mph + 0.5 s highspeed, roof params dropped -> DB f8728fe8 (v2 DB: Cayman WTAC steering 37/29/profile 0, ConvertibleType 0, AutoSteerOverrideID 2) -> POR_MissionSC_27.v3: v2b: white interior vertex colours (seats), stock gls_windsheild_interior pane dg 39 (rain), red/white flat emitters, crest up = rearward, on-glass frit band -> POR_MissionSC_27.v4: v2c: frit bands removed; roof + side-window liners in the ybody.024 convention (30 mm onto the pane, 12 mm under, cabin-facing, chains never bridged); cowl kept -> POR_MissionSC_27.v5: v2d: roof-glass liner only (side-window liners removed per user) -> POR_MissionSC_27.v6: v2e: inverted interior shells flipped (4 seat objects, ybody.003, ybody.011) - eye-ray test -> POR_MissionSC_27.v7: v3: cowl median-smoothed (spikes), roof liner removed, spindle recentred on the rim ring (+2.2 cm), seat cams +8 cm net, windshield inner pane = side-pane recipe (rain), 4 exhaust emitters at the Cylinder tip exits -> POR_MissionSC_27.v8: v3b: seal ybody.024 pushed out of ybody.003, cowl stops at |x| 0.60 (corner spike), full 7-value engine-network params (fan) -> POR_MissionSC_27.v9: v3c: cowl = the user's Blender-edited FH6_cowl_027 (full windshield width, jagged points merged), via cowl_override_blender.json -> POR_MissionSC_27.v10: v3d: user-approved cowl (smoothed, full width), wheel crest 1.15x, fan 103k tris / copper PaintedMetal / spin 5-8, camera +10 cm net, windshield inner pane = IndyCar recipe (int-windshield True, lod 15, damage 1, glass_windshield lib) + wiper masks dropped -> POR_MissionSC_27.v11: v3e: ybody.003 roof-liner clipping fix (user's 2 passenger-side vertex moves, mirrored to the driver side, finished by the user in Blender) -> POR_MissionSC_27.v12: v3f: cowl uniform shading normals, interior windshield pane normalised UV set 2, ActiveAeroEngage brake gate removed, fan no shadow, steering_ik_scale 0.9022 (hands together 1.2 cm) -> POR_MissionSC_27.v13: v3g: bespoke CarAero network (110/90, high-speed 180 in / 160 out to the deployed wing), hands together 1 cm (ik_scale 0.9085) -> DB f8728fe8 (v3g: AnimResourceConfig NetworkDictionary line for the Mission S aero network) -> POR_MissionSC_27.v14: v3h: windshield interior pane = full flipped copy (area-based pane split; the old pane was the shell's edge faces), hands together 2.5 cm / back 1 cm -> POR_MissionSC_27.v15: v3i: taillight emitters = GT3 RS '23 LED-bar instance lights_smooth_CH1 (emitter_ch1 library) instead of the 918 chrome bucket; ybody.003 rain flag 0 -> POR_MissionSC_27.v16: v4: rear lights placed per the 691-car corpus (2 tail+brake projectors, 2 reverse projectors, 2 reverse glow, 48 red glow instead of 132), rim UV1 density 2.0, all calipers black, 4 exhaust backfire locators on the pipe exits, tail lamp instance back to the 918's -> POR_MissionSC_27.v17: v17: windshield (exterior + interior pane) UV set 1 = one planar map on the pane, 2 u/m, u up the glass, v = -x (stock rule, 21 cars); was the per-triangle cube projection (114 charts) - scarred grime / clearing texture -> POR_MissionSC_27.v18: v18: side windows, roof (028) and deck (005_glass) panes, exterior + interior, UV set 1 = one planar map on the pane at 2 u/m like the windshield (v17)"
+      },
+      "status": "POR_MissionSC_27.v18 INSTALLED 2026-11-06 (test pending)",
+      "build_history": [
+        "ba4ecf2d9da92d943dfbe5664f01528e",
+        "42c24246eb33af5ad9052dcd576c0087",
+        "32491a53c52ed97db6a52b6d01ea01b2",
+        "d31fb0ff5b2fac63157b2530f73dba60",
+        "8744a6c9af8e1304af06e0270696d3fe",
+        "4cb87f458846e79956f7f16ebee33401",
+        "cf295064145a7b4d8e216062fe50fd44",
+        "6430bbd42cbaa4acd09420956bf4e4a6",
+        "6c9549060aa8ddb6721990dd43f77e7f",
+        "136e39a8eb52e673abb9487993c2b89f",
+        "cd0249f25359c4ae7095bb562914cbe4",
+        "36eb4c1c6b527a53c679c34c6664738c",
+        "b7d5b5ea11b21617d4724c36d9f968f5",
+        "d08ad170306620503b7a9a4d01573480",
+        "7c59404beca857353fcb29074593e4ca",
+        "983f0a8c8329200f02d7f3e25660c751",
+        "5883c1952227a638ea52f09206956484"
       ]
     }
   ],
@@ -1901,6 +1961,71 @@
         "version": "v17"
       },
       "status": "v17 user-approved 2026-10-24 (tiling 1, normal 0.8, mask window 25..43, tint default white)"
+    }
+  ],
+  "character_items": [
+    {
+      "asset": "Outfit_URBN_Race_Suit",
+      "item": "Outfit_URBN_Race_Suit_1",
+      "patch": "Patches/URBN_Race_Suit.character.json",
+      "derived_files": [
+        "mediapc/CharacterCustomisation/CustomisationAssets.xml",
+        "mediapc/CharacterCustomisation/CustomisationItems.xml",
+        "mediapc/ObjectModelGame.zip"
+      ],
+      "description": "URBN racesuit, new character item cloned from the stock Outfit_Race_Suit_Modern. Built by Z:/Forza/MyMods/Clothing/scripts/build_racesuit.py. derived_files = current stock + the patch (reference: scripts/character_patch.py), regenerated at install and by the Update Fix, never shipped. Game test pending.",
+      "files": [
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_F.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_f.zip",
+          "md5": "603b079d703c7680a3e82fd73528fd51"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_F_AI.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_f_ai.zip",
+          "md5": "80f82f295c9cb9dd54ba988ae96a26a6"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_F_Driver.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_f_driver.zip",
+          "md5": "8349bf1a444730967e946e54f48ed5b1"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_M.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_m.zip",
+          "md5": "bfb3cb3439b55d6b299eb81a5b3344bb"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_M_AI.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_m_ai.zip",
+          "md5": "8fca402d7179a5c29a8bbb513bcda6ad"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_M_Driver.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_m_driver.zip",
+          "md5": "a8eb882ad5b226d16ca2b6e5c477e2de"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_N.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_n.zip",
+          "md5": "2cd15a8eadd8bd19a12890b32d15f4bb"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_N_AI.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_n_ai.zip",
+          "md5": "39891ebdacbf5bf85bd401e5b25ffbf0"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/Outfit_URBN_Race_Suit_N_Driver.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/outfit_urbn_race_suit_n_driver.zip",
+          "md5": "c4abc0720bb913941ff275f032d276ec"
+        },
+        {
+          "file": "mediapc/Cinematic_Assets/Characters/Garments/Outfit/URBN_Racesuit_Tex.zip",
+          "manifest_entry": "game:/media/cinematic_assets/characters/garments/outfit/urbn_racesuit_tex.zip",
+          "md5": "21c7e7eee31c2675e94fd8eb097901ce"
+        }
+      ]
     }
   ]
 }
