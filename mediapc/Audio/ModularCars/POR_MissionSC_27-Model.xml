@@ -5,7 +5,7 @@
     <PropertyTemplate Source="ForzavistaPositions/Standard" />
     <PropertyTemplate Source="Chassis/AL_Tight" />
     <Property Name="CockpitIR" Value="CockpitIR_Race" />
-    <Property Name="CockpitFiltering" Value="0.7" />
+    <Property Name="CockpitFiltering" Value="0.9" />
     <Property Name="Cooling" Value="Cooling_Modern" />
     <Property Name="WipersFrontExternal" Value="Wipers_ModernFrontExternal" />
     <Property Name="WipersFrontInternal" Value="Wipers_ModernFrontInternal" />
@@ -17,5 +17,6 @@
     <Property Name="CockpitSnapshot" Value="1" />
     <Property Name="CockpitGain" Value="0" />
     <Property Name="IdleRPM" Value="992" />
+    <Property Name="Fan" Value="Fan_Aero" />
   </Properties>
 </ModularCar>

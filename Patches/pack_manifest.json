@@ -477,9 +477,10 @@
     {
       "order": 48,
       "file": "POR_MissionSC_27.sql",
-      "description": "2027 Porsche Mission S (custom model on the 918 Spyder rig; 918 rows, race suspension / race aero as stock (tunable), AWD stock + RWD conversion, engine 9011 4.8L F8 TT, 21 / 22 in rims, $0 car-local rows)",
+      "description": "2027 Porsche Mission S (custom model on the 918 Spyder rig; 918 rows, race suspension / race aero as stock (tunable), AWD stock + RWD conversion, own engine 9018 4.8L F8 TT (clone of 9011; redline 7500, curve end 7800), 21 / 22 in rims, $0 car-local rows)",
       "adds": [
-        "car 9543"
+        "car 9543",
+        "engine 9018"
       ],
       "requires": []
     }
@@ -1761,11 +1762,11 @@
       "id": 9543,
       "media": "POR_MissionSC_27",
       "name": "2027 Porsche Mission S",
-      "source": "custom model (Porsche Mission S, Blender) exported by scripts/export_missions.py on the stock POR_918Spyder_14 animation / sidecar donor; rows = stock POR_918Spyder_14 clone (race suspension + race aero as stock, AWD stock + the 918 RWD conversion, 21/22 in rims), engine = pack 9011 4.8L F8 TT (shared, untouched); make 39 Porsche",
+      "source": "custom model (Porsche Mission S, Blender) exported by scripts/export_missions.py on the stock POR_918Spyder_14 animation / sidecar donor; rows = stock POR_918Spyder_14 clone (race suspension + race aero as stock, AWD stock + the 918 RWD conversion, 21/22 in rims), engine = OWN 9018 4.8L F8 TT (clone of pack 9011 by fh6_clone_engine.py; redline 7500, torque curve cut at 7800 rpm, values to 7700 verbatim; 9011 untouched); make 39 Porsche",
       "files": [
         "mediapc/Cars/POR_MissionSC_27.zip",
-        "mediapc/Audio/ModularCars/POR_MissionSC_27-Engine.xml (= the F8 TT sound pair, copied from POR_1_GT3R_27_F8TT)",
-        "mediapc/Audio/ModularCars/POR_MissionSC_27-Model.xml (= the F8 TT sound pair, copied from POR_1_GT3R_27_F8TT)",
+        "mediapc/Audio/ModularCars/POR_MissionSC_27-Engine.xml (user sound, synced from the game 2026-11-06)",
+        "mediapc/Audio/ModularCars/POR_MissionSC_27-Model.xml (user sound, synced from the game 2026-11-06)",
         "Patches/POR_MissionSC_27.sql"
       ],
       "make": {
@@ -1782,11 +1783,11 @@
       ],
       "thumbnail": "NONE yet - user takes it from the game's cache after the first garage save",
       "build": {
-        "zip": "POR_MissionSC_27.v18",
-        "md5": "1955f8b096ebd9e88dba61aeb6816565",
-        "pipeline": "scripts/export_missions.py: Blender dump (67 meshes, 1.78 M tris after the 1-deg dissolve) -> one model per object on the 918 body_a template (918 library instances by role, Guards Red stock option, five-patch digital dash on the 918 page) -> skeleton = the 918 57 bones (rig_missions.py) + boneEngineRotate (T.50 spin clip) -> skeld rebuilt on the donor order (carskeleton_9543) -> 918 clips, wing clips rewritten as translations (+0.15 / +0.08) -> carbin non-upgradable parts 2 / 4 / 9 / 43, LF + RF rim models (Final Asset rims), 918 brakes -> Lights.bin re-targeted (sphere headlights, 3 tail bars) -> validate_output ALL CHECKS PASSED -> POR_MissionSC_27.v2: v2: rims x in metres (brake clip), draw groups 39/47, back skins, dark grey leather, chrome rear lettering, 918 crest geometry, roof/deck int panes, frit + cowl trims, aero 110/90/180 mph + 0.5 s highspeed, roof params dropped -> DB f8728fe8 (v2 DB: Cayman WTAC steering 37/29/profile 0, ConvertibleType 0, AutoSteerOverrideID 2) -> POR_MissionSC_27.v3: v2b: white interior vertex colours (seats), stock gls_windsheild_interior pane dg 39 (rain), red/white flat emitters, crest up = rearward, on-glass frit band -> POR_MissionSC_27.v4: v2c: frit bands removed; roof + side-window liners in the ybody.024 convention (30 mm onto the pane, 12 mm under, cabin-facing, chains never bridged); cowl kept -> POR_MissionSC_27.v5: v2d: roof-glass liner only (side-window liners removed per user) -> POR_MissionSC_27.v6: v2e: inverted interior shells flipped (4 seat objects, ybody.003, ybody.011) - eye-ray test -> POR_MissionSC_27.v7: v3: cowl median-smoothed (spikes), roof liner removed, spindle recentred on the rim ring (+2.2 cm), seat cams +8 cm net, windshield inner pane = side-pane recipe (rain), 4 exhaust emitters at the Cylinder tip exits -> POR_MissionSC_27.v8: v3b: seal ybody.024 pushed out of ybody.003, cowl stops at |x| 0.60 (corner spike), full 7-value engine-network params (fan) -> POR_MissionSC_27.v9: v3c: cowl = the user's Blender-edited FH6_cowl_027 (full windshield width, jagged points merged), via cowl_override_blender.json -> POR_MissionSC_27.v10: v3d: user-approved cowl (smoothed, full width), wheel crest 1.15x, fan 103k tris / copper PaintedMetal / spin 5-8, camera +10 cm net, windshield inner pane = IndyCar recipe (int-windshield True, lod 15, damage 1, glass_windshield lib) + wiper masks dropped -> POR_MissionSC_27.v11: v3e: ybody.003 roof-liner clipping fix (user's 2 passenger-side vertex moves, mirrored to the driver side, finished by the user in Blender) -> POR_MissionSC_27.v12: v3f: cowl uniform shading normals, interior windshield pane normalised UV set 2, ActiveAeroEngage brake gate removed, fan no shadow, steering_ik_scale 0.9022 (hands together 1.2 cm) -> POR_MissionSC_27.v13: v3g: bespoke CarAero network (110/90, high-speed 180 in / 160 out to the deployed wing), hands together 1 cm (ik_scale 0.9085) -> DB f8728fe8 (v3g: AnimResourceConfig NetworkDictionary line for the Mission S aero network) -> POR_MissionSC_27.v14: v3h: windshield interior pane = full flipped copy (area-based pane split; the old pane was the shell's edge faces), hands together 2.5 cm / back 1 cm -> POR_MissionSC_27.v15: v3i: taillight emitters = GT3 RS '23 LED-bar instance lights_smooth_CH1 (emitter_ch1 library) instead of the 918 chrome bucket; ybody.003 rain flag 0 -> POR_MissionSC_27.v16: v4: rear lights placed per the 691-car corpus (2 tail+brake projectors, 2 reverse projectors, 2 reverse glow, 48 red glow instead of 132), rim UV1 density 2.0, all calipers black, 4 exhaust backfire locators on the pipe exits, tail lamp instance back to the 918's -> POR_MissionSC_27.v17: v17: windshield (exterior + interior pane) UV set 1 = one planar map on the pane, 2 u/m, u up the glass, v = -x (stock rule, 21 cars); was the per-triangle cube projection (114 charts) - scarred grime / clearing texture -> POR_MissionSC_27.v18: v18: side windows, roof (028) and deck (005_glass) panes, exterior + interior, UV set 1 = one planar map on the pane at 2 u/m like the windshield (v17)"
+        "zip": "POR_MissionSC_27.v21",
+        "md5": "3339bd6b4796f0df241e879d18785608",
+        "pipeline": "scripts/export_missions.py: Blender dump (67 meshes, 1.78 M tris after the 1-deg dissolve) -> one model per object on the 918 body_a template (918 library instances by role, Guards Red stock option, five-patch digital dash on the 918 page) -> skeleton = the 918 57 bones (rig_missions.py) + boneEngineRotate (T.50 spin clip) -> skeld rebuilt on the donor order (carskeleton_9543) -> 918 clips, wing clips rewritten as translations (+0.15 / +0.08) -> carbin non-upgradable parts 2 / 4 / 9 / 43, LF + RF rim models (Final Asset rims), 918 brakes -> Lights.bin re-targeted (sphere headlights, 3 tail bars) -> validate_output ALL CHECKS PASSED -> POR_MissionSC_27.v2: v2: rims x in metres (brake clip), draw groups 39/47, back skins, dark grey leather, chrome rear lettering, 918 crest geometry, roof/deck int panes, frit + cowl trims, aero 110/90/180 mph + 0.5 s highspeed, roof params dropped -> DB f8728fe8 (v2 DB: Cayman WTAC steering 37/29/profile 0, ConvertibleType 0, AutoSteerOverrideID 2) -> POR_MissionSC_27.v3: v2b: white interior vertex colours (seats), stock gls_windsheild_interior pane dg 39 (rain), red/white flat emitters, crest up = rearward, on-glass frit band -> POR_MissionSC_27.v4: v2c: frit bands removed; roof + side-window liners in the ybody.024 convention (30 mm onto the pane, 12 mm under, cabin-facing, chains never bridged); cowl kept -> POR_MissionSC_27.v5: v2d: roof-glass liner only (side-window liners removed per user) -> POR_MissionSC_27.v6: v2e: inverted interior shells flipped (4 seat objects, ybody.003, ybody.011) - eye-ray test -> POR_MissionSC_27.v7: v3: cowl median-smoothed (spikes), roof liner removed, spindle recentred on the rim ring (+2.2 cm), seat cams +8 cm net, windshield inner pane = side-pane recipe (rain), 4 exhaust emitters at the Cylinder tip exits -> POR_MissionSC_27.v8: v3b: seal ybody.024 pushed out of ybody.003, cowl stops at |x| 0.60 (corner spike), full 7-value engine-network params (fan) -> POR_MissionSC_27.v9: v3c: cowl = the user's Blender-edited FH6_cowl_027 (full windshield width, jagged points merged), via cowl_override_blender.json -> POR_MissionSC_27.v10: v3d: user-approved cowl (smoothed, full width), wheel crest 1.15x, fan 103k tris / copper PaintedMetal / spin 5-8, camera +10 cm net, windshield inner pane = IndyCar recipe (int-windshield True, lod 15, damage 1, glass_windshield lib) + wiper masks dropped -> POR_MissionSC_27.v11: v3e: ybody.003 roof-liner clipping fix (user's 2 passenger-side vertex moves, mirrored to the driver side, finished by the user in Blender) -> POR_MissionSC_27.v12: v3f: cowl uniform shading normals, interior windshield pane normalised UV set 2, ActiveAeroEngage brake gate removed, fan no shadow, steering_ik_scale 0.9022 (hands together 1.2 cm) -> POR_MissionSC_27.v13: v3g: bespoke CarAero network (110/90, high-speed 180 in / 160 out to the deployed wing), hands together 1 cm (ik_scale 0.9085) -> DB f8728fe8 (v3g: AnimResourceConfig NetworkDictionary line for the Mission S aero network) -> POR_MissionSC_27.v14: v3h: windshield interior pane = full flipped copy (area-based pane split; the old pane was the shell's edge faces), hands together 2.5 cm / back 1 cm -> POR_MissionSC_27.v15: v3i: taillight emitters = GT3 RS '23 LED-bar instance lights_smooth_CH1 (emitter_ch1 library) instead of the 918 chrome bucket; ybody.003 rain flag 0 -> POR_MissionSC_27.v16: v4: rear lights placed per the 691-car corpus (2 tail+brake projectors, 2 reverse projectors, 2 reverse glow, 48 red glow instead of 132), rim UV1 density 2.0, all calipers black, 4 exhaust backfire locators on the pipe exits, tail lamp instance back to the 918's -> POR_MissionSC_27.v17: v17: windshield (exterior + interior pane) UV set 1 = one planar map on the pane, 2 u/m, u up the glass, v = -x (stock rule, 21 cars); was the per-triangle cube projection (114 charts) - scarred grime / clearing texture -> POR_MissionSC_27.v18: v18: side windows, roof (028) and deck (005_glass) panes, exterior + interior, UV set 1 = one planar map on the pane at 2 u/m like the windshield (v17) -> POR_MissionSC_27.v19: v19 own cluster page (five dials from the user's mockup, digidash_missions.py): each disc on its own page cell, tach needle / gear / speed / speed marker / fuel marker live, oil pressure / temperatures / range / mode static; donor UI textures dropped -> DB fe4dbec8 (own engine 9018 (clone of pack 9011 4.8L F8 TT): redline 7500, torque curve cut at 7800 rpm (values to 7700 verbatim); Data_Car SimRedlineAngVel / SimPeakAngVel 7500 rpm) -> POR_MissionSC_27.v20: v20 cluster page: speed dial in mph (0..240, numbers every 40, MPH label, UseMPH True, MaxSpeed 107.29 m/s) -> DB 98f8d6ff (stock weight 3517 lb (CurbWeight 15.9528, body-weight rows 1595.28 / 1492.908 / 1329.112 kg, the 918's reduction ratios)) -> POR_MissionSC_27.v21: v21: inner skins 2 mm inward (work/export/back_offsets.npz; shattered reflections at the rear corners - they lay at the paint surface) + ybody.041 trim (approved override, 178 verts under 035 / 005)"
       },
-      "status": "POR_MissionSC_27.v18 INSTALLED 2026-11-06 (test pending)",
+      "status": "POR_MissionSC_27.v21 INSTALLED 2026-11-06 (test pending)",
       "build_history": [
         "ba4ecf2d9da92d943dfbe5664f01528e",
         "42c24246eb33af5ad9052dcd576c0087",
@@ -1804,7 +1805,10 @@
         "d08ad170306620503b7a9a4d01573480",
         "7c59404beca857353fcb29074593e4ca",
         "983f0a8c8329200f02d7f3e25660c751",
-        "5883c1952227a638ea52f09206956484"
+        "5883c1952227a638ea52f09206956484",
+        "1955f8b096ebd9e88dba61aeb6816565",
+        "91cb2fd76a793b5fe4b9b7646026aa75",
+        "a5b7a25b9137af3668a9f8e47e1bbe09"
       ]
     }
   ],
@@ -1947,6 +1951,15 @@
         "DAT_33_280ZX_79-Model.xml"
       ],
       "backup": "Z:\\Forza\\MyMods\\DAT_33_280ZX_79 Import\\work\\audio_placeholder_pre_user_sound"
+    },
+    {
+      "date": "2026-11-06",
+      "synced_from_game": [
+        "POR_MissionSC_27-Engine.xml",
+        "POR_MissionSC_27-Model.xml"
+      ],
+      "backup": "Z:\\Forza\\MyMods\\Porsche Mission S\\work\\audio_pack_pre_user_sound_20261106",
+      "note": "Mission S sound (user)"
     }
   ],
   "shared_zips": [
